@@ -3,80 +3,623 @@
   "nome": "Campo Grande",
   "uf": "MS",
   "cidade": "Campo Grande - MS",
-  "centro": { "lat": -20.4697, "lng": -54.6201 },
+  "centro": {
+    "lat": -20.4697,
+    "lng": -54.6201
+  },
   "zoom": 12,
   "bairros": {
-    "centro": { "lat": -20.4648, "lng": -54.6163 },
-    "jardim dos estados": { "lat": -20.4596, "lng": -54.6025 },
-    "bela vista": { "lat": -20.4660, "lng": -54.5975 },
-    "santa fe": { "lat": -20.4535, "lng": -54.5920 },
-    "caranda bosque": { "lat": -20.4495, "lng": -54.5765 },
-    "chacara cachoeira": { "lat": -20.4615, "lng": -54.5815 },
-    "vivendas do bosque": { "lat": -20.4510, "lng": -54.5835 },
-    "parque dos poderes": { "lat": -20.4490, "lng": -54.5540 },
-    "jardim autonomista": { "lat": -20.4430, "lng": -54.5905 },
-    "mata do jacinto": { "lat": -20.4275, "lng": -54.5880 },
-    "novos estados": { "lat": -20.4170, "lng": -54.5865 },
-    "nova lima": { "lat": -20.3865, "lng": -54.5890 },
-    "coronel antonino": { "lat": -20.4360, "lng": -54.6085 },
-    "monte castelo": { "lat": -20.4465, "lng": -54.6145 },
-    "sao francisco": { "lat": -20.4515, "lng": -54.6245 },
-    "cabreuva": { "lat": -20.4620, "lng": -54.6300 },
-    "amambai": { "lat": -20.4715, "lng": -54.6320 },
-    "vila planalto": { "lat": -20.4665, "lng": -54.6380 },
-    "santo antonio": { "lat": -20.4595, "lng": -54.6490 },
-    "jardim imbirussu": { "lat": -20.4610, "lng": -54.6650 },
-    "santo amaro": { "lat": -20.4530, "lng": -54.6565 },
-    "vila sobrinho": { "lat": -20.4510, "lng": -54.6425 },
-    "jardim panama": { "lat": -20.4405, "lng": -54.6645 },
-    "panama": { "lat": -20.4405, "lng": -54.6645 },
-    "vila popular": { "lat": -20.4625, "lng": -54.6820 },
-    "aeroporto": { "lat": -20.4685, "lng": -54.6725 },
-    "coophavila ii": { "lat": -20.5110, "lng": -54.6865 },
-    "coophavila": { "lat": -20.5110, "lng": -54.6865 },
-    "taruma": { "lat": -20.5175, "lng": -54.6730 },
-    "tijuca": { "lat": -20.5130, "lng": -54.6590 },
-    "aero rancho": { "lat": -20.5150, "lng": -54.6430 },
-    "guanandi": { "lat": -20.5015, "lng": -54.6390 },
-    "vila nhanha": { "lat": -20.4935, "lng": -54.6290 },
-    "nhanha": { "lat": -20.4935, "lng": -54.6290 },
-    "piratininga": { "lat": -20.4965, "lng": -54.6210 },
-    "parati": { "lat": -20.5205, "lng": -54.6285 },
-    "jockey club": { "lat": -20.4990, "lng": -54.6165 },
-    "taquarussu": { "lat": -20.4945, "lng": -54.6455 },
-    "caicara": { "lat": -20.4835, "lng": -54.6465 },
-    "uniao": { "lat": -20.4970, "lng": -54.6660 },
-    "vila bandeirante": { "lat": -20.4830, "lng": -54.6305 },
-    "jardim tv morena": { "lat": -20.4925, "lng": -54.5990 },
-    "tv morena": { "lat": -20.4925, "lng": -54.5990 },
-    "vila progresso": { "lat": -20.4855, "lng": -54.6065 },
-    "vila carlota": { "lat": -20.4965, "lng": -54.6045 },
-    "universitario": { "lat": -20.5105, "lng": -54.6010 },
-    "moreninhas": { "lat": -20.5565, "lng": -54.5855 },
-    "moreninha": { "lat": -20.5565, "lng": -54.5855 },
-    "rita vieira": { "lat": -20.5060, "lng": -54.5780 },
-    "tiradentes": { "lat": -20.4785, "lng": -54.5740 },
-    "vilas boas": { "lat": -20.4840, "lng": -54.5865 },
-    "maria aparecida pedrossian": { "lat": -20.4785, "lng": -54.5445 },
-    "jardim noroeste": { "lat": -20.4570, "lng": -54.5390 },
-    "noroeste": { "lat": -20.4570, "lng": -54.5390 },
-    "los angeles": { "lat": -20.5675, "lng": -54.6180 },
-    "centro oeste": { "lat": -20.5540, "lng": -54.6120 },
-    "paulo coelho machado": { "lat": -20.5480, "lng": -54.6075 },
-    "dom antonio barbosa": { "lat": -20.5430, "lng": -54.6495 },
-    "jardim centenario": { "lat": -20.5335, "lng": -54.6245 },
-    "alves pereira": { "lat": -20.5270, "lng": -54.6140 },
-    "jardim colibri": { "lat": -20.5275, "lng": -54.6050 },
-    "pioneiros": { "lat": -20.5180, "lng": -54.6065 },
-    "br-163": { "lat": -20.4720, "lng": -54.5420 },
-    "br-262": { "lat": -20.4640, "lng": -54.5350 },
-    "anel viario": { "lat": -20.4720, "lng": -54.5420 },
-    "av afonso pena": { "lat": -20.4632, "lng": -54.6105 },
-    "av duque de caxias": { "lat": -20.4655, "lng": -54.6615 },
-    "av costa e silva": { "lat": -20.5030, "lng": -54.6120 },
-    "av julio de castilho": { "lat": -20.4575, "lng": -54.6470 },
-    "av mato grosso": { "lat": -20.4590, "lng": -54.6020 },
-    "av ernesto geisel": { "lat": -20.4775, "lng": -54.6230 },
-    "av gury marques": { "lat": -20.5340, "lng": -54.5975 }
+    "centro": {
+      "lat": -20.4648,
+      "lng": -54.6163
+    },
+    "jardim dos estados": {
+      "lat": -20.4596,
+      "lng": -54.6025
+    },
+    "bela vista": {
+      "lat": -20.466,
+      "lng": -54.5975
+    },
+    "santa fe": {
+      "lat": -20.4535,
+      "lng": -54.592
+    },
+    "caranda bosque": {
+      "lat": -20.4495,
+      "lng": -54.5765
+    },
+    "chacara cachoeira": {
+      "lat": -20.4615,
+      "lng": -54.5815
+    },
+    "vivendas do bosque": {
+      "lat": -20.451,
+      "lng": -54.5835
+    },
+    "parque dos poderes": {
+      "lat": -20.449,
+      "lng": -54.554
+    },
+    "jardim autonomista": {
+      "lat": -20.443,
+      "lng": -54.5905
+    },
+    "mata do jacinto": {
+      "lat": -20.4275,
+      "lng": -54.588
+    },
+    "novos estados": {
+      "lat": -20.417,
+      "lng": -54.5865
+    },
+    "nova lima": {
+      "lat": -20.3865,
+      "lng": -54.589
+    },
+    "coronel antonino": {
+      "lat": -20.436,
+      "lng": -54.6085
+    },
+    "monte castelo": {
+      "lat": -20.4465,
+      "lng": -54.6145
+    },
+    "sao francisco": {
+      "lat": -20.4515,
+      "lng": -54.6245
+    },
+    "cabreuva": {
+      "lat": -20.462,
+      "lng": -54.63
+    },
+    "amambai": {
+      "lat": -20.4715,
+      "lng": -54.632
+    },
+    "vila planalto": {
+      "lat": -20.4665,
+      "lng": -54.638
+    },
+    "santo antonio": {
+      "lat": -20.4595,
+      "lng": -54.649
+    },
+    "jardim imbirussu": {
+      "lat": -20.461,
+      "lng": -54.665
+    },
+    "santo amaro": {
+      "lat": -20.453,
+      "lng": -54.6565
+    },
+    "vila sobrinho": {
+      "lat": -20.451,
+      "lng": -54.6425
+    },
+    "jardim panama": {
+      "lat": -20.4405,
+      "lng": -54.6645
+    },
+    "panama": {
+      "lat": -20.4405,
+      "lng": -54.6645
+    },
+    "vila popular": {
+      "lat": -20.4625,
+      "lng": -54.682
+    },
+    "aeroporto": {
+      "lat": -20.4685,
+      "lng": -54.6725
+    },
+    "coophavila ii": {
+      "lat": -20.511,
+      "lng": -54.6865
+    },
+    "coophavila": {
+      "lat": -20.511,
+      "lng": -54.6865
+    },
+    "taruma": {
+      "lat": -20.5175,
+      "lng": -54.673
+    },
+    "tijuca": {
+      "lat": -20.513,
+      "lng": -54.659
+    },
+    "aero rancho": {
+      "lat": -20.515,
+      "lng": -54.643
+    },
+    "guanandi": {
+      "lat": -20.5015,
+      "lng": -54.639
+    },
+    "vila nhanha": {
+      "lat": -20.4935,
+      "lng": -54.629
+    },
+    "nhanha": {
+      "lat": -20.4935,
+      "lng": -54.629
+    },
+    "piratininga": {
+      "lat": -20.4965,
+      "lng": -54.621
+    },
+    "parati": {
+      "lat": -20.5205,
+      "lng": -54.6285
+    },
+    "jockey club": {
+      "lat": -20.499,
+      "lng": -54.6165
+    },
+    "taquarussu": {
+      "lat": -20.4945,
+      "lng": -54.6455
+    },
+    "caicara": {
+      "lat": -20.4835,
+      "lng": -54.6465
+    },
+    "uniao": {
+      "lat": -20.497,
+      "lng": -54.666
+    },
+    "vila bandeirante": {
+      "lat": -20.483,
+      "lng": -54.6305
+    },
+    "jardim tv morena": {
+      "lat": -20.4925,
+      "lng": -54.599
+    },
+    "tv morena": {
+      "lat": -20.4925,
+      "lng": -54.599
+    },
+    "vila progresso": {
+      "lat": -20.4855,
+      "lng": -54.6065
+    },
+    "vila carlota": {
+      "lat": -20.4965,
+      "lng": -54.6045
+    },
+    "universitario": {
+      "lat": -20.5105,
+      "lng": -54.601
+    },
+    "moreninhas": {
+      "lat": -20.5565,
+      "lng": -54.5855
+    },
+    "moreninha": {
+      "lat": -20.5565,
+      "lng": -54.5855
+    },
+    "rita vieira": {
+      "lat": -20.506,
+      "lng": -54.578
+    },
+    "tiradentes": {
+      "lat": -20.4785,
+      "lng": -54.574
+    },
+    "vilas boas": {
+      "lat": -20.484,
+      "lng": -54.5865
+    },
+    "maria aparecida pedrossian": {
+      "lat": -20.4785,
+      "lng": -54.5445
+    },
+    "jardim noroeste": {
+      "lat": -20.457,
+      "lng": -54.539
+    },
+    "noroeste": {
+      "lat": -20.457,
+      "lng": -54.539
+    },
+    "los angeles": {
+      "lat": -20.5675,
+      "lng": -54.618
+    },
+    "centro oeste": {
+      "lat": -20.554,
+      "lng": -54.612
+    },
+    "paulo coelho machado": {
+      "lat": -20.548,
+      "lng": -54.6075
+    },
+    "dom antonio barbosa": {
+      "lat": -20.543,
+      "lng": -54.6495
+    },
+    "jardim centenario": {
+      "lat": -20.5335,
+      "lng": -54.6245
+    },
+    "alves pereira": {
+      "lat": -20.527,
+      "lng": -54.614
+    },
+    "jardim colibri": {
+      "lat": -20.5275,
+      "lng": -54.605
+    },
+    "pioneiros": {
+      "lat": -20.518,
+      "lng": -54.6065
+    },
+    "br-163": {
+      "lat": -20.472,
+      "lng": -54.542
+    },
+    "br-262": {
+      "lat": -20.464,
+      "lng": -54.535
+    },
+    "anel viario": {
+      "lat": -20.472,
+      "lng": -54.542
+    },
+    "av afonso pena": {
+      "lat": -20.4632,
+      "lng": -54.6105
+    },
+    "av duque de caxias": {
+      "lat": -20.4655,
+      "lng": -54.6615
+    },
+    "av costa e silva": {
+      "lat": -20.503,
+      "lng": -54.612
+    },
+    "av julio de castilho": {
+      "lat": -20.4575,
+      "lng": -54.647
+    },
+    "av mato grosso": {
+      "lat": -20.459,
+      "lng": -54.602
+    },
+    "av ernesto geisel": {
+      "lat": -20.4775,
+      "lng": -54.623
+    },
+    "av gury marques": {
+      "lat": -20.534,
+      "lng": -54.5975
+    },
+    "sao jorge da lagoa": {
+      "lat": -20.5172,
+      "lng": -54.6512
+    },
+    "jardim sao jorge da lagoa": {
+      "lat": -20.5172,
+      "lng": -54.6512
+    },
+    "parque do lageado": {
+      "lat": -20.5585,
+      "lng": -54.6335
+    },
+    "lageado": {
+      "lat": -20.5585,
+      "lng": -54.6335
+    },
+    "jardim leblon": {
+      "lat": -20.497,
+      "lng": -54.6495
+    },
+    "leblon": {
+      "lat": -20.497,
+      "lng": -54.6495
+    },
+    "jardim campo alto": {
+      "lat": -20.5485,
+      "lng": -54.5965
+    },
+    "jardim colorado": {
+      "lat": -20.5415,
+      "lng": -54.623
+    },
+    "vila ipiranga": {
+      "lat": -20.4805,
+      "lng": -54.6145
+    },
+    "parque nacoes indigenas": {
+      "lat": -20.4545,
+      "lng": -54.572
+    },
+    "lagoa park": {
+      "lat": -20.5135,
+      "lng": -54.653
+    },
+    "loteamento cristo redentor": {
+      "lat": -20.5065,
+      "lng": -54.572
+    },
+    "cristo redentor": {
+      "lat": -20.5065,
+      "lng": -54.572
+    },
+    "jardim nossa senhora do perpetuo socorro": {
+      "lat": -20.5625,
+      "lng": -54.596
+    },
+    "perpetuo socorro": {
+      "lat": -20.5625,
+      "lng": -54.596
+    },
+    "vila nova campo grande": {
+      "lat": -20.449,
+      "lng": -54.691
+    },
+    "nova campo grande": {
+      "lat": -20.449,
+      "lng": -54.691
+    },
+    "jardim itamaraca": {
+      "lat": -20.513,
+      "lng": -54.568
+    },
+    "jardim vida nova": {
+      "lat": -20.388,
+      "lng": -54.576
+    },
+    "jardim anache": {
+      "lat": -20.3835,
+      "lng": -54.5815
+    },
+    "jardim montevideu": {
+      "lat": -20.415,
+      "lng": -54.602
+    },
+    "jardim veraneio": {
+      "lat": -20.431,
+      "lng": -54.562
+    },
+    "jardim ze pereira": {
+      "lat": -20.4375,
+      "lng": -54.6775
+    },
+    "vila almeida": {
+      "lat": -20.4645,
+      "lng": -54.6565
+    },
+    "vila carvalho": {
+      "lat": -20.4785,
+      "lng": -54.6215
+    },
+    "jardim campo nobre": {
+      "lat": -20.558,
+      "lng": -54.6195
+    },
+    "jardim sao lourenco": {
+      "lat": -20.473,
+      "lng": -54.5845
+    },
+    "vila nasser": {
+      "lat": -20.418,
+      "lng": -54.629
+    },
+    "seminario": {
+      "lat": -20.427,
+      "lng": -54.6365
+    },
+    "sao conrado": {
+      "lat": -20.519,
+      "lng": -54.665
+    },
+    "santa emilia": {
+      "lat": -20.514,
+      "lng": -54.675
+    },
+    "jardim batistao": {
+      "lat": -20.5175,
+      "lng": -54.682
+    },
+    "jardim aero rancho": {
+      "lat": -20.515,
+      "lng": -54.643
+    },
+    "conjunto aero rancho": {
+      "lat": -20.515,
+      "lng": -54.643
+    },
+    "jardim centro oeste": {
+      "lat": -20.554,
+      "lng": -54.612
+    },
+    "jardim tijuca": {
+      "lat": -20.513,
+      "lng": -54.659
+    },
+    "jardim taruma": {
+      "lat": -20.5175,
+      "lng": -54.673
+    },
+    "jardim los angeles": {
+      "lat": -20.5675,
+      "lng": -54.618
+    },
+    "jardim parati": {
+      "lat": -20.5205,
+      "lng": -54.6285
+    },
+    "vila moreninha i": {
+      "lat": -20.5565,
+      "lng": -54.5855
+    },
+    "vila moreninha ii": {
+      "lat": -20.5585,
+      "lng": -54.5825
+    },
+    "vila moreninha iii": {
+      "lat": -20.5615,
+      "lng": -54.5795
+    },
+    "vila cidade morena": {
+      "lat": -20.5645,
+      "lng": -54.588
+    },
+    "vila taquarussu": {
+      "lat": -20.4945,
+      "lng": -54.6455
+    },
+    "vila vilas boas": {
+      "lat": -20.484,
+      "lng": -54.5865
+    },
+    "parque dos novos estados": {
+      "lat": -20.417,
+      "lng": -54.5865
+    },
+    "parque residencial maria aparecida pedrossian": {
+      "lat": -20.4785,
+      "lng": -54.5445
+    },
+    "almeida lima": {
+      "lat": -20.464,
+      "lng": -54.658
+    },
+    "conjunto residencial estrela do sul": {
+      "lat": -20.422,
+      "lng": -54.596
+    },
+    "estrela do sul": {
+      "lat": -20.422,
+      "lng": -54.596
+    },
+    "residencial estrela park": {
+      "lat": -20.466,
+      "lng": -54.5465
+    },
+    "itanhanga park": {
+      "lat": -20.4765,
+      "lng": -54.599
+    },
+    "jardim america": {
+      "lat": -20.481,
+      "lng": -54.6175
+    },
+    "jardim bela vista": {
+      "lat": -20.466,
+      "lng": -54.5975
+    },
+    "jardim inapolis": {
+      "lat": -20.4495,
+      "lng": -54.696
+    },
+    "jardim itatiaia": {
+      "lat": -20.488,
+      "lng": -54.564
+    },
+    "jardim moema": {
+      "lat": -20.493,
+      "lng": -54.586
+    },
+    "jardim ouro preto": {
+      "lat": -20.4995,
+      "lng": -54.647
+    },
+    "jardim paulista": {
+      "lat": -20.484,
+      "lng": -54.602
+    },
+    "jardim sao bento": {
+      "lat": -20.473,
+      "lng": -54.605
+    },
+    "margarida": {
+      "lat": -20.434,
+      "lng": -54.604
+    },
+    "morada verde": {
+      "lat": -20.399,
+      "lng": -54.595
+    },
+    "nova jerusalem": {
+      "lat": -20.5465,
+      "lng": -54.636
+    },
+    "oliveira iii": {
+      "lat": -20.506,
+      "lng": -54.6615
+    },
+    "panorama": {
+      "lat": -20.474,
+      "lng": -54.552
+    },
+    "royal park": {
+      "lat": -20.447,
+      "lng": -54.571
+    },
+    "vila antonio vendas": {
+      "lat": -20.477,
+      "lng": -54.603
+    },
+    "vila florio": {
+      "lat": -20.47,
+      "lng": -54.6365
+    },
+    "vila gloria": {
+      "lat": -20.472,
+      "lng": -54.6195
+    },
+    "vila manoel da costa lima": {
+      "lat": -20.494,
+      "lng": -54.626
+    },
+    "vila marli": {
+      "lat": -20.436,
+      "lng": -54.639
+    },
+    "vila nossa senhora das gracas": {
+      "lat": -20.442,
+      "lng": -54.6195
+    },
+    "vila olinda": {
+      "lat": -20.503,
+      "lng": -54.593
+    },
+    "vila palmira": {
+      "lat": -20.4535,
+      "lng": -54.646
+    },
+    "vila rosa": {
+      "lat": -20.486,
+      "lng": -54.623
+    },
+    "parque do soter": {
+      "lat": -20.4295,
+      "lng": -54.5855
+    },
+    "anhandui": {
+      "lat": -20.625,
+      "lng": -54.575
+    },
+    "av fernando correa da costa": {
+      "lat": -20.4695,
+      "lng": -54.6125
+    },
+    "av mascarenhas de moraes": {
+      "lat": -20.443,
+      "lng": -54.6175
+    },
+    "rua sete de setembro": {
+      "lat": -20.4669,
+      "lng": -54.6162
+    },
+    "rua 14 de julho": {
+      "lat": -20.4628,
+      "lng": -54.6152
+    }
   }
 }

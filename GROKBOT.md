@@ -115,3 +115,27 @@ Arquivos atualizados de hora em hora pelo Grokbot para cada cidade:
 4. Mantenha **`"id"`** estável para evitar duplicatas entre coletas horárias e acumule o histórico recente (ex.: últimos 30–90 dias).
 5. Use `"precisao": "rua"` quando houver rua/avenida/cruzamento/km exato e `"precisao": "bairro"` quando só houver o bairro (se `lat`/`lng` ficarem nulos, o site posiciona automaticamente usando `data/campo-grande-ms/cidade.json`).
 6. Para adicionar uma **nova cidade** no futuro: adicione a entrada em `data/cidades.json` e crie `data/<slug>/cidade.json`, `crimes.json` e `transito.json`.
+
+---
+
+## 4. Fontes oficiais e portais para Campo Grande — MS
+
+### Base oficial da Polícia / SEJUSP-MS (CSV / Excel — Portal de Dados Abertos)
+O Governo de MS publica planilhas `.csv` (abertas no Excel) e API CKAN direto do sistema policial **SIGO** em `https://www.dados.ms.gov.br` com `Nº/ANO`, `FATO`, `DATA DO FATO`, `HORA DO FATO`, `MUNICÍPIO` (`CAMPO GRANDE`) e `BAIRRO`:
+- **CVLI (Homicídios / Feminicídios / Latrocínios):** `https://www.dados.ms.gov.br/dataset/crimes-violentos-letais-intencionais-sejusp`
+- **Veículos (Furto e Roubo):** `https://www.dados.ms.gov.br/dataset/veiculos-sejusp`
+- **Armas de Fogo apreendidas / disparos:** `https://www.dados.ms.gov.br/dataset/armas-sejusp`
+- **Tráfico / Drogas e Ocorrências:** `https://www.dados.ms.gov.br/dataset/ocorrencias-sejusp` e `https://www.dados.ms.gov.br/dataset/drogas-sejusp`
+- **Cumprimento de Mandados:** `https://www.dados.ms.gov.br/dataset/cumprimento-de-mandado-sejusp`
+
+*(Obs.: os CSVs da SEJUSP-MS têm defasagem média de ~1 a 2 meses — ideais para o histórico oficial de 90 dias/1 ano. O Detran-MS não publica CSV de acidentes de trânsito no portal, apenas frotas, CNH e infrações.)*
+
+### Portais de notícias de Campo Grande (tempo real / hora em hora)
+- **G1 MS:** `https://g1.globo.com/rss/g1/ms/mato-grosso-do-sul/`
+- **Midiamax (Polícia e Geral):** `https://midiamax.com.br/policia/feed/` e `https://midiamax.com.br/feed/`
+- **Campo Grande News:** `https://www.campograndenews.com.br/`
+- **JD1 Notícias:** `https://www.jd1noticias.com/rss/`
+- **O Estado Online:** `https://oestadoonline.com.br/feed/`
+- **Correio do Estado:** `https://correiodoestado.com.br/rss/`
+- **Primeira Página:** `https://primeirapagina.com.br/feed/`
+- **A Crítica de Campo Grande / Diário Digital / TopMídiaNews**
