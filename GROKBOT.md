@@ -132,14 +132,36 @@ O Governo de MS publica planilhas `.csv` (abertas no Excel) e API CKAN direto do
 *(Obs.: os CSVs da SEJUSP-MS têm defasagem média de ~1 a 2 meses — ideais para o histórico oficial de 90 dias/1 ano. O Detran-MS não publica CSV de acidentes de trânsito no portal, apenas frotas, CNH e infrações.)*
 
 ### Portais de notícias de Campo Grande (tempo real / hora em hora)
-- **G1 MS:** `https://g1.globo.com/rss/g1/ms/mato-grosso-do-sul/`
-- **Midiamax (Polícia e Geral):** `https://midiamax.com.br/policia/feed/` e `https://midiamax.com.br/feed/`
-- **Campo Grande News:** `https://www.campograndenews.com.br/`
-- **JD1 Notícias:** `https://www.jd1noticias.com/rss/`
-- **O Estado Online:** `https://oestadoonline.com.br/feed/`
-- **Correio do Estado:** `https://correiodoestado.com.br/rss/`
-- **Primeira Página:** `https://primeirapagina.com.br/feed/`
-- **A Crítica de Campo Grande / Diário Digital / TopMídiaNews**
+*(Nota: alguns portais podem não expor RSS nativo ou apresentar certificado TLS antigo; nesses casos, coletar via Google News RSS com `site:<dominio>` mantendo sempre o link exato da matéria.)*
+
+- **Portais específicos de bairro/região (hiperlocais):**
+  - **Nova Lima News:** `https://novalima.news/` (região norte: Nova Lima, Columbia, Anache, Vida Nova, Tarsila do Amaral, Campo Belo e Novos Estados)
+  - **Moreninhas News:** `https://moreninhasnews.com.br/` (Moreninhas e região sul — forte cobertura policial e comunitária)
+  - **Comunidade.MS:** `http://www.comunidadems.com.br/` *(monitorar retorno — foco em jornalismo de bairro em CG)*
+
+- **Portais que cobrem Campo Grande inteira (com seção de bairros / ruas):**
+  - **Campo Grande News ("Direto das Ruas"):** `https://www.campograndenews.com.br/direto-das-ruas` e `https://www.campograndenews.com.br/`
+  - **Midiamax (Polícia e Campo Grande):** `https://midiamax.com.br/policia/feed/` e `https://midiamax.com.br/municipios/campo-grande/`
+  - **G1 MS:** `https://g1.globo.com/rss/g1/ms/mato-grosso-do-sul/`
+  - **Capital News:** `https://www.capitalnews.com.br/`
+  - **TOP Mídia News:** `https://www.topmidianews.com.br/`
+  - **Correio do Estado:** `https://correiodoestado.com.br/cidades` e `https://correiodoestado.com.br/rss/`
+  - **MS News (Campo Grande):** `https://www.msnews.com.br/categorias/56/campo-grande`
+  - **Diário Digital:** `https://www.diariodigital.com.br/`
+  - **Folha MS:** `https://folhams.com.br/`
+  - **MS Notícias:** `https://www.msnoticias.com.br/`
+  - **JD1 Notícias:** `https://www.jd1noticias.com/rss/`
+  - **O Estado Online:** `https://oestadoonline.com.br/feed/`
+  - **Primeira Página:** `https://primeirapagina.com.br/feed/`
+  - **A Crítica de Campo Grande / CGNotícias (Prefeitura — obras/serviços por bairro):** `https://www.campogrande.ms.gov.br/cgnoticias/noticias/`
+
+- **Interior de MS (referência para futuras cidades de MS):**
+  - **Dourados News** (`https://www.douradosnews.com.br/`), **O Progresso** (`https://www.progresso.com.br/`), **Diário Corumbaense** (`https://diarionline.com.br/`), **Perfil News — Três Lagoas** (`https://www.perfilnews.com.br/`)
+
+- **Diretórios de imprensa de MS:**
+  - Guia da Mídia — MS: `https://www.guiademidia.com.br/jornaisdomatogrossodosul.htm`
+  - Atlas da Imprensa — MS: `https://atlasdaimprensa.com.br/matogrossodosul-jornais/`
+  - ABYZ News Links — MS: `https://www.abyznewslinks.com/brazims.htm`
 
 ---
 
@@ -150,12 +172,25 @@ O Governo de MS publica planilhas `.csv` (abertas no Excel) e API CKAN direto do
 - A **PCPR** (`https://www.policiacivil.pr.gov.br/`) e a **PMPR** (`https://www.pmpr.pr.gov.br/`) divulgam notas oficiais de prisões e operações.
 
 ### Portais de notícias de Maringá (tempo real / hora em hora)
-- **GMC Online (Geral e Policial):** `https://gmconline.com.br/feed/` e `https://gmconline.com.br/noticias/policial/feed/`
 - **Plantão Maringá:** `https://plantaomaringa.com/`
+- **GMC Online (Geral e Policial):** `https://gmconline.com.br/feed/` e `https://gmconline.com.br/noticias/policial/feed/`
+- **O Diário de Maringá:** `https://odiariodemaringa.com.br/feed/`
+- **Maringá.com:** `https://noticias.maringa.com/feed/`
+- **Portal de Maringá:** `https://portaldemaringa.com.br/feed/`
+- **Maringá Mais / Jornal do Povo:** `https://www.jornaldopovomaringa.com.br/feed/`
 - **Maringá Post:** `https://maringapost.com.br/`
-- **G1 Norte e Noroeste PR:** `https://g1.globo.com/rss/g1/pr/norte-noroeste/`
+- **Maringá Manchete:** `https://www.maringamanchete.com.br/feed/`
+- **O Fato Maringá:** `https://www.ofatomaringa.com.br/`
 - **O Maringá:** `https://omaringa.com.br/feed/`
-- **O Diário de Maringá / CBN Maringá / André Almenara / Catve**
+- **Pinga Fogo Notícias:** `https://www.pingafogo.com.br/feed/`
+- **Expresso Online:** `https://www.expressoonline.com.br/`
+- **O Dia na Cidade:** `https://odianacidade.com.br/`
+- **CBN Maringá:** `https://cbnmaringa.com.br/feed/`
+- **Blog Angelo Rigon (apuração local, política e cidade):** `https://angelorigon.com.br/`
+- **G1 Norte e Noroeste PR:** `https://g1.globo.com/rss/g1/pr/norte-noroeste/`
+- **Prefeitura de Maringá (obras, serviços e agenda por região):** `https://www.maringa.pr.gov.br/noticias`
+- **Outros:** André Almenara / Catve
+- **Diretórios de Maringá:** Guia da Mídia (`https://www.guiademidia.com.br/parana/jornais-de-maringa.htm`) e ListaMídia (`https://listamidia.com.br/pr/maringa`)
 
 ---
 
@@ -205,3 +240,46 @@ O Governo de MS publica planilhas `.csv` (abertas no Excel) e API CKAN direto do
   - AJORB (Associação dos Jornais e Revistas de Bairro de SP): `https://www.ajorb.com.br/associados/`
   - Guia da Mídia — Bairros da Capital: `https://www.guiademidia.com.br/jornais/saopaulo/bairros.htm`
   - Guia da Mídia — Grande SP: `https://www.guiademidia.com.br/jornais/saopaulo/grandesp.htm`
+
+---
+
+## 7. Fontes oficiais e portais para Rio de Janeiro e Região — RJ (`data/rio-de-janeiro-rj/`)
+
+### Base oficial da Polícia / ISP-RJ, PCERJ e PMERJ (CSVs abertos)
+O **ISP-RJ (Instituto de Segurança Pública do Estado do Rio de Janeiro)** consolida mensalmente os registros oficiais da **Polícia Civil (CISP / Delegacia)** e da **Polícia Militar (AISP / Batalhão)** em `https://www.ispdados.rj.gov.br/estatistica.html`:
+- **Base Mensal por Delegacia (CISP / AISP):** `https://www.ispdados.rj.gov.br/Arquivos/BaseDPEvolucaoMensalCisp.csv` (CVLI, homicídio doloso, latrocínio, feminicídio, intervenção policial, roubo de rua/transeunte/celular/veículo/carga, furtos, estupro, tráfico/apreensão de drogas, estelionato)
+- **Armas de Fogo Apreendidas por Delegacia (CISP / AISP):** `https://www.ispdados.rj.gov.br/Arquivos/ArmasApreendidasEvolucaoCisp.csv` (fuzis, pistolas, revólveres, submetralhadoras, espingardas, carabinas, artefatos explosivos)
+- **Drogas Apreendidas por Delegacia (CISP):** `https://www.ispdados.rj.gov.br/Arquivos/DrogasEvolucaoMensalCisp.csv`
+- **Base Municipal Mensal & UPPs:** `https://www.ispdados.rj.gov.br/Arquivos/BaseMunicipioMensal.csv` e `https://www.ispdados.rj.gov.br/Arquivos/UppEvolucaoMensalDeTitulos.csv`
+- **Portais oficiais:** PMERJ (`https://sepm.rj.gov.br/`) e PCERJ (`https://www.policiacivil.rj.gov.br/`)
+
+### Portais com editoria de bairro (tempo real / hora em hora)
+- **g1 Rio:** `https://g1.globo.com/rss/g1/rj/rio-de-janeiro/` (`https://g1.globo.com/rj/rio-de-janeiro/`)
+- **O Globo — Bairros (Zona Sul, Barra, Tijuca/ZN, Niterói):** `https://oglobo.globo.com/rio/bairros/`
+- **Extra — Zona Oeste / Polícia:** `https://extra.globo.com/noticias/rio/zona-oeste/`
+- **Diário do Rio (bairro a bairro — ZN, ZO, Centro, ZS):** `https://diariodorio.com/`
+- **O Dia Rio:** `https://odia.ig.com.br/_conteudo/rio-de-janeiro/rss.xml`
+
+### Jornais de bairro e regionais do RJ
+- **Correio Carioca (Zona Norte):** `https://correiocarioca.com.br/feed/`
+- **Notícias Úteis da Zona Oeste:** `https://www.noticiasuteisdazonaoeste.com.br/`
+- **Jornal do Recreio:** `https://jornaldorecreio.com.br/feed/`
+- **Tipo Carioca (Recreio):** `https://www.tipocarioca.com.br/`
+- **Jornal Orla Sul:** `https://jornalorlasul.com.br/`
+- **Ilha Carioca (Ilha do Governador):** `https://ilhacarioca.com/feed/`
+- **O Cidadão (Maré):** `https://jornalocidadao.net/feed/`
+- **Expresso Carioca (Vila da Penha):** `https://www.expressocarioca.com.br/feed/`
+- **JB em Folhas (Jardim Botânico, Gávea, Humaitá, Lagoa):** `https://jbemfolhas.com.br/feed/`
+- **Folha do Centro:** `https://www.jornalfolhadocentro.com.br/`
+- **Guias por bairro:** Realengo (`https://realengo.net.br/`), Bangu (`https://bangu.net.br/`), Botafogo (`https://botafogo.net.br/`)
+
+### Comunicação comunitária de favela
+- **Voz das Comunidades:** `https://vozdascomunidades.com.br/feed/`
+- **ANF — Agência de Notícias das Favelas:** `https://www.anf.org.br/feed/`
+- **RioOnWatch:** `https://rioonwatch.org.br/`
+- **Maré de Notícias:** perfil em `https://rioonwatch.org.br/?p=12900`
+
+### Diretórios de imprensa do RJ
+- Guia da Mídia — RJ: `https://www.guiademidia.com.br/rio-de-janeiro/jornais-do-rio-de-janeiro.htm`
+- Atlas da Imprensa — RJ: `https://atlasdaimprensa.com.br/riodejaneiro-jornais/`
+- ABYZ News Links — RJ: `https://www.abyznewslinks.com/brazirj.htm`

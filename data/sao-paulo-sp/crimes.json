@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-24T18:25:00-03:00",
+  "atualizado_em": "2026-11-24T18:45:00-03:00",
   "fonte": "Portais & Jornais Locais SP + Base Oficial SSP-SP",
   "cidade": "São Paulo e Região - SP",
   "observacao": "47 ocorrências recentes de portais e jornais locais de SP/RMSP (BNews SP, Metrópoles, Folha, G1 SP, R7, CNN, DGABC, Visão Oeste, PM-SP/PC-SP) + 761 boletins oficiais da SSP-SP (SPDadosCriminais_2026.xlsx, set/2026) cobrindo todas as zonas da Capital (incluindo Extremo Sul: Grajaú, Parelheiros, Cidade Dutra, Capão Redondo, Jardim Ângela) e Grande SP.",
@@ -71,6 +71,22 @@
       "fonte": "O Diário de Mogi",
       "link": "https://www.odiariodemogi.net.br/suzano/homem-com-dois-mandados-de-prisao-em-aberto-e-preso-em-suzano/",
       "resumo": "Foragido com dois mandados de prisão em aberto foi localizado e detido pelas forças de segurança em Suzano."
+    },
+    {
+      "id": "gmc-2026-11-24-1554-feminicidio-zl-motel-zs-sp",
+      "data": "2026-11-24",
+      "hora": "15:54",
+      "tipo": "homicidio",
+      "titulo": "Homem mata ex-namorada a facadas na Zona Leste de SP e é encontrado morto em motel na Zona Sul",
+      "cidade": "São Paulo",
+      "bairro": "Zona Leste",
+      "endereco": "Zona Leste / Zona Sul de São Paulo",
+      "lat": -23.5418,
+      "lng": -46.512,
+      "precisao": "bairro",
+      "nova": true,
+      "fonte": "GMC Online",
+      "link": "https://gmconline.com.br/noticias/policial/homem-mata-ex-namorada-a-facadas-e-depois-e-encontrado-morto-em-motel/"
     },
     {
       "id": "pmsp-2026-11-24-1428-drogas-residencia-jardim-california-barueri",

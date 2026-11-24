@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-24T17:45:00-03:00",
+  "atualizado_em": "2026-11-24T18:45:00-03:00",
   "fonte": "Portais Maringá + PCPR / PMPR",
   "cidade": "Maringá - PR",
   "observacao": "Varredura de ocorrências policiais em Maringá - PR nos portais GMC Online, Plantão Maringá, Maringá Post, G1 PR, O Diário de Maringá, CBN Maringá e comunicações da PCPR/PMPR (25/10 a 24/11/2026).",
@@ -71,6 +71,22 @@
       "fonte": "GMC Online / PCPR",
       "link": "https://gmconline.com.br/noticias/policial/acao-conjunta-entre-as-policias-civis-do-parana-e-de-santa-catarina-prende-foragido-de-maringa-em-florianopolis/",
       "resumo": "Investigação do NAOPI da 9ª SDP de Maringá localizou em Florianópolis (SC) foragido de 35 anos com três mandados de prisão por homicídios, roubo, furto e tráfico."
+    },
+    {
+      "id": "gmc-2026-11-23-1951-briga-praca-ipiranga-sarandi-esfaqueado",
+      "data": "2026-11-23",
+      "hora": "19:51",
+      "tipo": "agressao",
+      "titulo": "Briga na Praça Ipiranga, em Sarandi (RM Maringá), termina com homem esfaqueado no pescoço",
+      "cidade": "Sarandi",
+      "bairro": "Centro (Sarandi)",
+      "endereco": "Praça Ipiranga — Av. Londrina, Sarandi",
+      "lat": -23.4437,
+      "lng": -51.8739,
+      "precisao": "rua",
+      "nova": false,
+      "fonte": "GMC Online",
+      "link": "https://gmconline.com.br/noticias/policial/briga-em-praca-de-sarandi-termina-com-homem-esfaqueado-no-pescoco/"
     },
     {
       "id": "gmc-2026-11-23-esfaqueado-pescoco-enteado-iguatemi",

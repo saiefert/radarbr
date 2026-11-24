@@ -1,27 +1,9 @@
 {
-  "atualizado_em": "2026-11-24T16:45:00-04:00",
+  "atualizado_em": "2026-11-24T18:45:00-04:00",
   "fonte": "Portais CG (G1 MS, Midiamax, CG News, Diário Digital)",
   "cidade": "Campo Grande - MS",
   "observacao": "Varredura de acidentes de trânsito em Campo Grande - MS nos principais portais locais (21 a 24/11/2026).",
   "ocorrencias": [
-    {
-      "id": "g1ms-2026-11-24-0600-br163-fatal-carretas",
-      "data": "2026-11-24",
-      "hora": "06:00",
-      "tipo": "fatal",
-      "titulo": "Colisão entre carro e duas carretas provoca incêndio e mata motorista de 30 anos na BR-163",
-      "cidade": "Campo Grande",
-      "bairro": "BR-163",
-      "endereco": "BR-163, km 500–501 (saída para Cuiabá / Rochedinho)",
-      "lat": -20.312,
-      "lng": -54.5395,
-      "precisao": "rua",
-      "gravidade": "fatal",
-      "nova": true,
-      "fonte": "G1 MS",
-      "link": "https://g1.globo.com/ms/mato-grosso-do-sul/noticia/2026/11/24/batida-entre-carretas-e-carro-provoca-incendio-e-deixa-um-morto-na-br-163.ghtml",
-      "resumo": "HB20 colidiu com carreta, rodou na pista e foi atingido por outra carreta no sentido contrário, incendiando em seguida. Motorista de 30 anos morreu no local; PRF e Bombeiros atenderam."
-    },
     {
       "id": "diariodigital-2026-11-24-0830-acidente-vilas-boas",
       "data": "2026-11-24",
@@ -39,6 +21,24 @@
       "fonte": "Diário Digital",
       "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxORmJQc3htOGJWbGc3VDR1a2JHby1kV193T1daTm83OE4zUG5tUnZMSmhPYVpWTVV1VC1pcTd6SzhZMEFSTXFpb0RjRW1PZnI5emN4X3FSdnJoX3lvUWNjTENwTmJJZ2ROSElad0NLT3ExWHFrQVVVaTFDWi1nNm80NnV1cVRqTWUwZnp0SVZqSmE2WmZLR0ltY1JVeGJMLXAxNU9qc1dQdWFGM28?oc=5",
       "resumo": "Equipe de reportagem flagrou ocorrência de colisão de trânsito no início da manhã desta terça-feira no bairro Vilas Boas."
+    },
+    {
+      "id": "g1ms-2026-11-24-0600-br163-fatal-carretas",
+      "data": "2026-11-24",
+      "hora": "06:00",
+      "tipo": "fatal",
+      "titulo": "Colisão entre carro e duas carretas provoca incêndio e mata motorista de 30 anos na BR-163",
+      "cidade": "Campo Grande",
+      "bairro": "BR-163",
+      "endereco": "BR-163, km 500–501 (saída para Cuiabá / Rochedinho)",
+      "lat": -20.312,
+      "lng": -54.5395,
+      "precisao": "rua",
+      "gravidade": "fatal",
+      "nova": true,
+      "fonte": "G1 MS",
+      "link": "https://g1.globo.com/ms/mato-grosso-do-sul/noticia/2026/11/24/batida-entre-carretas-e-carro-provoca-incendio-e-deixa-um-morto-na-br-163.ghtml",
+      "resumo": "HB20 colidiu com carreta, rodou na pista e foi atingido por outra carreta no sentido contrário, incendiando em seguida. Motorista de 30 anos morreu no local; PRF e Bombeiros atenderam."
     },
     {
       "id": "cgnews-2026-11-24-0220-capotamento-capivaras-soter",
@@ -59,6 +59,23 @@
       "resumo": "Motorista de 34 anos em VW Tiguan desviou de capivaras na madrugada, atingiu árvore em frente ao Parque do Sóter e tombou. Condutor não teve ferimentos graves."
     },
     {
+      "id": "cgnews-2026-11-24-0002-onibus-funcionarios-vala-drenagem",
+      "data": "2026-11-24",
+      "hora": "00:02",
+      "tipo": "onibus_caminhao",
+      "titulo": "Ônibus que transportava funcionários cai em vala de drenagem em Campo Grande",
+      "cidade": "Campo Grande",
+      "bairro": "Campo Grande",
+      "endereco": "Via com obra de drenagem",
+      "lat": -20.491,
+      "lng": -54.641,
+      "precisao": "bairro",
+      "gravidade": "leve",
+      "nova": true,
+      "fonte": "Campo Grande News",
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNRUNoMEVaZUtYbVhXbkV1bXhsdjhhekQtb2w5aVVUcEZEYjRuQ0VXNTdYcnNMbDlNU3lIZVUtV3A0cmZGclo4M2g2MnBaV2prLUxQZ09ia3BSYmhZSGFoS0JoTzZ4Q3NlblVXaEZwZl91TEpvd0ZDdDRTYlpQX2hDNTJLU2kzUlFNaldzS2hLQU96dnpvQ1IyYm5IcWJ1a2NfSkl6NzdZSF94Qjkza2xIMw?oc=5"
+    },
+    {
       "id": "midiamax-2026-11-23-2030-atropelamento-mascarenhas",
       "data": "2026-11-23",
       "hora": "20:30",
@@ -75,6 +92,23 @@
       "fonte": "Midiamax",
       "link": "https://midiamax.com.br/policia/transito/2026/video-idoso-atropelado-mascarenhas-moraes-socorrido-santa-casa/",
       "resumo": "Vítima sofreu fratura na perna após ser atropelada na noite de segunda-feira e foi encaminhada à Santa Casa. Comerciantes pedem redutor de velocidade na via."
+    },
+    {
+      "id": "topmidia-2026-11-23-1633-carro-buraco-jardim-batistao",
+      "data": "2026-11-23",
+      "hora": "16:33",
+      "tipo": "outro",
+      "titulo": "Carro cai em buraco e tem roda quebrada no Jardim Batistão",
+      "cidade": "Campo Grande",
+      "bairro": "Jardim Batistão",
+      "endereco": "Bairro Jardim Batistão",
+      "lat": -20.5176,
+      "lng": -54.6775,
+      "precisao": "bairro",
+      "gravidade": "leve",
+      "nova": false,
+      "fonte": "Top Mídia News",
+      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQUlVJa3BubUxSNVQ1dzVmVFRoOUxPcXVWMGRhNkZ3MVZzOFQwWGJrT2RKR1NoTjBXeTgwanZ1MGRZR3Q3U1lXTDQ4RGNiR2Z3c2dtbE1VYURMRG11WUZnNWZPNThnZzNLV3FJWDhLMXkzb0x3aEV6VV9GNWdaZHByZU1nci04Z3FKMjl1TThvbHRiX0VpYWJkRVZPa2dfSDNhQ1pVeGpBSTY3VnQyT3FvS01MMVRxTUo30gG3AUFVX3lxTFBIZ19TTjBtVkRBVkJlaFV3QVlBaEV6c0xsbE5USEhCX19GWE9GX2E5bE1Da2RobWlsS1hjRE1qNnJoRzVldFM2bG0xUV9IM0g5enJMX2QtZHFsaUVJeTRSRmtITDZ2ei1nWGlRTzVNNnFHQU5pc19IdlJFX2FsbGlLZnNFb2RzRnl6STdDYnVXQ3NiZTlpc0YxTFZOOS1zN0ZTUjk0MEpzdHBydmpFMy1lU212d1ZwSQ?oc=5"
     },
     {
       "id": "cgnews-2026-11-23-1540-engavetamento-carretas-br163",
@@ -129,6 +163,40 @@
       "fonte": "G1 MS / Campo Grande News",
       "link": "https://g1.globo.com/ms/mato-grosso-do-sul/noticia/2026/11/21/motorista-passa-mal-bate-em-carro-parado-no-semaforo-e-e-socorrido-em-campo-grande.ghtml",
       "resumo": "Populares quebraram o vidro do Honda HR-V para socorrer o motorista após mal súbito; equipes do SAMU realizaram manobras de reanimação no local."
+    },
+    {
+      "id": "msnoticias-2026-11-19-1244-sargento-pm-morre-colisao-bmw1000",
+      "data": "2026-11-19",
+      "hora": "12:44",
+      "tipo": "fatal",
+      "titulo": "3º Sargento da PM morre após colisão entre moto BMW 1000 e Fiat Strada na Av. Capitão Mário Pio",
+      "cidade": "Campo Grande",
+      "bairro": "Campo Grande",
+      "endereco": "Av. Capitão Mário Pio",
+      "lat": -20.4648,
+      "lng": -54.6365,
+      "precisao": "rua",
+      "gravidade": "fatal",
+      "nova": false,
+      "fonte": "MS Notícias",
+      "link": "https://www.msnoticias.com.br/policia/2026/11/19/3o-sargento-da-pm-morre-ao-colidir-moto-bmw-1000.html"
+    },
+    {
+      "id": "cgnews-2026-11-16-0500-motociclista-morre-bater-muro",
+      "data": "2026-11-16",
+      "hora": "05:00",
+      "tipo": "fatal",
+      "titulo": "Motociclista morre após bater em muro em Campo Grande",
+      "cidade": "Campo Grande",
+      "bairro": "Campo Grande",
+      "endereco": "Campo Grande",
+      "lat": -20.4795,
+      "lng": -54.607,
+      "precisao": "bairro",
+      "gravidade": "fatal",
+      "nova": false,
+      "fonte": "Campo Grande News",
+      "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPTlRNd3BmYV9qRFg4YzZzZTdtVXhhWGZONllZVThaSFBYM1luaklHaXBvUE9RejE5cXJnd09uanNreGlDVGFfX0lBTVY5V1pDRjdGVENlYnZaaTN3RnZqQ1hQeHd4WXJFVzBrSnhhb0RuVFpHWUtnVlgzT0pybWpXSGVVSldsckpJcnREVFc2VFI4cDBTMDdCT1g5WGpoZUt0eFVrd3F1c1pEeTVCbnp2Y2dlZ0RkVDRnUUlrR0Y4czMtYm9vM3hnSnlFVdIBywFBVV95cUxNOW1rejZvd25ETWJzMDd2NFRVOTlOcWRDRy14QWJZODlwVHJtRHA4Wk1EeEtqNzZsYUpIbHdCSkpiZVdVRGhUR3k3b3ljV05rR3NyNFJ2MV9ybkZ2bXlOOS1MZ3d3YV9KNTNxMy0tSG9Hb3BoUERESlJpX0lVbEhFRnVCaGZ5SHRMZmViTEFFZktZVVdQQmFTRk9YLWlGT1BtMXlIM3dIcjRHeEpkYXRORVE4dVQwcFVqMzFaUjh4RjV6ZzN5MS1jN3QzUQ?oc=5"
     }
   ]
 }

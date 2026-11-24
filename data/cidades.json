@@ -37,6 +37,18 @@
       },
       "zoom": 11,
       "ativa": true
+    },
+    {
+      "slug": "rio-de-janeiro-rj",
+      "nome": "Rio de Janeiro e Região",
+      "uf": "RJ",
+      "rotulo": "Rio de Janeiro e Região — RJ",
+      "centro": {
+        "lat": -22.9068,
+        "lng": -43.1729
+      },
+      "zoom": 11,
+      "ativa": true
     }
   ]
 }

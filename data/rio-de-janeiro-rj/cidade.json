@@ -1,0 +1,398 @@
+{
+  "slug": "rio-de-janeiro-rj",
+  "nome": "Rio de Janeiro e Região",
+  "uf": "RJ",
+  "rotulo": "Rio de Janeiro e Região — RJ",
+  "centro": {
+    "lat": -22.9068,
+    "lng": -43.1729
+  },
+  "zoom": 11,
+  "fuso": "America/Sao_Paulo",
+  "bairros": {
+    "Alcântara": {
+      "lat": -22.8215,
+      "lng": -43.0015
+    },
+    "Andaraí": {
+      "lat": -22.9285,
+      "lng": -43.2525
+    },
+    "Avenida Brasil": {
+      "lat": -22.8495,
+      "lng": -43.2895
+    },
+    "Bangu": {
+      "lat": -22.8755,
+      "lng": -43.4665
+    },
+    "Barra da Tijuca": {
+      "lat": -23.0005,
+      "lng": -43.3655
+    },
+    "Belford Roxo": {
+      "lat": -22.7645,
+      "lng": -43.3995
+    },
+    "Bonsucesso": {
+      "lat": -22.8635,
+      "lng": -43.2535
+    },
+    "Botafogo": {
+      "lat": -22.951,
+      "lng": -43.1835
+    },
+    "Brás de Pina": {
+      "lat": -22.8315,
+      "lng": -43.2965
+    },
+    "Campinho": {
+      "lat": -22.8825,
+      "lng": -43.3475
+    },
+    "Campo Grande": {
+      "lat": -22.9035,
+      "lng": -43.5595
+    },
+    "Campos Elíseos": {
+      "lat": -22.6995,
+      "lng": -43.2855
+    },
+    "Catete": {
+      "lat": -22.9258,
+      "lng": -43.1775
+    },
+    "Centro": {
+      "lat": -22.9065,
+      "lng": -43.189
+    },
+    "Centro (Duque de Caxias)": {
+      "lat": -22.7855,
+      "lng": -43.3115
+    },
+    "Centro (Niterói)": {
+      "lat": -22.8935,
+      "lng": -43.1235
+    },
+    "Centro (Nova Iguaçu)": {
+      "lat": -22.7595,
+      "lng": -43.4515
+    },
+    "Cidade Nova": {
+      "lat": -22.9102,
+      "lng": -43.2045
+    },
+    "Cidade de Deus": {
+      "lat": -22.9485,
+      "lng": -43.3625
+    },
+    "Comendador Soares": {
+      "lat": -22.7425,
+      "lng": -43.4895
+    },
+    "Complexo da Maré": {
+      "lat": -22.8585,
+      "lng": -43.2425
+    },
+    "Complexo do Alemão": {
+      "lat": -22.8595,
+      "lng": -43.2745
+    },
+    "Copacabana": {
+      "lat": -22.969,
+      "lng": -43.1865
+    },
+    "Curicica": {
+      "lat": -22.9495,
+      "lng": -43.3855
+    },
+    "Engenho Novo": {
+      "lat": -22.9045,
+      "lng": -43.2665
+    },
+    "Flamengo": {
+      "lat": -22.9335,
+      "lng": -43.1755
+    },
+    "Fonseca": {
+      "lat": -22.8815,
+      "lng": -43.0915
+    },
+    "Freguesia (Jacarepaguá)": {
+      "lat": -22.9415,
+      "lng": -43.3385
+    },
+    "Galeão": {
+      "lat": -22.8099,
+      "lng": -43.2506
+    },
+    "Glória": {
+      "lat": -22.9215,
+      "lng": -43.1765
+    },
+    "Grajaú": {
+      "lat": -22.9235,
+      "lng": -43.2645
+    },
+    "Guapimirim": {
+      "lat": -22.5365,
+      "lng": -42.9815
+    },
+    "Guaratiba": {
+      "lat": -22.9935,
+      "lng": -43.6065
+    },
+    "Gávea": {
+      "lat": -22.9765,
+      "lng": -43.2285
+    },
+    "Honório Gurgel": {
+      "lat": -22.8455,
+      "lng": -43.3565
+    },
+    "Humaitá": {
+      "lat": -22.9565,
+      "lng": -43.1995
+    },
+    "Icaraí": {
+      "lat": -22.9055,
+      "lng": -43.1095
+    },
+    "Ilha do Governador": {
+      "lat": -22.8115,
+      "lng": -43.2085
+    },
+    "Imbariê": {
+      "lat": -22.6345,
+      "lng": -43.2195
+    },
+    "Inhaúma": {
+      "lat": -22.8765,
+      "lng": -43.2835
+    },
+    "Ipanema": {
+      "lat": -22.9838,
+      "lng": -43.1995
+    },
+    "Irajá": {
+      "lat": -22.8315,
+      "lng": -43.3265
+    },
+    "Itaguaí": {
+      "lat": -22.8695,
+      "lng": -43.7755
+    },
+    "Itaipu": {
+      "lat": -22.9595,
+      "lng": -43.0415
+    },
+    "Jacarepaguá": {
+      "lat": -22.9395,
+      "lng": -43.3615
+    },
+    "Japeri": {
+      "lat": -22.6435,
+      "lng": -43.6535
+    },
+    "Jardim Botânico": {
+      "lat": -22.9665,
+      "lng": -43.2245
+    },
+    "Jurujuba": {
+      "lat": -22.9315,
+      "lng": -43.1125
+    },
+    "Lagoa": {
+      "lat": -22.9715,
+      "lng": -43.2085
+    },
+    "Lapa": {
+      "lat": -22.9125,
+      "lng": -43.183
+    },
+    "Laranjeiras": {
+      "lat": -22.9345,
+      "lng": -43.1885
+    },
+    "Leblon": {
+      "lat": -22.984,
+      "lng": -43.2235
+    },
+    "Linha Amarela": {
+      "lat": -22.8785,
+      "lng": -43.2845
+    },
+    "Linha Vermelha": {
+      "lat": -22.8665,
+      "lng": -43.2315
+    },
+    "Madureira": {
+      "lat": -22.8755,
+      "lng": -43.3365
+    },
+    "Magé": {
+      "lat": -22.6525,
+      "lng": -43.0405
+    },
+    "Maracanã": {
+      "lat": -22.9122,
+      "lng": -43.2302
+    },
+    "Marechal Hermes": {
+      "lat": -22.8615,
+      "lng": -43.3715
+    },
+    "Maricá": {
+      "lat": -22.9195,
+      "lng": -42.8185
+    },
+    "Mesquita": {
+      "lat": -22.7825,
+      "lng": -43.4315
+    },
+    "Mutuá": {
+      "lat": -22.8265,
+      "lng": -43.0535
+    },
+    "Méier": {
+      "lat": -22.902,
+      "lng": -43.281
+    },
+    "Neves": {
+      "lat": -22.8545,
+      "lng": -43.0955
+    },
+    "Nilópolis": {
+      "lat": -22.8075,
+      "lng": -43.4145
+    },
+    "Olaria": {
+      "lat": -22.8455,
+      "lng": -43.2635
+    },
+    "Paracambi": {
+      "lat": -22.6115,
+      "lng": -43.7085
+    },
+    "Pavuna": {
+      "lat": -22.8065,
+      "lng": -43.3645
+    },
+    "Pechincha": {
+      "lat": -22.9285,
+      "lng": -43.3535
+    },
+    "Penha": {
+      "lat": -22.8425,
+      "lng": -43.2775
+    },
+    "Piabetá": {
+      "lat": -22.6115,
+      "lng": -43.1755
+    },
+    "Piedade": {
+      "lat": -22.8915,
+      "lng": -43.3075
+    },
+    "Ponte Rio-Niterói": {
+      "lat": -22.8712,
+      "lng": -43.1565
+    },
+    "Posse": {
+      "lat": -22.7245,
+      "lng": -43.4485
+    },
+    "Praça da Bandeira": {
+      "lat": -22.9125,
+      "lng": -43.2145
+    },
+    "Queimados": {
+      "lat": -22.7165,
+      "lng": -43.5555
+    },
+    "Ramos": {
+      "lat": -22.8505,
+      "lng": -43.2555
+    },
+    "Realengo": {
+      "lat": -22.8795,
+      "lng": -43.4315
+    },
+    "Recreio dos Bandeirantes": {
+      "lat": -23.0165,
+      "lng": -43.4655
+    },
+    "Ricardo de Albuquerque": {
+      "lat": -22.8385,
+      "lng": -43.3985
+    },
+    "Rio do Ouro": {
+      "lat": -22.8745,
+      "lng": -42.9885
+    },
+    "Rocinha": {
+      "lat": -22.9885,
+      "lng": -43.248
+    },
+    "Santa Cruz": {
+      "lat": -22.9195,
+      "lng": -43.6855
+    },
+    "Santa Teresa": {
+      "lat": -22.9218,
+      "lng": -43.1865
+    },
+    "Seropédica": {
+      "lat": -22.7465,
+      "lng": -43.7065
+    },
+    "São Cristóvão": {
+      "lat": -22.8995,
+      "lng": -43.222
+    },
+    "São João de Meriti": {
+      "lat": -22.8045,
+      "lng": -43.3725
+    },
+    "Tanque": {
+      "lat": -22.9165,
+      "lng": -43.3585
+    },
+    "Taquara": {
+      "lat": -22.9225,
+      "lng": -43.3745
+    },
+    "Tijuca": {
+      "lat": -22.9248,
+      "lng": -43.2325
+    },
+    "Todos os Santos": {
+      "lat": -22.8935,
+      "lng": -43.2845
+    },
+    "Urca": {
+      "lat": -22.9525,
+      "lng": -43.1645
+    },
+    "Vicente de Carvalho": {
+      "lat": -22.8545,
+      "lng": -43.3145
+    },
+    "Vila Isabel": {
+      "lat": -22.9165,
+      "lng": -43.2465
+    },
+    "Vila da Penha": {
+      "lat": -22.8435,
+      "lng": -43.3115
+    },
+    "Vista Alegre": {
+      "lat": -22.8285,
+      "lng": -43.3125
+    },
+    "Xerém": {
+      "lat": -22.5895,
+      "lng": -43.3065
+    }
+  }
+}
