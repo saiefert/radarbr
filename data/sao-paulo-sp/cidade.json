@@ -292,6 +292,42 @@
     "rodovia mogi-bertioga": {
       "lat": -23.671,
       "lng": -46.091
+    },
+    "vila andrade": {
+      "lat": -23.6275,
+      "lng": -46.7365
+    },
+    "santana de parnaiba": {
+      "lat": -23.4439,
+      "lng": -46.9178
+    },
+    "itapevi": {
+      "lat": -23.5489,
+      "lng": -46.9328
+    },
+    "mairipora": {
+      "lat": -23.3189,
+      "lng": -46.5867
+    },
+    "jardim california": {
+      "lat": -23.524,
+      "lng": -46.889
+    },
+    "bairro assuncao": {
+      "lat": -23.719,
+      "lng": -46.5785
+    },
+    "assuncao": {
+      "lat": -23.719,
+      "lng": -46.5785
+    },
+    "estrada dos alvarengas": {
+      "lat": -23.732,
+      "lng": -46.584
+    },
+    "rodovia castello branco": {
+      "lat": -23.5045,
+      "lng": -46.895
     }
   }
 }

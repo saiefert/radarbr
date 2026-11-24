@@ -51,7 +51,7 @@ Arquivos atualizados de hora em hora pelo Grokbot para cada cidade:
 | `agressao` | Agressão / Violência | Punho fechado / soco (laranja) | Lesão corporal, agressão física, espancamento, esfaqueamento, briga com feridos, ameaça grave |
 | `violencia_domestica` | Violência Doméstica | Casa com alerta (rosa escuro) | Violência doméstica, Lei Maria da Penha, descumprimento de medida protetiva |
 | `violencia_sexual` | Crime Sexual | Escudo de alerta (magenta) | Estupro, importunação sexual, assédio sexual, abuso |
-| `arma` | Arma / Disparo | Mira / disparo (carmim) | Disparo de arma de fogo, tiroteio, porte/posse ilegal de arma |
+| `arma` | Arma / Disparo | Pistola / arma de fogo (carmim) | Disparo de arma de fogo, tiroteio, porte/posse ilegal de arma |
 | `incendio` | Incêndio Criminoso | Chama (laranja fogo) | Incêndio criminoso em imóvel, terreno, veículo ou mata |
 | `vandalismo` | Vandalismo / Dano | Spray (ardósia) | Vandalismo, depredação, dano ao patrimônio, pichação |
 | `estelionato` | Estelionato / Golpe | Cartão com X (azul escuro) | Estelionato, golpe presencial, extorsão, fraude local |
@@ -160,12 +160,14 @@ O Governo de MS publica planilhas `.csv` (abertas no Excel) e API CKAN direto do
 
 ## 6. Fontes oficiais e portais para São Paulo e Região — SP (`data/sao-paulo-sp/`)
 
-### Base oficial da SSP-SP (Excel / `.xlsx`)
-- **SSP-SP Consultas / Base de Dados:** `https://www.ssp.sp.gov.br/estatistica/consultas` (planilhas `.xlsx` de dados criminais, veículos subtraídos, celulares e produtividade policial da Capital e RMSP).
+### Base oficial da SSP-SP, PM-SP, PC-SP e Agência SP
+- **SSP-SP Planilhas Excel (`.xlsx`):** `https://www.ssp.sp.gov.br/estatistica/consultas`
+- **PM-SP Notícias:** `https://www.policiamilitar.sp.gov.br/noticias`
+- **PC-SP Notícias:** `https://www.policiacivil.sp.gov.br/`
+- **Agência SP (comunicados oficiais PM/PC/SSP):** `https://www.agenciasp.sp.gov.br/`
 
-### Portais de notícias de SP e Grande SP (tempo real / hora em hora)
-- **G1 São Paulo (Capital e RMSP):** `https://g1.globo.com/rss/g1/sp/sao-paulo/`
-- **G1 Mogi das Cruzes e Suzano (Alto Tietê):** `https://g1.globo.com/rss/g1/sp/mogi-das-cruzes-suzano/`
-- **Metrópoles São Paulo:** `https://www.metropoles.com/sao-paulo/feed`
-- **Diário do Grande ABC (Santo André, SBC, São Caetano, Diadema, Mauá):** `https://www.dgabc.com.br/rss/`
-- **UOL / Folha / R7 / Diário do Transporte**
+### Portais e jornais locais/de bairro de SP e Grande SP (tempo real / hora em hora)
+- **Capital:** G1 SP (`https://g1.globo.com/rss/g1/sp/sao-paulo/`), Metrópoles SP (`https://www.metropoles.com/sao-paulo/feed`), Diário Zona Norte (`https://www.diariozonanorte.com.br/feed/`), Jornal Zona Sul (`https://www.jornalzonasul.com.br/feed/`), Diário do Transporte (`https://diariodotransporte.com.br/feed/`), Gazeta de SP, UOL / Folha
+- **Grande ABC:** Diário do Grande ABC (`https://www.dgabc.com.br/rss/`), Repórter Diário (`https://www.reporterdiario.com.br/feed/`), ABCD Jornal (`https://abcdjornal.com.br/feed/`), ABC do ABC
+- **Zona Oeste / RMSP:** Visão Oeste (`https://visaooeste.com.br/feed/`), Giro S/A (`https://girosa.com.br/feed/`), O Taboanense (`https://www.otaboanense.com.br/feed/`), Folha de Alphaville (`https://www.folhadealphaville.com.br/feed/`), Webdiário Osasco
+- **Guarulhos & Alto Tietê:** Guarulhos Hoje (`https://www.guarulhoshoje.com.br/feed/`), Click Guarulhos (`https://www.clickguarulhos.com.br/feed/`), G1 Mogi/Suzano (`https://g1.globo.com/rss/g1/sp/mogi-das-cruzes-suzano/`), O Diário de Mogi (`https://www.odiariodemogi.net.br/feed/`), Diário de Suzano (`https://www.diariodesuzano.com.br/feed/`)
