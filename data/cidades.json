@@ -49,6 +49,18 @@
       },
       "zoom": 11,
       "ativa": true
+    },
+    {
+      "slug": "salvador-ba",
+      "nome": "Salvador e Região",
+      "uf": "BA",
+      "rotulo": "Salvador e Região — BA",
+      "centro": {
+        "lat": -12.9714,
+        "lng": -38.5014
+      },
+      "zoom": 12,
+      "ativa": true
     }
   ]
 }

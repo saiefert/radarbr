@@ -1,0 +1,682 @@
+{
+  "slug": "salvador-ba",
+  "nome": "Salvador e Região",
+  "uf": "BA",
+  "rotulo": "Salvador e Região — BA",
+  "centro": {
+    "lat": -12.9714,
+    "lng": -38.5014
+  },
+  "zoom": 12,
+  "fuso": "America/Bahia",
+  "bairros": {
+    "Acupe": {
+      "lat": -12.99708,
+      "lng": -38.49288
+    },
+    "Aeroporto de Salvador": {
+      "lat": -12.9086,
+      "lng": -38.3225
+    },
+    "Alto da Terezinha": {
+      "lat": -12.87807,
+      "lng": -38.47774
+    },
+    "Alto do Cabrito": {
+      "lat": -12.90589,
+      "lng": -38.47353
+    },
+    "Alto do Coqueirinho": {
+      "lat": -12.94025,
+      "lng": -38.37428
+    },
+    "Amaralina": {
+      "lat": -13.0112,
+      "lng": -38.4728
+    },
+    "Arenoso": {
+      "lat": -12.94731,
+      "lng": -38.44124
+    },
+    "Armação": {
+      "lat": -12.9875,
+      "lng": -38.4368
+    },
+    "Arraial do Retiro": {
+      "lat": -12.94384,
+      "lng": -38.46588
+    },
+    "Avenida ACM": {
+      "lat": -12.9825,
+      "lng": -38.4675
+    },
+    "Avenida Paralela": {
+      "lat": -12.9555,
+      "lng": -38.4195
+    },
+    "BR-324": {
+      "lat": -12.9125,
+      "lng": -38.4595
+    },
+    "Bairro da Paz": {
+      "lat": -12.9365,
+      "lng": -38.3955
+    },
+    "Barbalho": {
+      "lat": -12.96479,
+      "lng": -38.49951
+    },
+    "Barra": {
+      "lat": -13.0095,
+      "lng": -38.5322
+    },
+    "Barreiras": {
+      "lat": -12.94323,
+      "lng": -38.45744
+    },
+    "Beiru/tancredo Neves": {
+      "lat": -12.94604,
+      "lng": -38.44742
+    },
+    "Boa Vista de Brotas": {
+      "lat": -12.98443,
+      "lng": -38.49946
+    },
+    "Boa Vista de Sao Caetano": {
+      "lat": -12.92455,
+      "lng": -38.4783
+    },
+    "Boca da Mata": {
+      "lat": -12.90396,
+      "lng": -38.38185
+    },
+    "Boca do Rio": {
+      "lat": -12.9765,
+      "lng": -38.4255
+    },
+    "Bom Jua": {
+      "lat": -12.94211,
+      "lng": -38.47344
+    },
+    "Bonfim": {
+      "lat": -12.9235,
+      "lng": -38.5085
+    },
+    "Bonocô": {
+      "lat": -12.9795,
+      "lng": -38.4915
+    },
+    "Brotas": {
+      "lat": -12.9875,
+      "lng": -38.4875
+    },
+    "Cabula": {
+      "lat": -12.9555,
+      "lng": -38.4585
+    },
+    "Cabula VI": {
+      "lat": -12.9585,
+      "lng": -38.4455
+    },
+    "Caixa D´agua": {
+      "lat": -12.96032,
+      "lng": -38.49287
+    },
+    "Cajazeiras": {
+      "lat": -12.8985,
+      "lng": -38.4125
+    },
+    "Cajazeiras II": {
+      "lat": -12.8945,
+      "lng": -38.4215
+    },
+    "Cajazeiras IV": {
+      "lat": -12.89905,
+      "lng": -38.42361
+    },
+    "Cajazeiras V": {
+      "lat": -12.8955,
+      "lng": -38.4185
+    },
+    "Cajazeiras VI": {
+      "lat": -12.89562,
+      "lng": -38.42773
+    },
+    "Cajazeiras VIII": {
+      "lat": -12.8975,
+      "lng": -38.4095
+    },
+    "Cajazeiras X": {
+      "lat": -12.9015,
+      "lng": -38.4055
+    },
+    "Cajazeiras XI": {
+      "lat": -12.9045,
+      "lng": -38.4015
+    },
+    "Calabar": {
+      "lat": -13.00574,
+      "lng": -38.51567
+    },
+    "Calabetao": {
+      "lat": -12.92966,
+      "lng": -38.46721
+    },
+    "Calçada": {
+      "lat": -12.9445,
+      "lng": -38.5015
+    },
+    "Camaçari": {
+      "lat": -12.6996,
+      "lng": -38.3242
+    },
+    "Caminho das Árvores": {
+      "lat": -12.9805,
+      "lng": -38.4555
+    },
+    "Caminho de Areia": {
+      "lat": -12.93367,
+      "lng": -38.50163
+    },
+    "Campinas de Pirajá": {
+      "lat": -12.9155,
+      "lng": -38.4685
+    },
+    "Canabrava": {
+      "lat": -12.92501,
+      "lng": -38.41612
+    },
+    "Candeias": {
+      "lat": -12.6681,
+      "lng": -38.5458
+    },
+    "Canela": {
+      "lat": -12.9922,
+      "lng": -38.5185
+    },
+    "Capelinha": {
+      "lat": -12.93061,
+      "lng": -38.48486
+    },
+    "Cassange": {
+      "lat": -12.88454,
+      "lng": -38.37634
+    },
+    "Castelo Branco": {
+      "lat": -12.9135,
+      "lng": -38.4375
+    },
+    "Centro": {
+      "lat": -12.9777,
+      "lng": -38.5144
+    },
+    "Chapada do Rio Vermelho": {
+      "lat": -13.00578,
+      "lng": -38.48037
+    },
+    "Cidade Nova": {
+      "lat": -12.9657,
+      "lng": -38.48463
+    },
+    "Comércio": {
+      "lat": -12.9718,
+      "lng": -38.5138
+    },
+    "Cosme de Farias": {
+      "lat": -12.9775,
+      "lng": -38.4845
+    },
+    "Costa Azul": {
+      "lat": -12.9918,
+      "lng": -38.4455
+    },
+    "Coutos": {
+      "lat": -12.8615,
+      "lng": -38.4755
+    },
+    "Dias d'Ávila": {
+      "lat": -12.6131,
+      "lng": -38.2975
+    },
+    "Dois de Julho": {
+      "lat": -12.98217,
+      "lng": -38.51662
+    },
+    "Dom Avelar": {
+      "lat": -12.90206,
+      "lng": -38.44695
+    },
+    "Doron": {
+      "lat": -12.95874,
+      "lng": -38.44205
+    },
+    "Engenho Velho da Federação": {
+      "lat": -13.0025,
+      "lng": -38.5025
+    },
+    "Engenho Velho de Brotas": {
+      "lat": -12.9885,
+      "lng": -38.4975
+    },
+    "Engomadeira": {
+      "lat": -12.9491,
+      "lng": -38.45742
+    },
+    "Escada": {
+      "lat": -12.8855,
+      "lng": -38.4825
+    },
+    "Fazenda Coutos": {
+      "lat": -12.8595,
+      "lng": -38.4685
+    },
+    "Fazenda Grande I": {
+      "lat": -12.8925,
+      "lng": -38.4055
+    },
+    "Fazenda Grande II": {
+      "lat": -12.8955,
+      "lng": -38.4015
+    },
+    "Fazenda Grande III": {
+      "lat": -12.90632,
+      "lng": -38.3951
+    },
+    "Fazenda Grande IV": {
+      "lat": -12.90671,
+      "lng": -38.38883
+    },
+    "Fazenda Grande do Retiro": {
+      "lat": -12.9445,
+      "lng": -38.4805
+    },
+    "Federação": {
+      "lat": -12.9985,
+      "lng": -38.5095
+    },
+    "Gamboa": {
+      "lat": -12.9835,
+      "lng": -38.5225
+    },
+    "Granjas Rurais Presidente Vargas": {
+      "lat": -12.92298,
+      "lng": -38.46382
+    },
+    "Graça": {
+      "lat": -12.9985,
+      "lng": -38.5225
+    },
+    "Iapi": {
+      "lat": -12.95575,
+      "lng": -38.47983
+    },
+    "Ilha Amarela": {
+      "lat": -12.88837,
+      "lng": -38.47329
+    },
+    "Imbuí": {
+      "lat": -12.9695,
+      "lng": -38.4355
+    },
+    "Itacaranha": {
+      "lat": -12.8915,
+      "lng": -38.4845
+    },
+    "Itaigara": {
+      "lat": -12.9935,
+      "lng": -38.4648
+    },
+    "Itaparica": {
+      "lat": -12.8886,
+      "lng": -38.6806
+    },
+    "Itapuã": {
+      "lat": -12.9482,
+      "lng": -38.3625
+    },
+    "Jardim Cajazeiras": {
+      "lat": -12.91882,
+      "lng": -38.45029
+    },
+    "Jardim Nova Esperanca": {
+      "lat": -12.91394,
+      "lng": -38.42
+    },
+    "Jardim Santo Inacio": {
+      "lat": -12.92788,
+      "lng": -38.4606
+    },
+    "Jardim das Margaridas": {
+      "lat": -12.88918,
+      "lng": -38.36135
+    },
+    "Lapinha": {
+      "lat": -12.9565,
+      "lng": -38.5035
+    },
+    "Lauro de Freitas": {
+      "lat": -12.8944,
+      "lng": -38.3272
+    },
+    "Liberdade": {
+      "lat": -12.9525,
+      "lng": -38.4965
+    },
+    "Lobato": {
+      "lat": -12.9155,
+      "lng": -38.4855
+    },
+    "Luiz Anselmo": {
+      "lat": -12.9755,
+      "lng": -38.4905
+    },
+    "Macaubas": {
+      "lat": -12.96561,
+      "lng": -38.49657
+    },
+    "Madre de Deus": {
+      "lat": -12.7417,
+      "lng": -38.6208
+    },
+    "Marechal Rondon": {
+      "lat": -12.90902,
+      "lng": -38.47019
+    },
+    "Mares": {
+      "lat": -12.9395,
+      "lng": -38.5035
+    },
+    "Massaranduba": {
+      "lat": -12.92467,
+      "lng": -38.49605
+    },
+    "Mata Escura": {
+      "lat": -12.9375,
+      "lng": -38.4665
+    },
+    "Mata de São João": {
+      "lat": -12.5303,
+      "lng": -38.2994
+    },
+    "Matatu": {
+      "lat": -12.9725,
+      "lng": -38.4935
+    },
+    "Monte Serrat": {
+      "lat": -12.92597,
+      "lng": -38.5142
+    },
+    "Moradas da Lagoa": {
+      "lat": -12.84833,
+      "lng": -38.44881
+    },
+    "Mussurunga": {
+      "lat": -12.9125,
+      "lng": -38.3665
+    },
+    "Narandiba": {
+      "lat": -12.9545,
+      "lng": -38.4485
+    },
+    "Nazaré": {
+      "lat": -12.9765,
+      "lng": -38.5035
+    },
+    "Nordeste de Amaralina": {
+      "lat": -13.0052,
+      "lng": -38.4755
+    },
+    "Nova Brasília": {
+      "lat": -12.9245,
+      "lng": -38.4115
+    },
+    "Nova Esperanca": {
+      "lat": -12.8399,
+      "lng": -38.37389
+    },
+    "Nova Sussuarana": {
+      "lat": -12.93783,
+      "lng": -38.43497
+    },
+    "Novo Horizonte": {
+      "lat": -12.9365,
+      "lng": -38.4475
+    },
+    "Novo Marotinho": {
+      "lat": -12.915,
+      "lng": -38.42736
+    },
+    "Ondina": {
+      "lat": -13.0102,
+      "lng": -38.5105
+    },
+    "Paralela Trecho Centro Administrativo da Bahia": {
+      "lat": -12.95768,
+      "lng": -38.43109
+    },
+    "Paripe": {
+      "lat": -12.8285,
+      "lng": -38.4755
+    },
+    "Patamares": {
+      "lat": -12.9575,
+      "lng": -38.4045
+    },
+    "Pau Miudo": {
+      "lat": -12.96198,
+      "lng": -38.48197
+    },
+    "Pau da Lima": {
+      "lat": -12.9225,
+      "lng": -38.4425
+    },
+    "Pelourinho": {
+      "lat": -12.9715,
+      "lng": -38.5085
+    },
+    "Periperi": {
+      "lat": -12.8725,
+      "lng": -38.4685
+    },
+    "Pernambués": {
+      "lat": -12.9675,
+      "lng": -38.4635
+    },
+    "Pero Vaz": {
+      "lat": -12.9475,
+      "lng": -38.4895
+    },
+    "Piatã": {
+      "lat": -12.9485,
+      "lng": -38.3875
+    },
+    "Pirajá": {
+      "lat": -12.9055,
+      "lng": -38.4625
+    },
+    "Pituacu": {
+      "lat": -12.96968,
+      "lng": -38.4202
+    },
+    "Pituba": {
+      "lat": -13.0035,
+      "lng": -38.4585
+    },
+    "Plataforma": {
+      "lat": -12.9005,
+      "lng": -38.4845
+    },
+    "Pojuca": {
+      "lat": -12.4314,
+      "lng": -38.3275
+    },
+    "Praia Grande": {
+      "lat": -12.8795,
+      "lng": -38.4785
+    },
+    "Resgate": {
+      "lat": -12.96105,
+      "lng": -38.46385
+    },
+    "Retiro": {
+      "lat": -12.94971,
+      "lng": -38.47261
+    },
+    "Ribeira": {
+      "lat": -12.9125,
+      "lng": -38.4965
+    },
+    "Rio Sena": {
+      "lat": -12.88365,
+      "lng": -38.46901
+    },
+    "Rio Vermelho": {
+      "lat": -13.0128,
+      "lng": -38.4915
+    },
+    "Saboeiro": {
+      "lat": -12.9605,
+      "lng": -38.4495
+    },
+    "Santa Cruz": {
+      "lat": -13.0034,
+      "lng": -38.47499
+    },
+    "Santa Luzia": {
+      "lat": -12.93664,
+      "lng": -38.49214
+    },
+    "Santa Monica": {
+      "lat": -12.95035,
+      "lng": -38.48522
+    },
+    "Sao Goncalo": {
+      "lat": -12.9498,
+      "lng": -38.46886
+    },
+    "Sao Joao do Cabrito": {
+      "lat": -12.9002,
+      "lng": -38.48092
+    },
+    "Sao Rafael": {
+      "lat": -12.94106,
+      "lng": -38.42188
+    },
+    "Sao Tome": {
+      "lat": -12.82047,
+      "lng": -38.47579
+    },
+    "Saramandaia": {
+      "lat": -12.9715,
+      "lng": -38.4695
+    },
+    "Sete de Abril": {
+      "lat": -12.9185,
+      "lng": -38.4265
+    },
+    "Simões Filho": {
+      "lat": -12.7869,
+      "lng": -38.4039
+    },
+    "Stella Maris": {
+      "lat": -12.92943,
+      "lng": -38.34651
+    },
+    "Stiep": {
+      "lat": -12.9842,
+      "lng": -38.4425
+    },
+    "Subúrbio Ferroviário": {
+      "lat": -12.8695,
+      "lng": -38.4765
+    },
+    "Sussuarana": {
+      "lat": -12.9315,
+      "lng": -38.4415
+    },
+    "São Caetano": {
+      "lat": -12.9385,
+      "lng": -38.4775
+    },
+    "São Cristóvão": {
+      "lat": -12.9105,
+      "lng": -38.3485
+    },
+    "São Francisco do Conde": {
+      "lat": -12.6275,
+      "lng": -38.68
+    },
+    "São Gonçalo do Retiro": {
+      "lat": -12.9555,
+      "lng": -38.4695
+    },
+    "São Marcos": {
+      "lat": -12.9255,
+      "lng": -38.4315
+    },
+    "São Sebastião do Passé": {
+      "lat": -12.5125,
+      "lng": -38.4947
+    },
+    "São Tomé de Paripe": {
+      "lat": -12.8095,
+      "lng": -38.4825
+    },
+    "Tancredo Neves": {
+      "lat": -12.9455,
+      "lng": -38.4465
+    },
+    "Tororo": {
+      "lat": -12.98361,
+      "lng": -38.50783
+    },
+    "Trobogy": {
+      "lat": -12.9286,
+      "lng": -38.40558
+    },
+    "Tubarão": {
+      "lat": -12.8155,
+      "lng": -38.4785
+    },
+    "Uruguai": {
+      "lat": -12.93003,
+      "lng": -38.49268
+    },
+    "Vale das Pedrinhas": {
+      "lat": -13.00917,
+      "lng": -38.48023
+    },
+    "Vale dos Lagos": {
+      "lat": -12.93751,
+      "lng": -38.4167
+    },
+    "Valéria": {
+      "lat": -12.8665,
+      "lng": -38.4385
+    },
+    "Vera Cruz": {
+      "lat": -12.9592,
+      "lng": -38.6156
+    },
+    "Vila Canaria": {
+      "lat": -12.91075,
+      "lng": -38.44347
+    },
+    "Vila Laura": {
+      "lat": -12.97959,
+      "lng": -38.48645
+    },
+    "Vila Ruy Barbosa/jadim Cruzeiro": {
+      "lat": -12.93463,
+      "lng": -38.50008
+    },
+    "Vitória": {
+      "lat": -12.9925,
+      "lng": -38.5265
+    },
+    "Águas Claras": {
+      "lat": -12.8915,
+      "lng": -38.4365
+    }
+  }
+}

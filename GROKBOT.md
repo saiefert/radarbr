@@ -283,3 +283,52 @@ O **ISP-RJ (Instituto de Segurança Pública do Estado do Rio de Janeiro)** cons
 - Guia da Mídia — RJ: `https://www.guiademidia.com.br/rio-de-janeiro/jornais-do-rio-de-janeiro.htm`
 - Atlas da Imprensa — RJ: `https://atlasdaimprensa.com.br/riodejaneiro-jornais/`
 - ABYZ News Links — RJ: `https://www.abyznewslinks.com/brazirj.htm`
+
+---
+
+## 8. Fontes oficiais e portais para Salvador e Região — BA (`data/salvador-ba/`)
+
+### Fontes oficiais da Segurança Pública e território (SSP-BA / PMBA / PCBA / Prefeitura-Bairro)
+- **SSP-BA Estatísticas 2026 (portal oficial):** `https://www.ba.gov.br/ssp/estatistica` e `https://www.ba.gov.br/ssp/publicacoes?combine=2026&term_node_tid_depth=All`
+- **SSP-BA Microdados Oficiais de Mortes Violentas 2026 (`.csv` com lat/lng, bairro, data e hora):** `https://www.ba.gov.br/ssp/sites/site-ssp/files/2026-11/01_MORTES_VIOLENTAS_ESTADO_MICRODADOS.csv`
+- **SSP-BA Microdados Oficiais de Veículos 2026 (`.xlsx` com bairro, AISP, marca/modelo e data):** `https://www.ba.gov.br/ssp/sites/site-ssp/files/2026-11/05_MICRODADOS_VEICULOS.xlsx`
+- **SSP-BA Outros Delitos e Violência contra Mulher 2026 (`.xlsx`):** `05_OUTROS_DELITOS_ESTADO.xlsx` e `06_VIOLENCIA_CONTRA_MULHER.xlsx` (portal `https://dados.ba.gov.br/`)
+- **PMBA / PCBA:** comunicados oficiais de operações em `https://www.ba.gov.br/ssp/noticias`, `https://www.ba.gov.br/policiacivil/noticias` e `https://www.ba.gov.br/pm/noticias`
+- **Prefeitura-Bairro (notícia e serviço por território):** `https://prefeiturabairro.salvador.ba.gov.br/noticias/`
+- **TBC Cabula (17 bairros da área do Cabula):** `https://tbccabula.com.br/`
+
+### Portais que cobrem Salvador inteira (tempo real / hora em hora)
+- **G1 Bahia:** `https://g1.globo.com/rss/g1/ba/bahia/`
+- **Bahia Notícias:** `https://www.bahianoticias.com.br/`
+- **Correio 24 Horas:** `https://www.correio24horas.com.br/`
+- **A Tarde:** `https://atarde.com.br/`
+- **Metro1:** `https://www.metro1.com.br/`
+- **BNews:** `https://www.bnews.com.br/`
+- **Aratu On:** `https://aratuon.com.br/feed/`
+- **Portal Massa:** `https://jornalmassa.com.br/`
+- **Tribuna da Bahia:** `http://www.tribunadabahia.com.br/`
+- **Leia Mais BA:** `https://leiamaisba.com.br/`
+- **Relata Bahia:** `https://relatabahia.com.br/`
+- **iBahia:** `https://www.ibahia.com/`
+- **Alô Alô Bahia (cultura/eventos):** `https://aloalobahia.com/`
+
+### Portais e mídias comunitárias por bairro (Salvador — ecossistema Rede Midicom)
+- **Subúrbio Ferroviário:** Paripe.net (`https://www.paripe.net/`), Subúrbio News (`https://www.suburbionews.com.br/`), Subúrbio Online (`https://suburbioonline.com/`)
+- **Cajazeiras:** Fala Cajazeiras (`https://falacajazeiras.com.br/`), Jornal Cajazeiras (`https://jornalcajazeiras.com.br/`), Cajaon (`https://cajaon.com.br/`)
+- **Itapuã:** Itapuã City (`https://www.itapuacity.com.br/`), Itapuã News (`https://medium.com/@itapuanews`)
+- **Boca do Rio:** Boca do Rio Magazine (`https://bocadoriomagazine.com.br/`)
+- **Perfis hiperlocais em redes sociais (monitoramento complementar):**
+  - Pernambués / Saramandaia: Portal Pernambués (`https://www.instagram.com/portalpernambues/`)
+  - Sussuarana: Sussuarana City (`https://www.instagram.com/sussuaranacity_/`)
+  - Castelo Branco: CBX Notícias (`https://www.instagram.com/cbxnoticias/`)
+  - Valéria: Valéria City Oficial (`https://www.instagram.com/valeriacityoficial/`) e Valéria News (`https://www.instagram.com/valerianews/`)
+  - Mata Escura: Mata Escura em Foco (`https://www.instagram.com/mataescuraemfoco/`)
+  - Engenho Velho: Nosso Engenho (`https://www.facebook.com/SiteNossoEngenho`)
+  - Bairro da Paz: Bairro da Paz News (`https://www.instagram.com/bairrodapaznews/`)
+- **Coletivos, redes e jornalismo periférico:**
+  - Rede Midicom (`https://www.instagram.com/redemidicom/`), Coletivo Entre Becos (`https://www.instagram.com/entrebecos/`), ANF — Agência de Notícias das Favelas (`https://www.anf.org.br/`), Portal UMBU (`https://portalumbu.com.br/`), Mídia Periférica (`https://midiaperiferica.blogspot.com/`)
+
+### Diretórios de Salvador / Bahia
+- Mapeamento de Veículos de Bairros (catálogo anual dos 37 veículos comunitários): `https://www.mapeamentocmtv.com.br/`
+- Guia da Mídia — Salvador: `https://www.guiademidia.com.br/bahia/jornais-de-salvador.htm`
+- ABYZ News Links — BA: `https://www.abyznewslinks.com/braziba.htm`
