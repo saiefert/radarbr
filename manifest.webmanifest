@@ -1,0 +1,16 @@
+{
+  "name": "RadarBR — Crimes & Trânsito por Cidade",
+  "short_name": "RadarBR",
+  "description": "Mapa interativo atualizado de hora em hora com ocorrências policiais e acidentes de trânsito por cidade no Brasil.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f6f7f9",
+  "theme_color": "#991b1b",
+  "icons": [
+    {
+      "src": "assets/img/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

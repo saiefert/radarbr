@@ -1,0 +1,15 @@
+{
+  "atualizado_em": "2026-11-24T14:05:00-03:00",
+  "cidade_padrao": "campo-grande-ms",
+  "cidades": [
+    {
+      "slug": "campo-grande-ms",
+      "nome": "Campo Grande",
+      "uf": "MS",
+      "rotulo": "Campo Grande — MS",
+      "centro": { "lat": -20.4697, "lng": -54.6201 },
+      "zoom": 12,
+      "ativa": true
+    }
+  ]
+}

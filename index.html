@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>RadarBR — Mapa de Crimes &amp; Trânsito por Cidade</title>
+  <meta name="description" content="Mapa interativo atualizado de hora em hora com ocorrências policiais e acidentes de trânsito por cidade no Brasil, começando por Campo Grande - MS.">
+  <meta name="theme-color" content="#991b1b">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="RadarBR">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/img/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-tab="mapa" data-sidebar-mode="relatorios">
+
+  <!-- ============ APP HEADER ============ -->
+  <header class="app-header" id="appHeader">
+    <a class="brand" href="./" aria-label="RadarBR — Início">
+      <span class="brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 36 36" fill="none">
+          <rect width="36" height="36" rx="10" fill="#111827"/>
+          <circle cx="18" cy="18" r="12.5" stroke="#ef4444" stroke-opacity="0.35" stroke-width="1.8"/>
+          <circle cx="18" cy="18" r="7.5" stroke="#f59e0b" stroke-opacity="0.6" stroke-width="1.8"/>
+          <path d="M18 18L26.5 10.5" stroke="#f87171" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="18" cy="18" r="2.8" fill="#ef4444"/>
+          <circle cx="24.5" cy="12.5" r="1.9" fill="#fbbf24"/>
+        </svg>
+      </span>
+      <span class="brand__text">
+        <strong>RadarBR</strong>
+        <small>Crimes &amp; Trânsito · Atualização horária</small>
+      </span>
+    </a>
+
+    <div class="city-bar">
+      <label class="city-picker" aria-label="Selecionar cidade">
+        <svg class="ico city-picker__ico" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path d="M10 17.5s5.5-4.7 5.5-9.2a5.5 5.5 0 1 0-11 0c0 4.5 5.5 9.2 5.5 9.2z" stroke="currentColor" stroke-width="1.8"/>
+          <circle cx="10" cy="8.3" r="2" stroke="currentColor" stroke-width="1.6"/>
+        </svg>
+        <select id="citySelect" aria-label="Cidade ativa">
+          <option value="campo-grande-ms">Campo Grande — MS</option>
+        </select>
+      </label>
+
+      <button type="button" class="refresh-pill-btn" id="refreshFeedBtn" title="Verificar atualizações agora" aria-label="Atualizar dados">
+        <svg class="ico" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path d="M16.2 10a6.2 6.2 0 1 1-1.6-4.2M16.2 3.8v2.9h-2.9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="header-desktop-actions">
+      <span id="feedStatus" class="feed-pill" title="Última atualização horária dos arquivos JSON da cidade">
+        <span class="feed-pill__dot"></span>
+        <span id="feedStatusText">Carregando…</span>
+      </span>
+
+      <!-- Hidden by default (preserved for future Imóveis module via FEATURES.imoveis / ?imoveis=1) -->
+      <button id="toggleImoveisModeBtn" class="btn-imoveis-nav" type="button" hidden aria-pressed="false">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M3 10.5L12 3l9 7.5"/><path d="M5.5 9.5V20h13V9.5"/>
+        </svg>
+        <span>Imóveis</span>
+        <span class="btn-imoveis-nav__count" id="headerImoveisCount" hidden>0</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ MAIN WORKSPACE ============ -->
+  <main class="workspace" id="workspace">
+
+    <!-- MAP STAGE (Left on desktop / Fullscreen on mobile Mapa tab) -->
+    <section class="map-stage" id="mapStage" aria-label="Mapa interativo de ocorrências">
+      <div id="map" class="map-canvas"></div>
+
+      <!-- Quick Layer Toggles (Crimes & Trânsito + optional hidden Imóveis) -->
+      <div class="map-dock" role="toolbar" aria-label="Camadas no mapa">
+        <div class="map-dock__cats" id="mapLayerBar"></div>
+      </div>
+
+      <!-- Mobile floating update pill below dock -->
+      <div class="mobile-status-strip" id="mobileStatusStrip">
+        <span class="feed-pill__dot"></span>
+        <span id="mobileStatusText">Carregando…</span>
+      </div>
+
+      <!-- Mobile right-side FABs -->
+      <div class="map-fabs">
+        <button type="button" class="map-fab" id="cycleBasemapBtn" title="Alternar estilo do mapa (Clean, Ruas, Satélite)" aria-label="Estilo do mapa">
+          <svg class="ico" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M10 3L2.5 7L10 11L17.5 7L10 3Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+            <path d="M2.5 10.5L10 14.5L17.5 10.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M2.5 14L10 18L17.5 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.65"/>
+          </svg>
+          <small id="cycleBasemapLabel">Clean</small>
+        </button>
+        <button type="button" class="map-fab" id="fitBoundsMobileBtn" title="Enquadrar ocorrências da cidade" aria-label="Enquadrar cidade">
+          <svg class="ico" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M4 8V4H8M12 4H16V8M16 12V16H12M8 16H4V12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <small>Cidade</small>
+        </button>
+      </div>
+
+      <!-- Desktop bottom-left controls bar -->
+      <div class="map-controls-bar">
+        <div class="map-pill-group" role="group" aria-label="Estilo do mapa">
+          <button type="button" class="map-pill is-active" data-basemap="clean">Clean</button>
+          <button type="button" class="map-pill" data-basemap="streets">Ruas</button>
+          <button type="button" class="map-pill" data-basemap="satellite">Satélite</button>
+        </div>
+
+        <button type="button" class="map-fit-btn" id="fitBoundsBtn" title="Enquadrar ocorrências da cidade">
+          <svg class="ico" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M4 8V4H8M12 4H16V8M16 12V16H12M8 16H4V12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>Enquadrar</span>
+        </button>
+
+        <span class="map-legend-inline">
+          <span class="map-legend-chip"><span class="map-legend-shape map-legend-shape--crime"></span>Crimes</span>
+          <span class="map-legend-chip"><span class="map-legend-shape map-legend-shape--traffic"></span>Trânsito</span>
+          <span class="map-legend-chip"><span class="map-legend-shape map-legend-shape--approx"></span>Bairro aprox.</span>
+        </span>
+      </div>
+    </section>
+
+    <!-- RIGHT SIDEBAR: CENTRALIZED REPORTS (Primary) + HIDDEN IMÓVEIS MODULE -->
+    <aside class="sidebar" id="sidebar" aria-label="Painel de relatórios">
+      <section class="report-view" id="reportView" aria-label="Relatórios de crimes e trânsito"></section>
+
+      <!-- Hidden Imóveis module (preserved for future activation via FEATURES.imoveis or ?imoveis=1) -->
+      <section class="imoveis-view" id="imoveisView" hidden aria-label="Imóveis na cidade"></section>
+    </aside>
+  </main>
+
+  <!-- ============ MOBILE BOTTOM NAVIGATION BAR ============ -->
+  <nav class="bottom-nav" id="bottomNav" aria-label="Navegação principal">
+    <button type="button" class="bottom-nav__btn is-active" data-nav-tab="mapa">
+      <svg class="ico" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M3.5 6.5L9 4L15 6.5L20.5 4V17.5L15 20L9 17.5L3.5 20V6.5Z" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/>
+        <path d="M9 4V17.5M15 6.5V20" stroke="currentColor" stroke-width="1.7"/>
+      </svg>
+      <span>Mapa</span>
+    </button>
+
+    <button type="button" class="bottom-nav__btn bottom-nav__btn--reports" data-nav-tab="relatorios">
+      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M12 3l7.5 3v5.5c0 4.8-3.2 8.7-7.5 9.8-4.3-1.1-7.5-5-7.5-9.8V6L12 3z"/>
+        <path d="M12 8.5v4.5"/>
+        <circle cx="12" cy="16.2" r="0.9" fill="currentColor" stroke="none"/>
+      </svg>
+      <span>Relatórios</span>
+      <span class="bottom-nav__pill" id="navReportsCount" hidden>0</span>
+    </button>
+
+    <!-- Hidden by default until FEATURES.imoveis / ?imoveis=1 -->
+    <button type="button" class="bottom-nav__btn" data-nav-tab="imoveis" id="navImoveisBtn" hidden>
+      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M3 10.5L12 3l9 7.5"/><path d="M5.5 9.5V20h13V9.5"/>
+      </svg>
+      <span>Imóveis</span>
+      <span class="bottom-nav__pill bottom-nav__pill--imoveis" id="navImoveisCount" hidden>0</span>
+    </button>
+  </nav>
+
+  <!-- Toast notification -->
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="assets/js/app.js" defer></script>
+</body>
+</html>

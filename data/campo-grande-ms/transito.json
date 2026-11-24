@@ -1,0 +1,7 @@
+{
+  "atualizado_em": "2026-11-24T14:05:00-03:00",
+  "fonte": "Grokbot",
+  "cidade": "Campo Grande - MS",
+  "observacao": "Feed horário de acidentes de trânsito em Campo Grande - MS. Atualize 'ocorrencias' seguindo data/transito.schema.json e GROKBOT.md.",
+  "ocorrencias": []
+}

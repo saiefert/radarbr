@@ -1,0 +1,137 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.github.io/radarbr/data/crimes.schema.json",
+  "title": "RadarBR — Ocorrências Policiais por Cidade (Feed Horário Grokbot)",
+  "description": "Formato JSON para o Grokbot atualizar ocorrências policiais por hora em data/<cidade>/crimes.json. Aceita objeto com 'ocorrencias' (ou 'crimes') ou array direto.",
+  "oneOf": [
+    {
+      "type": "array",
+      "items": { "$ref": "#/$defs/ocorrencia" }
+    },
+    {
+      "type": "object",
+      "properties": {
+        "atualizado_em": {
+          "type": "string",
+          "description": "Data/hora ISO 8601 da última coleta (ex: 2026-11-24T14:00:00-04:00)."
+        },
+        "fonte": {
+          "type": "string",
+          "default": "Grokbot"
+        },
+        "cidade": {
+          "type": "string",
+          "description": "Cidade/UF (ex: Campo Grande - MS)."
+        },
+        "observacao": {
+          "type": "string"
+        },
+        "ocorrencias": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/ocorrencia" }
+        },
+        "crimes": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/ocorrencia" }
+        }
+      },
+      "anyOf": [
+        { "required": ["ocorrencias"] },
+        { "required": ["crimes"] }
+      ]
+    }
+  ],
+  "$defs": {
+    "ocorrencia": {
+      "type": "object",
+      "required": ["id", "data", "tipo", "titulo", "cidade", "bairro"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Identificador único estável (ex: cgnews-2026-11-24-13h-furto-centro)."
+        },
+        "data": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+          "description": "Data da ocorrência ou publicação (YYYY-MM-DD)."
+        },
+        "hora": {
+          "type": "string",
+          "pattern": "^\\d{2}:\\d{2}(:\\d{2})?$",
+          "description": "Hora local da ocorrência ou publicação (HH:MM, ex: 13:45). Usado nos filtros de 1h, 6h, 12h e 24h."
+        },
+        "data_hora": {
+          "type": "string",
+          "description": "Alternativa combinada ISO 8601 (ex: 2026-11-24T13:45:00-04:00)."
+        },
+        "tipo": {
+          "type": "string",
+          "enum": [
+            "homicidio",
+            "roubo",
+            "furto",
+            "invasao",
+            "veiculo",
+            "trafico",
+            "agressao",
+            "violencia_domestica",
+            "violencia_sexual",
+            "arma",
+            "incendio",
+            "vandalismo",
+            "estelionato",
+            "operacao_policial",
+            "outro"
+          ],
+          "description": "Categoria estilo CrimeReports (1 ícone por grupo de crimes)."
+        },
+        "titulo": {
+          "type": "string",
+          "description": "Manchete curta e objetiva da ocorrência."
+        },
+        "cidade": {
+          "type": "string",
+          "description": "Cidade (ex: Campo Grande)."
+        },
+        "bairro": {
+          "type": "string",
+          "description": "Bairro ou região (ex: Centro, Aero Rancho, Moreninhas, Nova Lima)."
+        },
+        "endereco": {
+          "type": "string",
+          "description": "Rua, avenida ou referência (opcional)."
+        },
+        "lat": {
+          "type": ["number", "null"],
+          "description": "Latitude decimal. Se omitida, o site posiciona automaticamente pelo bairro."
+        },
+        "lng": {
+          "type": ["number", "null"],
+          "description": "Longitude decimal. Se omitida, o site posiciona automaticamente pelo bairro."
+        },
+        "precisao": {
+          "type": "string",
+          "enum": ["rua", "bairro"],
+          "default": "bairro"
+        },
+        "nova": {
+          "type": "boolean",
+          "default": false,
+          "description": "Opcional: true para destacar ocorrência recém-adicionada na última rodada."
+        },
+        "fonte": {
+          "type": "string",
+          "description": "Portal ou órgão fonte (ex: Campo Grande News, Midiamax, G1 MS, TopMídiaNews)."
+        },
+        "link": {
+          "type": "string",
+          "description": "URL direta para a matéria (https://...)."
+        },
+        "descricao": {
+          "type": "string",
+          "description": "Resumo breve opcional de 1-2 frases."
+        }
+      }
+    }
+  }
+}
