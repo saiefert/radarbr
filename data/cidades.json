@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-24T14:05:00-03:00",
+  "atualizado_em": "2026-11-24T16:48:00-03:00",
   "cidade_padrao": "campo-grande-ms",
   "cidades": [
     {
@@ -7,8 +7,23 @@
       "nome": "Campo Grande",
       "uf": "MS",
       "rotulo": "Campo Grande — MS",
-      "centro": { "lat": -20.4697, "lng": -54.6201 },
+      "centro": {
+        "lat": -20.4697,
+        "lng": -54.6201
+      },
       "zoom": 12,
+      "ativa": true
+    },
+    {
+      "slug": "maringa-pr",
+      "nome": "Maringá",
+      "uf": "PR",
+      "rotulo": "Maringá — PR",
+      "centro": {
+        "lat": -23.4252,
+        "lng": -51.9336
+      },
+      "zoom": 13,
       "ativa": true
     }
   ]

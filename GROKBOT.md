@@ -139,3 +139,19 @@ O Governo de MS publica planilhas `.csv` (abertas no Excel) e API CKAN direto do
 - **Correio do Estado:** `https://correiodoestado.com.br/rss/`
 - **Primeira Página:** `https://primeirapagina.com.br/feed/`
 - **A Crítica de Campo Grande / Diário Digital / TopMídiaNews**
+
+---
+
+## 5. Fontes oficiais e portais para Maringá — PR (`data/maringa-pr/`)
+
+### Dados oficiais do Paraná (SESP-PR / CAPE / PCPR / PMPR)
+- A **SESP-PR (CAPE)** publica relatórios estatísticos consolidados em **PDF** (por município/AISP, sem download aberto de BOs por bairro em CSV/Excel) em `https://www.seguranca.pr.gov.br/Estatisticas`.
+- A **PCPR** (`https://www.policiacivil.pr.gov.br/`) e a **PMPR** (`https://www.pmpr.pr.gov.br/`) divulgam notas oficiais de prisões e operações.
+
+### Portais de notícias de Maringá (tempo real / hora em hora)
+- **GMC Online (Geral e Policial):** `https://gmconline.com.br/feed/` e `https://gmconline.com.br/noticias/policial/feed/`
+- **Plantão Maringá:** `https://plantaomaringa.com/`
+- **Maringá Post:** `https://maringapost.com.br/`
+- **G1 Norte e Noroeste PR:** `https://g1.globo.com/rss/g1/pr/norte-noroeste/`
+- **O Maringá:** `https://omaringa.com.br/feed/`
+- **O Diário de Maringá / CBN Maringá / André Almenara / Catve**

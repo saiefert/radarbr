@@ -1,0 +1,325 @@
+{
+  "slug": "maringa-pr",
+  "nome": "Maringá",
+  "uf": "PR",
+  "cidade": "Maringá - PR",
+  "centro": {
+    "lat": -23.4252,
+    "lng": -51.9336
+  },
+  "zoom": 13,
+  "bairros": {
+    "centro": {
+      "lat": -23.421,
+      "lng": -51.9331
+    },
+    "zona 01": {
+      "lat": -23.421,
+      "lng": -51.9331
+    },
+    "zona 1": {
+      "lat": -23.421,
+      "lng": -51.9331
+    },
+    "zona 02": {
+      "lat": -23.4319,
+      "lng": -51.9385
+    },
+    "zona 2": {
+      "lat": -23.4319,
+      "lng": -51.9385
+    },
+    "zona 03": {
+      "lat": -23.4265,
+      "lng": -51.9225
+    },
+    "zona 3": {
+      "lat": -23.4265,
+      "lng": -51.9225
+    },
+    "vila operaria": {
+      "lat": -23.4275,
+      "lng": -51.9205
+    },
+    "zona 04": {
+      "lat": -23.4325,
+      "lng": -51.9505
+    },
+    "zona 4": {
+      "lat": -23.4325,
+      "lng": -51.9505
+    },
+    "zona 05": {
+      "lat": -23.443,
+      "lng": -51.9515
+    },
+    "zona 5": {
+      "lat": -23.443,
+      "lng": -51.9515
+    },
+    "zona 06": {
+      "lat": -23.425,
+      "lng": -51.961
+    },
+    "zona 6": {
+      "lat": -23.425,
+      "lng": -51.961
+    },
+    "zona 07": {
+      "lat": -23.4085,
+      "lng": -51.9405
+    },
+    "zona 7": {
+      "lat": -23.4085,
+      "lng": -51.9405
+    },
+    "zona 08": {
+      "lat": -23.4405,
+      "lng": -51.9215
+    },
+    "zona 8": {
+      "lat": -23.4405,
+      "lng": -51.9215
+    },
+    "novo centro": {
+      "lat": -23.4185,
+      "lng": -51.9345
+    },
+    "vila nova": {
+      "lat": -23.424,
+      "lng": -51.908
+    },
+    "vila morangueira": {
+      "lat": -23.4015,
+      "lng": -51.918
+    },
+    "vila santo antonio": {
+      "lat": -23.411,
+      "lng": -51.9235
+    },
+    "vila esperanca": {
+      "lat": -23.3945,
+      "lng": -51.9475
+    },
+    "jardim alvorada": {
+      "lat": -23.391,
+      "lng": -51.9195
+    },
+    "jardim quebec": {
+      "lat": -23.389,
+      "lng": -51.9373
+    },
+    "jardim colina verde": {
+      "lat": -23.3944,
+      "lng": -51.8849
+    },
+    "jardim colina": {
+      "lat": -23.3944,
+      "lng": -51.8849
+    },
+    "jardim guairaca": {
+      "lat": -23.3871,
+      "lng": -51.9704
+    },
+    "jardim universitario": {
+      "lat": -23.407,
+      "lng": -51.9525
+    },
+    "jardim imperio do sol": {
+      "lat": -23.384,
+      "lng": -51.914
+    },
+    "jardim aclimacao": {
+      "lat": -23.4385,
+      "lng": -51.9195
+    },
+    "jardim novo horizonte": {
+      "lat": -23.4495,
+      "lng": -51.9355
+    },
+    "jardim borba gato": {
+      "lat": -23.457,
+      "lng": -51.9515
+    },
+    "conjunto borba gato": {
+      "lat": -23.457,
+      "lng": -51.9515
+    },
+    "conjunto santa felicidade": {
+      "lat": -23.4573,
+      "lng": -51.9281
+    },
+    "santa felicidade": {
+      "lat": -23.4573,
+      "lng": -51.9281
+    },
+    "parque itaipu": {
+      "lat": -23.4499,
+      "lng": -51.9765
+    },
+    "parque das laranjeiras": {
+      "lat": -23.395,
+      "lng": -51.906
+    },
+    "parque das palmeiras": {
+      "lat": -23.3985,
+      "lng": -51.964
+    },
+    "parque das gaveas": {
+      "lat": -23.4415,
+      "lng": -51.9645
+    },
+    "parque residencial tuiuti": {
+      "lat": -23.4038,
+      "lng": -51.8945
+    },
+    "parque residencial": {
+      "lat": -23.4038,
+      "lng": -51.8945
+    },
+    "parque de exposicoes": {
+      "lat": -23.4185,
+      "lng": -51.8955
+    },
+    "parque industrial": {
+      "lat": -23.438,
+      "lng": -51.981
+    },
+    "jardim industrial": {
+      "lat": -23.413,
+      "lng": -51.978
+    },
+    "cidade jardim": {
+      "lat": -23.442,
+      "lng": -51.9685
+    },
+    "conjunto requiao": {
+      "lat": -23.3955,
+      "lng": -51.8745
+    },
+    "conjunto guaiapo": {
+      "lat": -23.3935,
+      "lng": -51.883
+    },
+    "conjunto hermann moraes barros": {
+      "lat": -23.382,
+      "lng": -51.962
+    },
+    "conjunto itaparica": {
+      "lat": -23.447,
+      "lng": -51.963
+    },
+    "jardim dias": {
+      "lat": -23.3975,
+      "lng": -51.974
+    },
+    "jardim universo": {
+      "lat": -23.452,
+      "lng": -51.941
+    },
+    "jardim pinheiros": {
+      "lat": -23.396,
+      "lng": -51.93
+    },
+    "jardim tupi": {
+      "lat": -23.4075,
+      "lng": -51.9625
+    },
+    "jardim ouro cola": {
+      "lat": -23.406,
+      "lng": -51.9735
+    },
+    "jardim real": {
+      "lat": -23.388,
+      "lng": -51.9465
+    },
+    "jardim liberatti": {
+      "lat": -23.4015,
+      "lng": -51.9035
+    },
+    "jardim oriental": {
+      "lat": -23.3695,
+      "lng": -51.9446
+    },
+    "porto seguro": {
+      "lat": -23.4575,
+      "lng": -51.9355
+    },
+    "iguatemi": {
+      "lat": -23.3765,
+      "lng": -52.063
+    },
+    "distrito de iguatemi": {
+      "lat": -23.3765,
+      "lng": -52.063
+    },
+    "floriano": {
+      "lat": -23.5245,
+      "lng": -52.0545
+    },
+    "pr-317": {
+      "lat": -23.3623,
+      "lng": -51.899
+    },
+    "contorno sul": {
+      "lat": -23.4606,
+      "lng": -51.9183
+    },
+    "contorno norte": {
+      "lat": -23.3785,
+      "lng": -51.934
+    },
+    "av brasil": {
+      "lat": -23.4215,
+      "lng": -51.9335
+    },
+    "av colombo": {
+      "lat": -23.4137,
+      "lng": -51.9415
+    },
+    "av mandacaru": {
+      "lat": -23.4103,
+      "lng": -51.9558
+    },
+    "av morangueira": {
+      "lat": -23.405,
+      "lng": -51.9245
+    },
+    "av pedro taques": {
+      "lat": -23.388,
+      "lng": -51.9125
+    },
+    "av kakogawa": {
+      "lat": -23.3854,
+      "lng": -51.9318
+    },
+    "av tuiuti": {
+      "lat": -23.4038,
+      "lng": -51.8945
+    },
+    "av duque de caxias": {
+      "lat": -23.4205,
+      "lng": -51.939
+    },
+    "av carlos correia borges": {
+      "lat": -23.451,
+      "lng": -51.951
+    },
+    "av cerro azul": {
+      "lat": -23.4548,
+      "lng": -51.9307
+    },
+    "av gastao vidigal": {
+      "lat": -23.4436,
+      "lng": -51.9123
+    },
+    "av sophia rasgulaeff": {
+      "lat": -23.3905,
+      "lng": -51.921
+    },
+    "av alexandre rasgulaeff": {
+      "lat": -23.3855,
+      "lng": -51.9145
+    }
+  }
+}
