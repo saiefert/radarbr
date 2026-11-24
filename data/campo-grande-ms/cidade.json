@@ -620,6 +620,10 @@
     "rua 14 de julho": {
       "lat": -20.4628,
       "lng": -54.6152
+    },
+    "residencial buzios": {
+      "lat": -20.531,
+      "lng": -54.6365
     }
   }
 }

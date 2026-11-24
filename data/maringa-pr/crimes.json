@@ -1,9 +1,26 @@
 {
-  "atualizado_em": "2026-11-24T16:48:00-03:00",
+  "atualizado_em": "2026-11-24T17:45:00-03:00",
   "fonte": "Portais Maringá + PCPR / PMPR",
   "cidade": "Maringá - PR",
   "observacao": "Varredura de ocorrências policiais em Maringá - PR nos portais GMC Online, Plantão Maringá, Maringá Post, G1 PR, O Diário de Maringá, CBN Maringá e comunicações da PCPR/PMPR (25/10 a 24/11/2026).",
   "ocorrencias": [
+    {
+      "id": "gmc-2026-11-24-1712-homem-30-anos-morre-agressao-vila-vardelina",
+      "data": "2026-11-24",
+      "hora": "17:12",
+      "tipo": "homicidio",
+      "titulo": "Homem de 30 anos morre após dois meses internado por agressão na Vila Vardelina",
+      "cidade": "Maringá",
+      "bairro": "Vila Vardelina",
+      "endereco": "Vila Vardelina (caso sob investigação da Delegacia de Homicídios)",
+      "lat": -23.4005,
+      "lng": -51.964,
+      "precisao": "bairro",
+      "nova": true,
+      "fonte": "GMC Online",
+      "link": "https://gmconline.com.br/noticias/policial/homem-de-30-anos-morre-apos-dois-meses-internado-por-agressao-em-maringa/",
+      "resumo": "Vítima estava na UTI do Hospital Universitário após sofrer violenta agressão na Vila Vardelina. Delegacia de Homicídios de Maringá investiga o caso."
+    },
     {
       "id": "gmc-2026-11-24-menino-12-anos-pula-caminhonete-sequestro",
       "data": "2026-11-24",

@@ -1,0 +1,297 @@
+{
+  "slug": "sao-paulo-sp",
+  "nome": "São Paulo e Região",
+  "uf": "SP",
+  "cidade": "São Paulo e Região - SP",
+  "centro": {
+    "lat": -23.5505,
+    "lng": -46.6333
+  },
+  "zoom": 11,
+  "bairros": {
+    "centro": {
+      "lat": -23.5505,
+      "lng": -46.6333
+    },
+    "se": {
+      "lat": -23.5503,
+      "lng": -46.634
+    },
+    "republica": {
+      "lat": -23.5435,
+      "lng": -46.6426
+    },
+    "bela vista": {
+      "lat": -23.5587,
+      "lng": -46.6485
+    },
+    "av paulista": {
+      "lat": -23.5614,
+      "lng": -46.6559
+    },
+    "consolacao": {
+      "lat": -23.5528,
+      "lng": -46.658
+    },
+    "pinheiros": {
+      "lat": -23.5667,
+      "lng": -46.6911
+    },
+    "itaim bibi": {
+      "lat": -23.5844,
+      "lng": -46.6784
+    },
+    "vila olimpia": {
+      "lat": -23.5955,
+      "lng": -46.6856
+    },
+    "moema": {
+      "lat": -23.6015,
+      "lng": -46.665
+    },
+    "vila mariana": {
+      "lat": -23.5895,
+      "lng": -46.6345
+    },
+    "ipiranga": {
+      "lat": -23.5919,
+      "lng": -46.6095
+    },
+    "jabaquara": {
+      "lat": -23.6463,
+      "lng": -46.641
+    },
+    "santo amaro": {
+      "lat": -23.6528,
+      "lng": -46.706
+    },
+    "campo limpo": {
+      "lat": -23.6485,
+      "lng": -46.758
+    },
+    "capao redondo": {
+      "lat": -23.659,
+      "lng": -46.7795
+    },
+    "jardim angela": {
+      "lat": -23.6885,
+      "lng": -46.7685
+    },
+    "grajau": {
+      "lat": -23.745,
+      "lng": -46.692
+    },
+    "zona sul": {
+      "lat": -23.642,
+      "lng": -46.682
+    },
+    "barra funda": {
+      "lat": -23.5255,
+      "lng": -46.6675
+    },
+    "lapa": {
+      "lat": -23.5226,
+      "lng": -46.7042
+    },
+    "perdizes": {
+      "lat": -23.5365,
+      "lng": -46.675
+    },
+    "butanta": {
+      "lat": -23.5715,
+      "lng": -46.708
+    },
+    "morumbi": {
+      "lat": -23.601,
+      "lng": -46.7215
+    },
+    "limao": {
+      "lat": -23.5035,
+      "lng": -46.6745
+    },
+    "casa verde": {
+      "lat": -23.5055,
+      "lng": -46.6565
+    },
+    "santana": {
+      "lat": -23.5015,
+      "lng": -46.6245
+    },
+    "tucuruvi": {
+      "lat": -23.4795,
+      "lng": -46.6035
+    },
+    "vila dom pedro ii": {
+      "lat": -23.4875,
+      "lng": -46.6215
+    },
+    "jardim peri": {
+      "lat": -23.4685,
+      "lng": -46.6605
+    },
+    "freguesia do o": {
+      "lat": -23.4955,
+      "lng": -46.698
+    },
+    "brasilandia": {
+      "lat": -23.462,
+      "lng": -46.6915
+    },
+    "zona norte": {
+      "lat": -23.486,
+      "lng": -46.638
+    },
+    "mooca": {
+      "lat": -23.5555,
+      "lng": -46.5975
+    },
+    "tatuape": {
+      "lat": -23.5405,
+      "lng": -46.5765
+    },
+    "penha": {
+      "lat": -23.5235,
+      "lng": -46.5405
+    },
+    "itaquera": {
+      "lat": -23.5415,
+      "lng": -46.4565
+    },
+    "parque do carmo": {
+      "lat": -23.5715,
+      "lng": -46.469
+    },
+    "sao mateus": {
+      "lat": -23.6095,
+      "lng": -46.4765
+    },
+    "sapopemba": {
+      "lat": -23.602,
+      "lng": -46.5105
+    },
+    "vila prudente": {
+      "lat": -23.584,
+      "lng": -46.582
+    },
+    "zona leste": {
+      "lat": -23.556,
+      "lng": -46.506
+    },
+    "guarulhos": {
+      "lat": -23.4538,
+      "lng": -46.5333
+    },
+    "aeroporto de guarulhos": {
+      "lat": -23.4356,
+      "lng": -46.4731
+    },
+    "osasco": {
+      "lat": -23.5329,
+      "lng": -46.7917
+    },
+    "barueri": {
+      "lat": -23.5107,
+      "lng": -46.8761
+    },
+    "carapicuiba": {
+      "lat": -23.5225,
+      "lng": -46.8358
+    },
+    "cotia": {
+      "lat": -23.6022,
+      "lng": -46.919
+    },
+    "taboao da serra": {
+      "lat": -23.6085,
+      "lng": -46.758
+    },
+    "embu das artes": {
+      "lat": -23.6489,
+      "lng": -46.8522
+    },
+    "itapecerica da serra": {
+      "lat": -23.7169,
+      "lng": -46.8492
+    },
+    "santo andre": {
+      "lat": -23.6639,
+      "lng": -46.5383
+    },
+    "sao bernardo do campo": {
+      "lat": -23.6914,
+      "lng": -46.5646
+    },
+    "pauliceia": {
+      "lat": -23.6585,
+      "lng": -46.5875
+    },
+    "sao caetano do sul": {
+      "lat": -23.6229,
+      "lng": -46.5548
+    },
+    "diadema": {
+      "lat": -23.6865,
+      "lng": -46.6234
+    },
+    "maua": {
+      "lat": -23.6677,
+      "lng": -46.4613
+    },
+    "mogi das cruzes": {
+      "lat": -23.5228,
+      "lng": -46.1883
+    },
+    "suzano": {
+      "lat": -23.5425,
+      "lng": -46.3108
+    },
+    "ipelandia": {
+      "lat": -23.6515,
+      "lng": -46.3135
+    },
+    "itaquaquecetuba": {
+      "lat": -23.4864,
+      "lng": -46.3487
+    },
+    "ferraz de vasconcelos": {
+      "lat": -23.5411,
+      "lng": -46.3689
+    },
+    "poa": {
+      "lat": -23.528,
+      "lng": -46.345
+    },
+    "biritiba-mirim": {
+      "lat": -23.5731,
+      "lng": -46.0389
+    },
+    "marginal tiete": {
+      "lat": -23.5165,
+      "lng": -46.6455
+    },
+    "marginal pinheiros": {
+      "lat": -23.5845,
+      "lng": -46.6995
+    },
+    "radial leste": {
+      "lat": -23.5415,
+      "lng": -46.5785
+    },
+    "rodovia anchieta": {
+      "lat": -23.7195,
+      "lng": -46.551
+    },
+    "rodovia dos imigrantes": {
+      "lat": -23.716,
+      "lng": -46.5975
+    },
+    "rodovia indio tibirica": {
+      "lat": -23.6515,
+      "lng": -46.3135
+    },
+    "rodovia mogi-bertioga": {
+      "lat": -23.671,
+      "lng": -46.091
+    }
+  }
+}

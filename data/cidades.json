@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-24T16:48:00-03:00",
+  "atualizado_em": "2026-11-24T17:45:00-03:00",
   "cidade_padrao": "campo-grande-ms",
   "cidades": [
     {
@@ -24,6 +24,18 @@
         "lng": -51.9336
       },
       "zoom": 13,
+      "ativa": true
+    },
+    {
+      "slug": "sao-paulo-sp",
+      "nome": "São Paulo e Região",
+      "uf": "SP",
+      "rotulo": "São Paulo e Região — SP",
+      "centro": {
+        "lat": -23.5505,
+        "lng": -46.6333
+      },
+      "zoom": 11,
       "ativa": true
     }
   ]

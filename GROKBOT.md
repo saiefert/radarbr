@@ -155,3 +155,17 @@ O Governo de MS publica planilhas `.csv` (abertas no Excel) e API CKAN direto do
 - **G1 Norte e Noroeste PR:** `https://g1.globo.com/rss/g1/pr/norte-noroeste/`
 - **O Maringá:** `https://omaringa.com.br/feed/`
 - **O Diário de Maringá / CBN Maringá / André Almenara / Catve**
+
+---
+
+## 6. Fontes oficiais e portais para São Paulo e Região — SP (`data/sao-paulo-sp/`)
+
+### Base oficial da SSP-SP (Excel / `.xlsx`)
+- **SSP-SP Consultas / Base de Dados:** `https://www.ssp.sp.gov.br/estatistica/consultas` (planilhas `.xlsx` de dados criminais, veículos subtraídos, celulares e produtividade policial da Capital e RMSP).
+
+### Portais de notícias de SP e Grande SP (tempo real / hora em hora)
+- **G1 São Paulo (Capital e RMSP):** `https://g1.globo.com/rss/g1/sp/sao-paulo/`
+- **G1 Mogi das Cruzes e Suzano (Alto Tietê):** `https://g1.globo.com/rss/g1/sp/mogi-das-cruzes-suzano/`
+- **Metrópoles São Paulo:** `https://www.metropoles.com/sao-paulo/feed`
+- **Diário do Grande ABC (Santo André, SBC, São Caetano, Diadema, Mauá):** `https://www.dgabc.com.br/rss/`
+- **UOL / Folha / R7 / Diário do Transporte**
