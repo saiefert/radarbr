@@ -111,10 +111,11 @@ Arquivos atualizados de hora em hora pelo Grokbot para cada cidade:
 
 1. Sempre preencha **`"atualizado_em"`** com data e hora ISO 8601 (ex.: `2026-11-24T14:00:00-04:00` para Campo Grande/MS) — o cabeçalho do site mostra exatamente há quantos minutos foi atualizado.
 2. Sempre preencha **`"data"`** (`YYYY-MM-DD`) e, sempre que a notícia informar, **`"hora"`** (`HH:MM`) para que os filtros de **1h, 6h, 12h e 24h** funcionem com precisão.
-3. Marque `"nova": true` apenas nos registros recém-encontrados na rodada da última hora (e `false` nos anteriores). O site também destaca automaticamente qualquer registro com menos de 3 horas com o selo **Recente**.
-4. Mantenha **`"id"`** estável para evitar duplicatas entre coletas horárias e acumule o histórico recente (ex.: últimos 30–90 dias).
-5. Use `"precisao": "rua"` quando houver rua/avenida/cruzamento/km exato e `"precisao": "bairro"` quando só houver o bairro (se `lat`/`lng` ficarem nulos, o site posiciona automaticamente usando `data/campo-grande-ms/cidade.json`).
-6. Para adicionar uma **nova cidade** no futuro: adicione a entrada em `data/cidades.json` e crie `data/<slug>/cidade.json`, `crimes.json` e `transito.json`.
+3. **Link exato da matéria (obrigatório):** no campo `"link"`, salve SEMPRE a URL específica da notícia/matéria correspondente — **nunca** a página inicial do portal (ex.: evitar `https://www.dgabc.com.br/` ou `https://www.metropoles.com/sao-paulo/`). Somente registros provenientes de planilhas oficiais em massa (`SSP-SP` / `SEJUSP-MS (SIGO)`) apontam para a página oficial do conjunto de dados.
+4. Marque `"nova": true` apenas nos registros recém-encontrados na rodada da última hora (e `false` nos anteriores). O site também destaca automaticamente qualquer registro com menos de 3 horas com o selo **Recente**.
+5. Mantenha **`"id"`** estável para evitar duplicatas entre coletas horárias e acumule o histórico recente (ex.: últimos 30–90 dias).
+6. Use `"precisao": "rua"` quando houver rua/avenida/cruzamento/km exato e `"precisao": "bairro"` quando só houver o bairro (se `lat`/`lng` ficarem nulos, o site posiciona automaticamente usando `data/campo-grande-ms/cidade.json`).
+7. Para adicionar uma **nova cidade** no futuro: adicione a entrada em `data/cidades.json` e crie `data/<slug>/cidade.json`, `crimes.json` e `transito.json`.
 
 ---
 
@@ -167,7 +168,40 @@ O Governo de MS publica planilhas `.csv` (abertas no Excel) e API CKAN direto do
 - **Agência SP (comunicados oficiais PM/PC/SSP):** `https://www.agenciasp.sp.gov.br/`
 
 ### Portais e jornais locais/de bairro de SP e Grande SP (tempo real / hora em hora)
-- **Capital:** G1 SP (`https://g1.globo.com/rss/g1/sp/sao-paulo/`), BNews São Paulo (`https://www.bnewssaopaulo.com.br/feed/`), Metrópoles SP (`https://www.metropoles.com/sao-paulo/feed`), Folha de S.Paulo (`https://feeds.folha.uol.com.br/cotidiano/rss091.xml` e `https://www1.folha.uol.com.br/folha-topicos/sao-paulo/`), Diário Zona Norte (`https://www.diariozonanorte.com.br/feed/`), Jornal Zona Sul (`https://www.jornalzonasul.com.br/feed/`), Diário do Transporte (`https://diariodotransporte.com.br/feed/`), R7 / Band / SBT News / CNN Brasil / UOL
-- **Grande ABC:** Diário do Grande ABC (`https://www.dgabc.com.br/rss/`), Repórter Diário (`https://www.reporterdiario.com.br/feed/`), ABCD Jornal (`https://abcdjornal.com.br/feed/`), ABC do ABC
-- **Zona Oeste / RMSP:** Visão Oeste (`https://visaooeste.com.br/feed/`), Giro S/A (`https://girosa.com.br/feed/`), O Taboanense (`https://www.otaboanense.com.br/feed/`), Folha de Alphaville (`https://www.folhadealphaville.com.br/feed/`), Webdiário Osasco
-- **Guarulhos & Alto Tietê:** Guarulhos Hoje (`https://www.guarulhoshoje.com.br/feed/`), Click Guarulhos (`https://www.clickguarulhos.com.br/feed/`), G1 Mogi/Suzano (`https://g1.globo.com/rss/g1/sp/mogi-das-cruzes-suzano/`), O Diário de Mogi (`https://www.odiariodemogi.net.br/feed/`), Diário de Suzano (`https://www.diariodesuzano.com.br/feed/`)
+*(Nota: alguns sites de bairro menores podem apresentar certificado TLS antigo/expirado ou não expor RSS nativo; nesses casos, coletar via Google News RSS com `site:<dominio>` para obter sempre o link exato da matéria.)*
+
+- **Portais gerais e regionalizados (toda a cidade):**
+  - G1 SP (`https://g1.globo.com/rss/g1/sp/sao-paulo/`)
+  - BNews São Paulo (`https://www.bnewssaopaulo.com.br/feed/`)
+  - Metrópoles SP (`https://www.metropoles.com/sao-paulo/feed`)
+  - Folha de S.Paulo (`https://feeds.folha.uol.com.br/cotidiano/rss091.xml` e `https://www1.folha.uol.com.br/folha-topicos/sao-paulo/`)
+  - SP Jornal (`https://spjornal.com.br/feed/`) — seções por zona (leste, oeste, norte, sul, centro)
+  - São Paulo Agora (`https://www.spagora.com.br/feed/` e `https://www.spagora.com.br/bairros/`)
+  - Sampa na Web (`https://sampanaweb.com.br/`)
+  - Metropolitano SP (`https://metropolitanosp.com.br/`)
+  - Diário do Transporte (`https://diariodotransporte.com.br/feed/`), R7, Band, SBT News, CNN Brasil, UOL
+
+- **Zona Leste:**
+  - ZL Notícias (`https://zlnoticias.com.br/feed/`), Jornal ZL (`https://zlnews.com.br/`), Leste Online (`https://lesteonline.com.br/`), Jornal Infoleste / Vila Matilde (`https://www.infoleste.com.br/feed/`), Jornal do Momento News (`https://jornaldomomento.com.br/feed/`), Gazeta Penhense (`https://gazetapenhense.com.br/`), Gazeta da Mooca (`http://www.gazetadamooca.com/`), Gazeta de São Mateus (`https://www.gazetasaomateus.com.br/feed/`), Folha de São Miguel (`https://www.folhadesaomiguel.com.br/feed/`), Voz do Bairro / Vila Prudente (`https://vozdobairro.com.br/`), Cidade Tiradentes News (`https://www.cidadetiradentesnews.com.br/`)
+
+- **Zona Norte:**
+  - Diário da Zona Norte (`https://www.diariozonanorte.com.br/feed/`), Semanário Zona Norte (`https://www.semanariozonanorte.com.br/`), Jornal SP Norte (`https://www.jornalspnorte.com.br/`), ZN Mais Notícias (`https://www.znmaisnoticias.com.br/feed/`), A Gazeta da Zona Norte (`http://www.gazetazn.com.br/`), Freguesia News (`http://freguesianews.com.br/`), Gazeta da Vila Guilherme (`https://gazetadavilaguilherme.com.br/feed/`)
+
+- **Zona Sul e Extremo Sul:**
+  - Jornal São Paulo Zona Sul (`https://jornalzonasul.com.br/feed/`), Zona Sul Notícias (`https://www.zonasulnoticias.com.br/feed/`), Grupo Sul News (`https://gruposulnews.com.br/`), Ipiranga News (`https://ipiranganews.inf.br/feed/`), Jabaquara News (`https://jabaquaranews.com.br/feed/`), Grajaú News (`https://grajaunews.com/`), Folha do Capão (`http://folhadocapao.com.br/`), Cidade Ademar em Notícias (`http://www.cidadeademaremnoticias.com.br/`), Espaço do Povo / Paraisópolis (`https://espacodopovo.com.br/feed/`), Folha Minha Sampa / Parelheiros-Marsilac (`https://www.folhadaminhasampa.com.br/`), Periferia em Movimento (`http://periferiaemmovimento.com.br/`)
+
+- **Zona Oeste:**
+  - Jornal Oeste News (`https://www.jornaloestenews.com.br/`), Folha Noroeste (`http://folhanoroeste.com/`), Jornal da Gente / Lapa (`http://www.jornaldagente.inf.br/`), Daqui Lapa (`http://www.daquilapa.com.br/`), Gazeta de Pinheiros (`https://gazetadepinheiros.com.br/`), Perdizes Digital (`https://www.perdizesdigital.com.br/`), Pirituba Agora (`http://piritubaagora.com.br/`), Perus e Região (`http://peruseregiao.com.br/`), Barra Funda News (`https://www.barranewssp.com/`)
+
+- **Centro:**
+  - Jornal do Brás (`https://jornaldobras.com.br/`), Bom Retiro Digital (`https://www.bomretirodigital.com.br/`), Jornal da Liberdade (`https://www.ajorb.com.br/associados/jornal-da-liberdade/`), Notícias da Aclimação e Cambuci (`https://www.ajorb.com.br/associados/noticias-da-aclimacao-e-cambuci/`)
+
+- **Grande São Paulo (RMSP):**
+  - **Grande ABC:** Diário do Grande ABC (`https://www.dgabc.com.br/rss/`), Repórter Diário (`https://www.reporterdiario.com.br/feed/`), ABC Agora (`https://abcagora.com.br/`), Clique ABC (`https://cliqueabc.com.br/`), ABCD Jornal (`https://abcdjornal.com.br/feed/`), ABC do ABC
+  - **Oeste RMSP (Osasco / Barueri / Taboão):** Portal Mídia Oeste (`https://midiaoeste.com.br/feed/`), Visão Oeste (`https://visaooeste.com.br/feed/`), Giro S/A (`https://girosa.com.br/feed/`), O Taboanense (`https://www.otaboanense.com.br/feed/`), Folha de Alphaville (`https://www.folhadealphaville.com.br/feed/`), Webdiário Osasco
+  - **Periferia da Grande SP / Guarulhos / Alto Tietê:** Agência Mural (`https://www.agenciamural.org.br/feed/`), Guarulhos Hoje (`https://www.guarulhoshoje.com.br/feed/`), Click Guarulhos (`https://www.clickguarulhos.com.br/feed/`), G1 Mogi/Suzano (`https://g1.globo.com/rss/g1/sp/mogi-das-cruzes-suzano/`), O Diário de Mogi (`https://www.odiariodemogi.net.br/feed/`), Diário de Suzano (`https://www.diariodesuzano.com.br/feed/`)
+
+- **Diretórios de referência para descoberta de novos jornais locais:**
+  - AJORB (Associação dos Jornais e Revistas de Bairro de SP): `https://www.ajorb.com.br/associados/`
+  - Guia da Mídia — Bairros da Capital: `https://www.guiademidia.com.br/jornais/saopaulo/bairros.htm`
+  - Guia da Mídia — Grande SP: `https://www.guiademidia.com.br/jornais/saopaulo/grandesp.htm`

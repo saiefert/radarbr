@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-24T18:08:00-03:00",
+  "atualizado_em": "2026-11-24T18:25:00-03:00",
   "fonte": "Portais & Jornais Locais SP + Base Oficial SSP-SP",
   "cidade": "São Paulo e Região - SP",
   "observacao": "47 ocorrências recentes de portais e jornais locais de SP/RMSP (BNews SP, Metrópoles, Folha, G1 SP, R7, CNN, DGABC, Visão Oeste, PM-SP/PC-SP) + 761 boletins oficiais da SSP-SP (SPDadosCriminais_2026.xlsx, set/2026) cobrindo todas as zonas da Capital (incluindo Extremo Sul: Grajaú, Parelheiros, Cidade Dutra, Capão Redondo, Jardim Ângela) e Grande SP.",
@@ -86,7 +86,7 @@
       "precisao": "bairro",
       "nova": true,
       "fonte": "Polícia Militar SP",
-      "link": "https://www.policiamilitar.sp.gov.br/",
+      "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPbUc0QXU3cGs0eDdBNTdVbm93alJJUlduZkVPdnNjYTRTM1NPUmlienlKTWlMQVpfaXBLNlA0VGY1Nk8tNE5MNEY3MGZmN2R0cnphSGpIVDRpbXdyeUZ4OTF5dXRyNWtTNDhaZnNGSDJLaVQxLVppUnA2LVA0Q0czTGlidHVxWXQtM0UzUG5tNkRHaUJudmtMN1VRQVd0UVNEYnh1TUpCSkNaMnU3eWZpWGtWNGQtQlZQSjNCbGRfNmlGUlBPQ09CYU5ZWTlYNXgxTzZfd1JJbFI2c2I3X3N5TTNHSQ?oc=5",
       "resumo": "Equipes da Polícia Militar de São Paulo apreenderam grande volume de entorpecentes armazenados em residência no Jardim Califórnia, em Barueri."
     },
     {
@@ -122,6 +122,22 @@
       "fonte": "Visão Oeste / PM-SP",
       "link": "https://visaooeste.com.br/mais-de-12-tonelada-de-maconha-e-apreendida-em-caminhao-na-castello-branco-em-santana-de-parnaiba/",
       "resumo": "Polícia Militar Rodoviária interceptou caminhão com carga de móveis na Rodovia Castello Branco e apreendeu mais de 1,2 tonelada de maconha; motorista foi preso em flagrante."
+    },
+    {
+      "id": "dgabc-2026-11-24-1227-furto-placas-cemiterio-sbc",
+      "data": "2026-11-24",
+      "hora": "12:27",
+      "tipo": "furto",
+      "titulo": "Homem é preso após furtar 49 placas de túmulos em cemitério de São Bernardo do Campo",
+      "cidade": "São Bernardo do Campo",
+      "bairro": "Centro",
+      "endereco": "Cemitério municipal de São Bernardo do Campo",
+      "lat": -23.694,
+      "lng": -46.565,
+      "precisao": "bairro",
+      "nova": true,
+      "fonte": "Diário do Grande ABC",
+      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOcC1CMS1MRy1MazJ4TVVIREdVWERQRl9CV1kyRUQ4N3N0VW5tQTJpVHdhaDc1dDA3b2tEbURiLU14RU1tTlNFN3RKWUc0NjQtUnI2aHYyS3kyOHdYOHdnc216cXNCdnpMcHFwVk9UMnUyNk05YTUzandLa1pYeUlOVG9OVjlMNjgtRmVtUFhneVZOU0dVaGNoeUlxbHA0NHVKZDZ1OHVseEF2Z3BwazFyWnRINA?oc=5"
     },
     {
       "id": "g1sp-2026-11-24-1146-pf-prende-tratorista-aeroporto-gru",
@@ -171,7 +187,7 @@
       "precisao": "bairro",
       "nova": true,
       "fonte": "Diário do Grande ABC",
-      "link": "https://www.dgabc.com.br/",
+      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQT3NPU2I1LUh5a051Z3JzUXJjNEdtemxBSkxmckFSa083MlB3amdNYTBlcjFkcXZQZ3JQVzVKNlpBanZxR2FqR0x6Z0dMV21nTWdlN2FNLUdWODQ3VmR6Q3JQcXZ3d3FneDdtWXN6dEhEUWZMZWQwYTJHa3pfeDh2akk2QkJKb0NVUmVFOHMwWEF6ZG1VNFBDS1B5ZHV4Zk5KZHFZTmVHRDA?oc=5",
       "resumo": "Foragido procurado por tráfico de drogas tentou fugir de carro, mas acabou detido após perseguição policial em São Bernardo do Campo."
     },
     {
@@ -239,7 +255,7 @@
       "precisao": "bairro",
       "nova": false,
       "fonte": "Diário do Grande ABC",
-      "link": "https://www.dgabc.com.br/",
+      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNM0xsNl95QThqQ3hPcm4tWV9BektyNU5GM1VzRFM1cGZOWm05OVB5dkNWNkZLYkUzOFpEZGJBOXNPVUt1OVhiOTB6RmxoQ2tpRUUtMm1mODJtdU5mdk9BbUZELWRXbEFzRHJKQmR0Z040WFVORmVxaldNY1ZhZEh4Q3oyaUVtZDFQclEydE9YVnRPWEdteHdfOFZTQWlfejhiZFFDR3NLQ21COVpMbVE?oc=5",
       "resumo": "Investigado pelo feminicídio de jovem em Diadema apresentou-se à polícia após buscas na região do Grande ABC."
     },
     {
@@ -256,7 +272,7 @@
       "precisao": "bairro",
       "nova": false,
       "fonte": "Metrópoles SP / PM-SP",
-      "link": "https://www.metropoles.com/sao-paulo/",
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOSFFnU0ZVTjJIZDk2TTJqRVp4WEtkcXBDTnNPZFkxZzVXTkZrQkoyc2ZOdGZXNVItY3pLQTFFRnBMWTBTbkhxNTBUXzNvS0FYZTRIS2h3NHBFMmRXdHNIUlF2YllMLVdTdXhyNDZKWXJSRTBrUXVPZXFjUzdwS0Nfc290NFBaZGtobHFHRmh0cnYydmx5em5wdkh1WTlLX2hNY2FhXzJQMTdXOGJpcXROTA?oc=5",
       "resumo": "Polícia Militar apreendeu três réplicas de fuzil durante patrulhamento na Zona Norte da capital paulista."
     },
     {
@@ -290,8 +306,24 @@
       "precisao": "rua",
       "nova": false,
       "fonte": "Polícia Federal / UOL",
-      "link": "https://www.gov.br/pf/",
+      "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOUzhfNHZpUGdzeXZPYXNwekVfeHJxTkFJcno4akZWWl9qR1FKem53dy1rRXdGU3NuNWF3X0RBNmhYQ29QQ2swVzc3M2E4NG1TdHcwZE1mYl9rVDdwU1FHMXNNT1R5NHBRR0J2RUNPVXE5QnI2YmU2QTN1cGVyeXdaeTU4ak1aNWI3d3NMbGRUYnk1Y0w0OUZldC1DNDUta0YtalpOcWxpdVFpc1c3cDlQcklodmdCUU1EbGV1TlM0ZHFELU1XNjRiRVgyZW5raXRzNGVHb0Vn?oc=5",
       "resumo": "Em quatro dias de fiscalizações no Aeroporto Internacional de Guarulhos, a PF prendeu sete suspeitos e apreendeu mais de 107 kg de cocaína."
+    },
+    {
+      "id": "dgabc-2026-11-23-1327-suspeita-bomba-itaim-bibi",
+      "data": "2026-11-23",
+      "hora": "13:27",
+      "tipo": "operacao_policial",
+      "titulo": "Prédio comercial é esvaziado e polícia acionada após suspeita de artefato explosivo no Itaim Bibi",
+      "cidade": "São Paulo",
+      "bairro": "Itaim Bibi",
+      "endereco": "Região comercial do Itaim Bibi",
+      "lat": -23.5847,
+      "lng": -46.678,
+      "precisao": "bairro",
+      "nova": false,
+      "fonte": "Diário do Grande ABC",
+      "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPdV94WElvRGRoV3A4UndWcHk3SWo2MzVBTWdONmdSVEFtU2xYdjk5MkxManM0RUpCZ1JxV1I2YWl1OWF2VVU5cW9zZjdybE5OLUs3bFhhV3BnZkdLQXRjLXVxQUE0Ujg2aFVsNlcxSDRRYkhsM0tHZGpkVEhVaWdCd2FQTjV3Uy0wVGRzQWx5UHpyWmdWNk15TWJ4dDRYM3AtRjhmU1hoQ05XSEhyTEJSOUU4TERQaVlUUFhVSm51cVB4ZDEydzhfamxWS3FzbFE?oc=5"
     },
     {
       "id": "girosa-2026-11-23-1313-violencia-domestica-barueri",
@@ -324,7 +356,7 @@
       "precisao": "bairro",
       "nova": false,
       "fonte": "PM-SP / Policial Padrão",
-      "link": "https://www.policiamilitar.sp.gov.br/",
+      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPajZ4NEVPMzRsWVBYcmhfcDZ6VF8wdWNsd1pfbWYzYm1KUWIwN0g1N0VZVWZySTlJUVhxVXJYb2Z6UjBmQWxyWnJnc3UxYUpvbnpzdXFVeGc5dG03YTEyLXlxWFRWaEhSLVJtTmRiVXdYbmJ1VXZZOGJFeHFHWExLbml2VFhJWjlOWEd0TThhM0pUSDRkaFV2eVprdUxzNm1IV2VMbTVBWnQ?oc=5",
       "resumo": "Policiais militares efetuaram a prisão de suspeito de tentativa de homicídio na Zona Norte de São Paulo."
     },
     {
@@ -341,7 +373,7 @@
       "precisao": "bairro",
       "nova": false,
       "fonte": "Polícia Militar SP",
-      "link": "https://www.policiamilitar.sp.gov.br/",
+      "link": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxOTXQ3TTduWm01dWY1amF1OGJLZ1NYcFVpd1ZRUFFrWmw1b1g4SjBFRFk0N1NtbnVUTmdkdlRLczZ5eDhjbnl2by1IYU0tT2c0emNQOVpGYnFYSkhVWXl5V0FhWS1RenkyUUFwWUNvRXJDdTFLN05kUmxwSjFITzhVSjZjb1JlbnR3dUl1NExyOW1GZHluZ0RWbFNxZ3lfNHhXSVBoeFdJTExaVlQ3b0hOcmxfLUx1d0tsUEUxckVtZHNBd3hfSElJLUZGbWxpZDJkUmVXa2xTeW05MEVIQnplQlJ0YU9lX2s?oc=5",
       "resumo": "Durante atendimento de ocorrência de violência doméstica em Barueri, policiais militares apreenderam arma de fogo e objetos."
     },
     {
@@ -374,8 +406,8 @@
       "lng": -46.4613,
       "precisao": "bairro",
       "nova": false,
-      "fonte": "Diário do Grande ABC / PM-SP",
-      "link": "https://www.dgabc.com.br/",
+      "fonte": "Diário do Grande ABC",
+      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNU1ZlVUxvQWZUVWN0U0ZibDFJc1U3aVZzdGpDcXlHVDc5TmtkdEY4YnhwNjFfSTNXaVo1eUd3aG91Nk43YWJKWndJaHNfb3BFbVhyQ0xfRzNVNlF1cGpjVFk1VVZHa2Q1WGxuU01ja29MRTcteWoycS1yTFJTU3B4QlpwX3hDanlZc1NJb0ZaOUhSY3hOTHM4Nw?oc=5",
       "resumo": "Polícia Militar prendeu mulher em flagrante por tráfico de drogas com 902 porções de entorpecentes em Mauá."
     },
     {
@@ -392,7 +424,7 @@
       "precisao": "bairro",
       "nova": false,
       "fonte": "PM-SP / SSP-SP / Agência SP",
-      "link": "https://www.ssp.sp.gov.br/",
+      "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxPMW8xYTNmX19UbkNBNmxRMDFIVERHaUd0UzFFbTFVUE03dzdQNndDWHMxX3Y0c0ZQaW9hdWpIVnZaSFZjdTJEYWpRTnY2c01iRFN4RHVQY0FNaXNGVVlKRXNnV0d4UHRBdGx6STlPeGFQeXNqSkFNZF84ZEs3dGZjS2pQeklFMDREN0NUY1htUmRYSm5tZDNVYU9ZdFkzUzM5ZkVER0FIOHIxN2M5QjFuWk5BbmVZZ05pTXQxd3dOMkNFQVBCXy0yNF9RQVZvY3ZpU3NnVjkwd2JMTnJuMmxBblZIOFpkNnNq?oc=5",
       "resumo": "PM prendeu suspeito de 22 anos após roubo a farmácia na Vila Andrade, apreendendo R$ 49,6 mil em medicamentos e cosméticos, uma arma de fogo e moto roubada em Santo Amaro."
     },
     {
@@ -409,7 +441,7 @@
       "precisao": "bairro",
       "nova": false,
       "fonte": "Polícia Militar SP / DGABC",
-      "link": "https://www.policiamilitar.sp.gov.br/",
+      "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPbGpJam90RElnbmc2dVo4TXdKZ0RFOUdEalk5eEVQS0lVeWhkUEdGREFDWVpTT0daWkQ1MUNqUmd4UVNaRklDRHVaNEdpSlQ4ZTVBcWhRalM5dTgwb2JtY1FmRTNsMXNlblY0aWZtZmlxVkpEV0J1dE1TV0RzTlFLMHFMekpoRzlIcDNiRTZ0d2FvRXFqQzNOT0c3ajhsTXVaVmdGUEVmMXJKSVNjR1Y0d1FnOTE2WTJDV0lVZ1NQY0Jyd3F0OEl4OQ?oc=5",
       "resumo": "Ação da Polícia Militar frustrou o roubo de carga milionária de fios de cobre em Santo André e resultou na prisão de um suspeito."
     },
     {
@@ -430,6 +462,22 @@
       "resumo": "Casal foi abordado por assaltantes que exigiram transferências bancárias; Polícia Militar resgatou as vítimas do porta-malas e prendeu dois suspeitos em flagrante."
     },
     {
+      "id": "spagora-2026-11-23-0118-carro-luxo-363-infracoes-cupece",
+      "data": "2026-11-23",
+      "hora": "01:18",
+      "tipo": "operacao_policial",
+      "titulo": "PM apreende carro de luxo com 363 infrações e R$ 531 mil em débitos na Av. Cupecê",
+      "cidade": "São Paulo",
+      "bairro": "Cidade Ademar",
+      "endereco": "Av. Cupecê — Zona Sul",
+      "lat": -23.671,
+      "lng": -46.6572,
+      "precisao": "rua",
+      "nova": false,
+      "fonte": "São Paulo Agora",
+      "link": "https://www.spagora.com.br/seguranca/policia/carro-luxo-363-infracoes-531-mil-debitos-sao-paulo/"
+    },
+    {
       "id": "agenciasp-2026-11-22-1844-1300kg-drogas-mairipora",
       "data": "2026-11-22",
       "hora": "18:44",
@@ -443,7 +491,7 @@
       "precisao": "bairro",
       "nova": false,
       "fonte": "Agência SP / PM-SP",
-      "link": "https://www.agenciasp.sp.gov.br/",
+      "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQYnFXYk1sbzlOdWhZUjk2MkpxWWlGMW1xdV8zYkJpWThxbzhpWkdla21aOWpJaVNSY1FUSGtaeHI2d2czaDFUSjBLRldPRktYX09aN2Jwc21TenVMWVR1OERjYVA0UEZEdWFsb1E4TDJqTXp3SEV2YXFFSUNEYXkxb240OE5ZT1BUMWI0Z1dlMjE1cXJOTllpR2FkWDkxY1dGMGNqU0hoRTlZenNUVFVjNXFWei1BX053SUE4MXNVQUhYNklfbmw0U0p5UTZtdw?oc=5",
       "resumo": "Polícia Militar apreendeu mais de 1,3 tonelada de entorpecentes e prendeu dois suspeitos em flagrante em Mairiporã."
     },
     {
@@ -460,7 +508,7 @@
       "precisao": "bairro",
       "nova": false,
       "fonte": "BNews São Paulo",
-      "link": "https://www.bnewssaopaulo.com.br/",
+      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNdjZiSGtKNkRYazhYNnhMWk5uU29jS282V19NQ09HLWdFaktTeUN2MVg3MHR1TFZ3UHo3aXl3Y1BpMXRxMVdXaGZDeFY2T0JKTFpxaDNNZzFCcVI5T0pRUzFjODlsMkx5SE5fYlRnVGlGZThBSWlZNlZJWS1PeTNBN1JYd3dHQ1daZUR4cFRBMHAtX2xYbldtWWJVWnVMT0NuRUkyc3B6V3UtOXNKcGNwNTZWYlg1QXZOc2Z1Z1Q4QVnSAcYBQVVfeXFMUGhRQ3RwdjQ4MTBvdHpibktKNEMwa1JRMXVxMGlOTE8tWmFMSjh5S0JDZERUaUNPZFprdld6VkE4VEp4T0xPaU5Vc19FTW9JcW5pUEVWWlZTQktLc2tmd2w1b0FDc3IwMWlaMHh5MWhwX2FCVTVUZDU4RDlXWExDcU5RVERwUVZpYzBLZVQxUF93aTJ1RHBRX2V6MEJDZU9jZVBzY1VUYVU3NE1ZenNGZ0tWTVNZZE50VW1fbGZvZGc2a2x6cV9n?oc=5",
       "resumo": "Condutor com sinais de embriaguez foi preso após provocar colisões em quatro veículos enquanto transportava a filha."
     },
     {
@@ -477,7 +525,7 @@
       "precisao": "bairro",
       "nova": false,
       "fonte": "Diário do Grande ABC",
-      "link": "https://www.dgabc.com.br/",
+      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOalpSdEpybXNweUhmblBVX2VRSUR2YWoxdmpVdWI1WVVFb1R1OHV0MGdZSVduVmNDdWQzZXlWZmRWUDJYQ3djV2R2RjM4SjFuU0paLXdCdWxjMHhpeUhEUWhROXFhVmhVaEhFYmtlRVNWUTZENDdjbjNOTVlhT29OZkh0OHdDbEcxdHBENDhOWEZlZ3NRa3BMRjlsc0NrRHNBZjlGbg?oc=5",
       "resumo": "Agente da Guarda Civil Municipal foi atingido por disparo de arma de fogo durante tentativa de assalto em Santo André."
     },
     {
@@ -511,7 +559,7 @@
       "precisao": "bairro",
       "nova": false,
       "fonte": "Portal ABC do ABC",
-      "link": "https://abcdoabc.com.br/",
+      "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE01cGxHWUdYcy1rYnE1N25xLVdYQVNSYUZNRzd2UXNpYmxic3oxU2dEaHlSdzR3enhXaDUtLWhodUw1X0gzRHE4Q1pnaDRTNUY0cFhKQWdGc2NrNlRqYzY3THo2OFBON25DVUJQNTFSNHFkbTBGc0l1eERyai1XZw?oc=5",
       "resumo": "Guarda Civil Municipal localizou e apreendeu 200 porções e frascos de entorpecentes durante patrulhamento em São Bernardo."
     },
     {
@@ -579,8 +627,40 @@
       "precisao": "bairro",
       "nova": false,
       "fonte": "O Globo / PC-SP",
-      "link": "https://oglobo.globo.com/",
+      "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQUWd2SkMzRklpQmZwaEFzeXI3TFQybmJxRUFhUURnRlRZMEFFWmJtdC01eVhPb1ZVMHpHVFhHUVBPSU9sSTBWZGJsdkVWQ3lnX3M3QmdXSzg1SjhzSERNV3A2ZktsTEUzeDVTeWlYQkhpRUd0N1RabWJ2UjM3RWd5WjNqYlJJSkxaRUtXS3ZNS2JEWGc1ZnNaTXQ3c2oweDNyZ0hVY2VaNHpGTDdidXIxdU1VeHpaa1FTOXgxVTdvQ3BnZ1Rxb1EwLXotQUFSZEU?oc=5",
       "resumo": "Polícia Civil apura duplo homicídio de tio e sobrinho no bairro do Tatuapé, Zona Leste da Capital, sob suspeita de execução."
+    },
+    {
+      "id": "dgabc-2026-11-20-1637-furto-comercio-maua",
+      "data": "2026-11-20",
+      "hora": "16:37",
+      "tipo": "furto",
+      "titulo": "Polícia Militar prende homem após furto em comércio de Mauá",
+      "cidade": "Mauá",
+      "bairro": "Centro",
+      "endereco": "Área comercial de Mauá",
+      "lat": -23.6678,
+      "lng": -46.4614,
+      "precisao": "bairro",
+      "nova": false,
+      "fonte": "Diário do Grande ABC",
+      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOMDJWSGd0d2dabkVCcFViVE9tbWtsQlVvbWFYUnl4QWRtaTVtSTZCQzlOQ0NCOUFiZFJzb3BJZTlHcjhQbkZhemhGdmxFdEVsWWI4YVdsajdHRjFKMEo0THZZSXEzSjZkTVM0NFJMazVQVmFydUVIVU43bEpTanMzdlFxZkpzUVlSXzFhQWNtVnFyN2pQQ3FkY1o5RW9kaXlMOFE?oc=5"
+    },
+    {
+      "id": "dgabc-2026-11-19-2142-pm-prende-trafico-maua",
+      "data": "2026-11-19",
+      "hora": "21:42",
+      "tipo": "trafico",
+      "titulo": "Polícia Militar prende homem por tráfico de drogas em Mauá",
+      "cidade": "Mauá",
+      "bairro": "Mauá",
+      "endereco": "Mauá — Grande ABC",
+      "lat": -23.6712,
+      "lng": -46.4589,
+      "precisao": "bairro",
+      "nova": false,
+      "fonte": "Diário do Grande ABC",
+      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPWVlvNU5yN3JJTFJmTGd5MnJGMTExcnFZZmhQOEtyV3hKay1zY2V1ajdCVzkyeDF5eHd4VkJCQnQ5SUlGTF9hWXpIRk1JUXpmV0dHUkJBdGpNRkFEcEZESk1FRC0tbEdrRzZvN1pYV3Y2TWtNeHZqci1BYjRDLWs4d1V6UmVhNE1JbURDamJfNzRiMEl1MU1HMXQwYVZmRHc?oc=5"
     },
     {
       "id": "g1mogi-2026-11-19-2018-estudante-roubado-agredido-suzano",
@@ -613,7 +693,7 @@
       "precisao": "bairro",
       "nova": false,
       "fonte": "Folha de S.Paulo",
-      "link": "https://www1.folha.uol.com.br/folha-topicos/sao-paulo/",
+      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNREpUM0NWUVVGbGQ5dHpZRjRvdUtPWmdSVnljbGZxZTJkZkxtaTBOeG5saU5Pa2JtQ0c2RjVGcWp2bllzODNoSEZOdzFmeXFKazI2MTRoV29CQWVLeG1uTW10NU5UQUZ3ZjdlX2ZMRHB3YnhGZHhvQVVwWS1LVXRkelh0ZDYwUzZRQTVkS3dCRGMzZWE3bHFicnN3YmI5LTdUb0NiMDVHdDVxb3VuTWVWNlFUWUlXMzk4YlpLSXF3ekUxVEk?oc=5",
       "resumo": "Agente da Guarda Civil Metropolitana foi baleado durante tentativa de assalto no Brás, região central da capital paulista."
     },
     {
@@ -630,7 +710,7 @@
       "precisao": "cidade",
       "nova": false,
       "fonte": "Agência SP / PC-SP",
-      "link": "https://www.agenciasp.sp.gov.br/",
+      "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPZ0VzMDM2Rl9BdmFQdFZQSmlGdDhqM3RyaVlheFB0SGxvTklrNFpUaHUzRVkxeXdHdjNmcVpVeTZzM3FoZTF2RDJqQnlxQnNtaGtwWGVWWHU0eFZnUlZzZGJiU1NzU204cWZKNTJMSFA3SmRBcEZxUXFPNEVuWVcxM29aN1NWX2RpUW13SG0tS1c0cVFsZ0dyTlpwWVhYN0ZrVVBXVU52RW1pOWstcTBEZk93WVV5aWlqNlhFaGVtNWhpTExFcWVNTnBGeTRWSWdYRktaVlVUSkdfS0tK?oc=5",
       "resumo": "Polícia Civil de São Paulo e Gaeco deflagraram operação para desarticular organização suspeita de aplicar o golpe do bilhete premiado."
     },
     {
@@ -647,7 +727,7 @@
       "precisao": "cidade",
       "nova": false,
       "fonte": "CNN Brasil",
-      "link": "https://www.cnnbrasil.com.br/",
+      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOOHN3WmxwOWRJdUxfcWNIanNPdm41WEZaUE1aX0hPWmJnYndmRGRaWnFZSkJVc3NVRWMtYTA1Mm4yUnNQcWZYSER0bEVPOTJJd29GMTVUMXhSUVlLRkdIcGN3VHF0R2NoYk9COEx0bHA4cVQ2YkxjU0FzYTg0NkhZNHFMa3k2QQ?oc=5",
       "resumo": "Suspeito foi detido pela Polícia Civil investigado pelo feminicídio de uma tatuadora cujo corpo foi encontrado em praça de São Paulo."
     },
     {
@@ -664,7 +744,7 @@
       "precisao": "rua",
       "nova": false,
       "fonte": "Metrópoles SP / R7",
-      "link": "https://www.metropoles.com/sao-paulo/",
+      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPSmN2RXBwSHd6bnZJSmtqUWVGT2FzNXhPd2Ewb3N1VjVEcU5vM1NDUjE2YzNzanE1OG1KT3BTNnFMaVk0aFFNM3FndmdvdFBoSFMtNGR1Qnpmd0JyRldPTHlvRExqdC11ZjRUVFMwaExMaERhd3BRSlBvLU9GamFoNndnWl90WjJEUXFYRFlRNk0xLTltVDdxQU92UzBBck5ST1dxQmtxajNYQjJF?oc=5",
       "resumo": "Confronto entre policiais militares e suspeitos de roubos na Marginal Pinheiros terminou com dois mortos e assustou passageiros da Linha 9-Esmeralda."
     },
     {
@@ -698,7 +778,7 @@
       "precisao": "rua",
       "nova": false,
       "fonte": "Metrópoles SP",
-      "link": "https://www.metropoles.com/sao-paulo/",
+      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQQjJSYnJBTi02b0trOWlUQjJCY29UbG00T1p5bG5KTWhBTUFZMjJsUk0tVTRNbEM1OXh1Z1dsTklYSzVhYl9fcHZ0R0dEZXh2ZVQ5ZzZ5TklmZS1PWUpyV3FZd0FTYTNkWmJYbXVWaks3NF9xS0N6RnZWZV84WmhLYk8ydDYyMjNjT2dOQUMyYnNzeVJrQjFzeW1ac1dCdHV0a3NUWGNWNG5BMG9OOVE?oc=5",
       "resumo": "Polícia prendeu três suspeitos em operação contra quadrilha especializada em assaltos a motocicletas de luxo na Raposo Tavares."
     },
     {
@@ -732,7 +812,7 @@
       "precisao": "bairro",
       "nova": false,
       "fonte": "Metrópoles SP",
-      "link": "https://www.metropoles.com/sao-paulo/",
+      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOWXp4MVNtbEZOMXA1LUswczBzejI1cWNoYXY3NHR3dzZnLU83cnpvcjEyOHVLd2ZUOUctbUJFNGZaZXA4Ri1LX2JoZFZOMFoxV1lINGU4VlhJMUtrcDJxS0tvM2R5OE1JTFJwUTVrN3hxNDVVOFktcktNRE5WZDBCeGxnaGZtLWREbjFOYURKSXE1SEU0c2RVbXVzT204eldrR2p4UzFqVQ?oc=5",
       "resumo": "Médico com mandado de prisão em aberto foi localizado e preso pela polícia enquanto trabalhava de plantão em unidade de saúde de Barueri."
     },
     {
@@ -749,7 +829,7 @@
       "precisao": "bairro",
       "nova": false,
       "fonte": "Metrópoles SP",
-      "link": "https://www.metropoles.com/sao-paulo/",
+      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPSF9OVXE0bU1wQk1laHFReFRZQ29rdGo4SmtCc0pWQ0pFWFFBdEstV1JFTE1ZWXozenV5dWt2Ml85X1gxOWJsOEZpeU1ReDNqSzkwa2NWTjc2VFlQNUV4ekZwaEhJbDlMUGttaWQ2V3dNSlpVak5nNlJmLVh3eGdET2t4SFZqeEZxRUFicGFYQUVlZmttemdvSGRMU3B5b2taYUtNcFF0TFVkckV6Tlpv?oc=5",
       "resumo": "Criminoso responsável por roubo de veículo em que a vítima foi atropelada duas vezes na Barra Funda acabou preso pela polícia."
     },
     {
@@ -766,7 +846,7 @@
       "precisao": "bairro",
       "nova": false,
       "fonte": "Metrópoles SP",
-      "link": "https://www.metropoles.com/sao-paulo/",
+      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOWWh2anRfSmZBcjFvN2dWcUo0TWVENmVFYno3WS1EREE2LXctdlZ0cDdfaDlzNkxMcUdPcWw4UFlvVVhQREE5RHJuTVdRTk1zRmdHWnRhQWZ5OFVXcHlBVUxRUDhKc20xQWVMMkZjdmw1NnFPcHVsWTJaWnNMbUo5dE1hLWNfRmJOLWhDcDFhTUlKZFBHUUhORmNpSmc1MUNveWRGS2p3dVJGSW8?oc=5",
       "resumo": "Durante varredura com canil policial na Zona Leste, cão farejador localizou 83 kg de entorpecentes ocultos sob entulho."
     },
     {
@@ -800,8 +880,40 @@
       "precisao": "bairro",
       "nova": false,
       "fonte": "BNews São Paulo",
-      "link": "https://www.bnewssaopaulo.com.br/",
+      "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOWjltNzVubUg3cWFPMEIwRWZtNlFUZWRyWC1GY3Ryc1IwTnpfaFBDWnJwcmRmU3ExT0hYLXFJNHBQRU5vdVY1MGFoQ0E5WFlnXzhJbU0tQTYwSlowckhkdExpaDVabnBGSW9ST092RFZzbjNmUmR3OWxTVC0tSTZ2OFdKdWlNZjlqd0FLUlVCdGg3YTJIS0haSjV4NmZCZlhHMl9jUUJYb3JRV3QtdDM4T3ZNS00zYllGUkpEZ19HVzdOQ2hHVW5XYTRJc2tuY3QyU3fSAdcBQVVfeXFMTmhKTk5tQVJGWDk0aER3ckFzc2QzMEUybFhoekdyaUVqQW9lSFpQZlM2TEFlekdrMS1xQ051Z2NNdF9HTi0zWnZ6SzBwX2w2MXVhQi1ualkycnhRNDF1MVZnd09xRWpKQTZnbS1hZENOQ0szb1dxLVNqZDFYVDBJRkY4cW4yMWx6YzRCX2ZiYjBDSTE5T3czQUFkbXBKaWFTa0k2NWR0U1BlMTI1clBwcFA4Z1FQNFgzV2NhWVpBTjhSVVozT0NnZ2lhcDFiMzhsd0tsTmdRd3M?oc=5",
       "resumo": "Polícia Militar resgatou mulher mantida em cárcere privado dentro de apartamento no Centro e prendeu o suspeito."
+    },
+    {
+      "id": "gazetapenhense-2026-11-15-0721-furto-cabos-zona-leste",
+      "data": "2026-11-15",
+      "hora": "07:21",
+      "tipo": "furto",
+      "titulo": "Onze falsos funcionários são flagrados com 1,5 tonelada de cabos telefônicos furtados na Zona Leste",
+      "cidade": "São Paulo",
+      "bairro": "Penha",
+      "endereco": "Zona Leste de São Paulo",
+      "lat": -23.5236,
+      "lng": -46.5419,
+      "precisao": "bairro",
+      "nova": false,
+      "fonte": "Gazeta Penhense",
+      "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5vWm5uNEgyN01qUWxSTnpiek5GbEJyZWxrNXIyc0ZjaEpzWkh3ZkU0VTFDbjJkMFBBZ2RrcklQUFBNR1JmSGZNVFFBb0hTQmJERG5icldMMnpvdmFJa1U1emszTEhFM1pFeVlOd3NYZy1UR1ROdlhwaTI0RG4?oc=5"
+    },
+    {
+      "id": "midiaoeste-2026-10-20-1918-operacao-impacto-barueri",
+      "data": "2026-10-20",
+      "hora": "19:18",
+      "tipo": "operacao_policial",
+      "titulo": "20º BPM/M e CPTran realizam Operação Impacto — Cavalo de Aço em Barueri",
+      "cidade": "Barueri",
+      "bairro": "Centro",
+      "endereco": "Barueri — Zona Oeste RMSP",
+      "lat": -23.5112,
+      "lng": -46.8764,
+      "precisao": "bairro",
+      "nova": false,
+      "fonte": "Portal Mídia Oeste",
+      "link": "https://midiaoeste.com.br/20bpm-m-e-cptran-realizam-operacao-impacto-cavalo-de-aco-em-barueri/"
     },
     {
       "id": "ssp-2026-09-30-os5677-sao-paulo-roubo",

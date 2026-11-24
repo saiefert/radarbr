@@ -37,7 +37,7 @@
       "gravidade": "grave",
       "nova": true,
       "fonte": "TV São Bernardo",
-      "link": "https://www.dgabc.com.br/",
+      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOY2VudXZLWDhEZUFUZmlZQkFmV3d4emdZbGFfYVVIS3p2VzlqOTlkbDdBNTZUelM2NWpiNUo3bWxRRk42WEE5ZGdqRUF1QldhblM3V3VoUGNSZHdnbEI3UVBva0RsVmNjSVZObUhXNFpvMTM0TWhYRi1pY3RiZGJ1b05vRVB2WVJLdGFzRWZCc3RYT2lreEE?oc=5",
       "resumo": "Colisão na Estrada dos Alvarengas deixou feridos na tarde desta terça-feira e mobilizou equipes de resgate em São Bernardo."
     },
     {
@@ -73,7 +73,7 @@
       "gravidade": "leve",
       "nova": true,
       "fonte": "Via Trolebus",
-      "link": "https://viatrolebus.com.br/",
+      "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNS1M5NmRTemE5dkRVczBmNmM4bnFCZ0dLU2pfVUExR0J0RWxEVEVGR01PZV9NbFdiTTBoM0RFaldIVmVrSFh3NDlRcExUS0RyTFE1dFc0LTFQbWlhV2VEVlk1SG8tQ3Z1aTdUQmlrdmxhdzQ5NmJfZG5QU01iYTQydlhSUFEydEdDLWc?oc=5",
       "resumo": "Ocorrência de trânsito na madrugada na Rodovia Fernão Dias gerou filas e lentidão no acesso à capital."
     },
     {
@@ -91,7 +91,7 @@
       "gravidade": "grave",
       "nova": false,
       "fonte": "Diário do Grande ABC",
-      "link": "https://www.dgabc.com.br/",
+      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNbVNYTU9DWmJlY2kwT0ZwZ2RhR2NzUzJvWWhKbUV4eldxc3Q0M1pqNjJjZWs4bG81V283YUhlc1VpbGQ5X2dVd01neXNURFNsNGhnTmZTbU5vWGdmZ09yNTJYQVBRUkJpTnZkeE50V1lNUk0wSUNCbDl4bU51dmRicWpJbkE0dGFZOVJYM0pSdFlmS1pYeldPOGVn?oc=5",
       "resumo": "Pedestre foi atingida em atropelamento na noite de segunda-feira em São Bernardo do Campo e recebeu atendimento médico."
     },
     {
@@ -109,7 +109,7 @@
       "gravidade": "leve",
       "nova": false,
       "fonte": "A Tribuna / Ecovias",
-      "link": "https://www.atribuna.com.br/",
+      "link": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNS2N2VHJIODR6bzNENElMclUxVVowaTkwSnhLQ1Q5QTh4S3JWamZsanJabEdBMjM1TmVmSUVDNHRMTEFLa0JveEJjZjhzOHc0Z2M2T0RmVUExTExXNnFBLTBTX3pDWU1tT29xS2JZbWpTellmWGtsZlV1dHBoNTZQcEdjUVU5X3NMSVVHZERvSGQ1NHA0c1l3SzVOSVZnbkNfYnFSSDRBSDNrVWt2VHpRV2RHaXdRSGlKck82Y184a1czbVUxR2VLUVdyNjNSdVRqV3BZU1drT3RDZEx6Njh0eXRybXAxRHIwTE9DVzN3?oc=5",
       "resumo": "Batida envolvendo caminhões na Rodovia Anchieta causou lentidão e interdição parcial no sentido litoral paulista."
     },
     {
@@ -126,8 +126,8 @@
       "precisao": "rua",
       "gravidade": "grave",
       "nova": false,
-      "fonte": "UOL / Diário do Transporte",
-      "link": "https://diariodotransporte.com.br/",
+      "fonte": "G1 SP",
+      "link": "https://g1.globo.com/sp/sao-paulo/noticia/2026/11/23/onibus-perde-freio-bate-em-muro-de-casa-e-deixa-ao-menos-sete-feridos-na-zona-norte-de-sp.ghtml",
       "resumo": "Ônibus da linha 1743-10 perdeu o freio na ladeira, atingiu um carro, ciclistas (pai e filho) e muro de residência, deixando 7 feridos; um ciclista foi socorrido pelo helicóptero Águia da PM."
     },
     {
@@ -181,7 +181,7 @@
       "gravidade": "leve",
       "nova": false,
       "fonte": "Metrópoles SP",
-      "link": "https://www.metropoles.com/sao-paulo/",
+      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPbkVybW5lT2kxTUQwdEp5dEUtU2c4bzl4THdKLXlrcE9NM3p2YmhYeWlLNGVSOXAwUkNKZm9fTjFhNl8wRHB0VVlrUlRaY2cxcVhvUlh5VUhtVGhCOXZLaE12eW9RX3BTQjVRWEpJYjcxNjhMSjZPeGtPUndKNm1Ya1FxR05WZk11U2tETkJ3bkE0WVJzR2hFZVNFLWpQS2lHLUdyT0dPbEt4VW55dGc?oc=5",
       "resumo": "Colisão entre automóvel e dois caminhões interditou faixa da Rodovia Castello Branco na manhã de segunda-feira."
     },
     {
@@ -199,7 +199,7 @@
       "gravidade": "fatal",
       "nova": false,
       "fonte": "G1 / Folha de S.Paulo",
-      "link": "https://g1.globo.com/sp/sao-paulo/",
+      "link": "https://www1.folha.uol.com.br/cotidiano/2026/11/garupa-morre-e-gcm-fica-ferido-apos-moto-fugir-de-dispersao-de-baile-funk-em-sao-bernardo-sp.shtml",
       "resumo": "Durante dispersão de baile funk em São Bernardo do Campo, motociclista avançou contra equipe da GCM; garupa morreu e um guarda municipal ficou ferido."
     },
     {
@@ -235,7 +235,7 @@
       "gravidade": "leve",
       "nova": false,
       "fonte": "Diário de São Paulo",
-      "link": "https://www.dgabc.com.br/",
+      "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPVktRaVBCTnM4VmNwNDJ3Y2RVOWdvSTE5WFdGdUpta3ZxcDVYdHRjWl9iVmtMYTBkNG0xWU91cXNPMXBVX0JiTnkxektfNjlqbzdYY0ExQ2w4Z1gxTFlaMGl0bmh3T2hkaGpzb3B4dE54aGZlaEI2MV8xMnlLSTRKc1ZnVjBqSDVRT3RJWmJ1bzVERUlSbFgta2ExMktDZ2JWUkpVcGNJdmg0Y2dfWkhwejNSN210d05rVl9sdUM4TWZZNmptczZIV2hFWHI4d9IB0wFBVV95cUxQbFZYWUowY05USGZwM3BKNVlIVllPM1A0YmNOSWZ6emdnMUNRbDk4Y3FwZktBVDgySnFRWkp2Q2Fpb1lVYTZVLVgxME9ONXVKTFBJRE9oMnRHQ2RKaGpvNVA5cldnX3hFbVlsYUdXTzJhaUpzalVKaWRqTkVjeU1KVWcwMTEyYUhMdUo1RnJkVG9TWDNENC1jWTZFUnpqcFJLOG9zcWlhNFM5TW9acmFpcnA4NlVMN3dDV3ZBaHBpcXRoMEJyanA5LXMzeVo5Nmo3REZr?oc=5",
       "resumo": "Motorista que transportava a filha de 7 anos perdeu o controle e provocou engavetamento múltiplo em São Bernardo do Campo."
     },
     {
@@ -271,7 +271,7 @@
       "gravidade": "leve",
       "nova": false,
       "fonte": "Metrópoles SP",
-      "link": "https://www.metropoles.com/sao-paulo/",
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQZWhhTWllbWgxYmV4cjNIVVBYSlNiWHVkVXMzVlFVb1hMZXMwelk1bV9xS0FIR1VSak1RT2NkdDc0bzZRbm15M2QtR2JUWDhlM2tlNnJETy1Za1V1cTh1X2lEckpxYlV4bnBHandoc28tcHlsU3ZXMzUxN0luekE4RXV6c1FXM214VGNvUmxlWEdXZUdwY090SE1VV25RMUVUd1NrWTlGZEE2a2dNd2tzbA?oc=5",
       "resumo": "Tombamento de carreta bloqueou faixa da Rodovia Raposo Tavares na região oeste da Grande SP."
     }
   ]
