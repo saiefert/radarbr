@@ -161,13 +161,13 @@ O Governo de MS publica planilhas `.csv` (abertas no Excel) e API CKAN direto do
 ## 6. Fontes oficiais e portais para São Paulo e Região — SP (`data/sao-paulo-sp/`)
 
 ### Base oficial da SSP-SP, PM-SP, PC-SP e Agência SP
-- **SSP-SP Planilhas Excel (`.xlsx`):** `https://www.ssp.sp.gov.br/estatistica/consultas`
+- **SSP-SP Planilha Excel Oficial 2026 (`.xlsx` com lat/lng/rua/bairro/hora):** `https://www.ssp.sp.gov.br/assets/estatistica/transparencia/spDados/SPDadosCriminais_2026.xlsx` (portal: `https://www.ssp.sp.gov.br/estatistica/consultas`)
 - **PM-SP Notícias:** `https://www.policiamilitar.sp.gov.br/noticias`
 - **PC-SP Notícias:** `https://www.policiacivil.sp.gov.br/`
 - **Agência SP (comunicados oficiais PM/PC/SSP):** `https://www.agenciasp.sp.gov.br/`
 
 ### Portais e jornais locais/de bairro de SP e Grande SP (tempo real / hora em hora)
-- **Capital:** G1 SP (`https://g1.globo.com/rss/g1/sp/sao-paulo/`), Metrópoles SP (`https://www.metropoles.com/sao-paulo/feed`), Diário Zona Norte (`https://www.diariozonanorte.com.br/feed/`), Jornal Zona Sul (`https://www.jornalzonasul.com.br/feed/`), Diário do Transporte (`https://diariodotransporte.com.br/feed/`), Gazeta de SP, UOL / Folha
+- **Capital:** G1 SP (`https://g1.globo.com/rss/g1/sp/sao-paulo/`), BNews São Paulo (`https://www.bnewssaopaulo.com.br/feed/`), Metrópoles SP (`https://www.metropoles.com/sao-paulo/feed`), Folha de S.Paulo (`https://feeds.folha.uol.com.br/cotidiano/rss091.xml` e `https://www1.folha.uol.com.br/folha-topicos/sao-paulo/`), Diário Zona Norte (`https://www.diariozonanorte.com.br/feed/`), Jornal Zona Sul (`https://www.jornalzonasul.com.br/feed/`), Diário do Transporte (`https://diariodotransporte.com.br/feed/`), R7 / Band / SBT News / CNN Brasil / UOL
 - **Grande ABC:** Diário do Grande ABC (`https://www.dgabc.com.br/rss/`), Repórter Diário (`https://www.reporterdiario.com.br/feed/`), ABCD Jornal (`https://abcdjornal.com.br/feed/`), ABC do ABC
 - **Zona Oeste / RMSP:** Visão Oeste (`https://visaooeste.com.br/feed/`), Giro S/A (`https://girosa.com.br/feed/`), O Taboanense (`https://www.otaboanense.com.br/feed/`), Folha de Alphaville (`https://www.folhadealphaville.com.br/feed/`), Webdiário Osasco
 - **Guarulhos & Alto Tietê:** Guarulhos Hoje (`https://www.guarulhoshoje.com.br/feed/`), Click Guarulhos (`https://www.clickguarulhos.com.br/feed/`), G1 Mogi/Suzano (`https://g1.globo.com/rss/g1/sp/mogi-das-cruzes-suzano/`), O Diário de Mogi (`https://www.odiariodemogi.net.br/feed/`), Diário de Suzano (`https://www.diariodesuzano.com.br/feed/`)

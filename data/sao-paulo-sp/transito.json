@@ -1,6 +1,6 @@
 {
-  "atualizado_em": "2026-11-24T17:55:00-03:00",
-  "fonte": "Jornais Locais SP & RMSP (G1 SP, ABCD Jornal, Visão Oeste, Giro S/A, DGABC, UOL)",
+  "atualizado_em": "2026-11-24T18:08:00-03:00",
+  "fonte": "Portais SP & RMSP (G1 SP, Metrópoles, Folha, BNews SP, ABCD Jornal, Visão Oeste, Giro S/A, DGABC)",
   "cidade": "São Paulo e Região - SP",
   "observacao": "Varredura de acidentes de trânsito em São Paulo e Região Metropolitana (20 a 24/11/2026).",
   "ocorrencias": [
@@ -57,6 +57,24 @@
       "fonte": "Visão Oeste",
       "link": "https://visaooeste.com.br/incendio-atinge-eixo-traseiro-de-carreta-na-castello-branco-em-itapevi/",
       "resumo": "Princípio de incêndio no eixo traseiro de uma carreta mobilizou equipes de emergência na Rodovia Castello Branco, altura de Itapevi."
+    },
+    {
+      "id": "viatrolebus-2026-11-24-0420-acidente-fernao-dias-sp",
+      "data": "2026-11-24",
+      "hora": "04:20",
+      "tipo": "rodovia",
+      "titulo": "Acidente na Rodovia Fernão Dias provoca lentidão no acesso à Zona Norte de SP",
+      "cidade": "São Paulo",
+      "bairro": "Jaçanã",
+      "endereco": "Rodovia Fernão Dias (BR-381), saída/acesso Zona Norte",
+      "lat": -23.462,
+      "lng": -46.578,
+      "precisao": "rua",
+      "gravidade": "leve",
+      "nova": true,
+      "fonte": "Via Trolebus",
+      "link": "https://viatrolebus.com.br/",
+      "resumo": "Ocorrência de trânsito na madrugada na Rodovia Fernão Dias gerou filas e lentidão no acesso à capital."
     },
     {
       "id": "dgabc-2026-11-23-2207-atropelamento-mulher-sbc",
@@ -149,6 +167,24 @@
       "resumo": "Colisão na manhã de segunda-feira na Rodovia Castello Branco, em Osasco, deixou uma pessoa ferida e causou lentidão."
     },
     {
+      "id": "metropoles-2026-11-23-0633-carro-2-caminhoes-castello-branco",
+      "data": "2026-11-23",
+      "hora": "06:33",
+      "tipo": "onibus_caminhao",
+      "titulo": "Acidente envolvendo carro e dois caminhões interdita faixa na Rodovia Castello Branco",
+      "cidade": "Barueri",
+      "bairro": "Rodovia Castello Branco",
+      "endereco": "Rodovia Presidente Castello Branco (SP-280)",
+      "lat": -23.5045,
+      "lng": -46.865,
+      "precisao": "rua",
+      "gravidade": "leve",
+      "nova": false,
+      "fonte": "Metrópoles SP",
+      "link": "https://www.metropoles.com/sao-paulo/",
+      "resumo": "Colisão entre automóvel e dois caminhões interditou faixa da Rodovia Castello Branco na manhã de segunda-feira."
+    },
+    {
       "id": "folha-2026-11-22-1751-garupa-morre-fuga-baile-funk-sbc",
       "data": "2026-11-22",
       "hora": "17:51",
@@ -219,6 +255,24 @@
       "fonte": "G1 SP",
       "link": "https://g1.globo.com/sp/sao-paulo/noticia/2026/11/23/video-mostra-vampeta-discutindo-com-motoboys-apos-acidente-de-transito-em-sp-completamente-bebado-diz-entregadora.ghtml",
       "resumo": "Entregadora motociclista relatou ter se ferido ao frear para evitar colisão; caso ganhou repercussão após vídeos de discussão no local e versões divergentes das partes."
+    },
+    {
+      "id": "metropoles-2026-11-18-0650-carreta-tomba-raposo-vargem-grande",
+      "data": "2026-11-18",
+      "hora": "06:50",
+      "tipo": "capotamento",
+      "titulo": "Carreta tomba e interdita faixa da Rodovia Raposo Tavares em Vargem Grande Paulista",
+      "cidade": "Vargem Grande Paulista",
+      "bairro": "Vargem Grande Paulista",
+      "endereco": "Rodovia Raposo Tavares (SP-270), Vargem Grande Paulista",
+      "lat": -23.603,
+      "lng": -47.0225,
+      "precisao": "rua",
+      "gravidade": "leve",
+      "nova": false,
+      "fonte": "Metrópoles SP",
+      "link": "https://www.metropoles.com/sao-paulo/",
+      "resumo": "Tombamento de carreta bloqueou faixa da Rodovia Raposo Tavares na região oeste da Grande SP."
     }
   ]
 }

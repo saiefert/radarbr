@@ -328,6 +328,54 @@
     "rodovia castello branco": {
       "lat": -23.5045,
       "lng": -46.895
+    },
+    "parelheiros": {
+      "lat": -23.827,
+      "lng": -46.7275
+    },
+    "cidade dutra": {
+      "lat": -23.7135,
+      "lng": -46.701
+    },
+    "capela do socorro": {
+      "lat": -23.702,
+      "lng": -46.707
+    },
+    "interlagos": {
+      "lat": -23.7015,
+      "lng": -46.697
+    },
+    "marsilac": {
+      "lat": -23.908,
+      "lng": -46.706
+    },
+    "pedreira": {
+      "lat": -23.6945,
+      "lng": -46.6565
+    },
+    "cidade ademar": {
+      "lat": -23.671,
+      "lng": -46.658
+    },
+    "socorro": {
+      "lat": -23.681,
+      "lng": -46.712
+    },
+    "jardim sao luis": {
+      "lat": -23.658,
+      "lng": -46.734
+    },
+    "bras": {
+      "lat": -23.5453,
+      "lng": -46.6164
+    },
+    "jacana": {
+      "lat": -23.4655,
+      "lng": -46.5805
+    },
+    "vargem grande paulista": {
+      "lat": -23.603,
+      "lng": -47.0225
     }
   }
 }
