@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RadarBR — Feed de Imóveis por Cidade",
+  "description": "Formato JSON padronizado para o Grokbot atualizar os imóveis de cada cidade em data/<slug>/casas.json.",
+  "type": "object",
+  "required": ["casas"],
+  "properties": {
+    "atualizado_em": {
+      "type": "string",
+      "description": "Data/hora da última atualização em ISO 8601 (ex.: 2026-11-25T12:00:00-03:00)."
+    },
+    "fonte": {
+      "type": "string",
+      "description": "Origem da coleta (ex.: Grokbot / Perez Imóveis)."
+    },
+    "cidade": {
+      "type": "string",
+      "description": "Nome da cidade e UF (ex.: Campo Grande - MS, Maringá - PR)."
+    },
+    "observacao": {
+      "type": "string",
+      "description": "Resumo da rodada de busca."
+    },
+    "casas": {
+      "type": "array",
+      "description": "Lista de imóveis disponíveis.",
+      "items": {
+        "type": "object",
+        "required": ["titulo", "preco"],
+        "properties": {
+          "id": { "type": "string" },
+          "codigo": { "type": "string", "description": "Código/referência na imobiliária." },
+          "titulo": { "type": "string" },
+          "finalidade": { "type": "string", "enum": ["aluguel", "compra"], "default": "aluguel" },
+          "tipo": { "type": "string", "default": "Casa" },
+          "casa": { "type": "boolean", "default": true },
+          "chacara": { "type": "boolean", "default": false },
+          "preco": { "type": ["number", "string"] },
+          "condominio": { "type": ["number", "null"] },
+          "iptu": { "type": ["number", "null"] },
+          "bairro": { "type": "string" },
+          "endereco": { "type": "string" },
+          "lat": { "type": ["number", "null"] },
+          "lng": { "type": ["number", "null"] },
+          "quartos": { "type": "integer", "minimum": 0 },
+          "suites": { "type": "integer", "minimum": 0 },
+          "banheiros": { "type": "integer", "minimum": 0 },
+          "vagas": { "type": "integer", "minimum": 0 },
+          "area_m2": { "type": ["number", "null"], "minimum": 0 },
+          "terreno_m2": { "type": ["number", "null"], "minimum": 0 },
+          "aceita_pets": { "type": "boolean" },
+          "quintal": { "type": "boolean" },
+          "moveis": { "type": "boolean" },
+          "nova": { "type": "boolean", "default": false },
+          "destaque": { "type": "boolean", "default": false },
+          "descricao": { "type": "string" },
+          "nota_grokbot": { "type": "string" },
+          "tags": { "type": "array", "items": { "type": "string" } },
+          "fotos": { "type": "array", "items": { "type": "string" } },
+          "link": { "type": "string" },
+          "portal": { "type": "string" },
+          "encontrado_em": { "type": "string" }
+        }
+      }
+    }
+  }
+}

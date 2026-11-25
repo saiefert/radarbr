@@ -786,6 +786,8 @@ body[data-tab="imoveis"] .report-view { display: none; }
 }
 
 .event-card {
+  flex: none;
+  flex-shrink: 0;
   background: var(--surface);
   border: 1px solid var(--border);
   border-left: 4px solid var(--event-color, #991b1b);
@@ -1384,7 +1386,8 @@ body[data-tab="imoveis"] .report-view { display: none; }
     overflow: hidden;
     box-shadow: var(--shadow-sm) !important;
     margin-top: 64px !important;
-    margin-right: 14px !important;
+    margin-left: 14px !important;
+    margin-right: 0 !important;
   }
   .leaflet-control-zoom a {
     width: 34px !important;

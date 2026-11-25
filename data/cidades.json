@@ -36,7 +36,7 @@
         "lng": -46.6333
       },
       "zoom": 11,
-      "ativa": true
+      "ativa": false
     },
     {
       "slug": "rio-de-janeiro-rj",
@@ -48,7 +48,7 @@
         "lng": -43.1729
       },
       "zoom": 11,
-      "ativa": true
+      "ativa": false
     },
     {
       "slug": "salvador-ba",
@@ -60,7 +60,7 @@
         "lng": -38.5014
       },
       "zoom": 12,
-      "ativa": true
+      "ativa": false
     }
   ]
 }

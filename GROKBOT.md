@@ -1,11 +1,70 @@
-# Guia de Integração — Grokbot → RadarBR (Atualização Horária por Cidade)
+# Guia de Integração — Grokbot → RadarBR (Imóveis & Radar por Cidade)
 
-O **RadarBR** organiza os dados por pasta de cidade em `data/<slug>/`, começando por **Campo Grande — MS** (`data/campo-grande-ms/`).
+O **RadarBR** possui **2 abas principais** completamente separadas:
+1. **Imóveis** *(aba padrão)* — alimentada por `data/<slug>/casas.json` (com utilidades do entorno em `data/<slug>/pois.json`).
+2. **Radar** *(subabas Todos, Crimes e Trânsito)* — alimentada por `data/<slug>/crimes.json` e `data/<slug>/transito.json`.
 
-Arquivos atualizados de hora em hora pelo Grokbot para cada cidade:
-- `data/campo-grande-ms/crimes.json` — ocorrências policiais
-- `data/campo-grande-ms/transito.json` — acidentes de trânsito
-- *(Reservado e oculto por padrão)* `data/campo-grande-ms/casas.json` — imóveis (ativável futuramente)
+> **Cidades ativas no momento:** atualizar **APENAS** **Campo Grande — MS** (`data/campo-grande-ms/`) e **Maringá — PR** (`data/maringa-pr/`). As demais cidades (`sao-paulo-sp`, `rio-de-janeiro-rj`, `salvador-ba`) estão preservadas no repositório com `"ativa": false` em `data/cidades.json` e devem permanecer pausadas/ocultas até nova orientação.
+
+Arquivos atualizados pelo Grokbot para cada cidade ativa:
+- `data/<slug>/casas.json` — catálogo de imóveis (schema formal em `data/casas.schema.json`)
+- `data/<slug>/crimes.json` — ocorrências policiais
+- `data/<slug>/transito.json` — acidentes de trânsito
+
+---
+
+## 0. Formato de `data/<slug>/casas.json` (Imóveis — Aba Padrão)
+
+Fonte prioritária inicial para **Campo Grande — MS**: **`https://perezimoveis.com/`** (`/imoveis-para-aluguel` e `/imoveis-de-venda`).
+
+```json
+{
+  "atualizado_em": "2026-11-25T12:00:00-04:00",
+  "fonte": "Grokbot / Perez Imóveis",
+  "cidade": "Campo Grande - MS",
+  "observacao": "Coleta de imóveis em Campo Grande - MS via perezimoveis.com.",
+  "casas": [
+    {
+      "id": "perez-12345",
+      "codigo": "12345",
+      "titulo": "Casa 3 quartos no Jardim dos Estados",
+      "finalidade": "aluguel",
+      "tipo": "Casa",
+      "casa": true,
+      "chacara": false,
+      "preco": 3500,
+      "condominio": null,
+      "iptu": 180,
+      "bairro": "Jardim dos Estados",
+      "endereco": "Rua aproximada ou referência",
+      "lat": -20.4596,
+      "lng": -54.6025,
+      "quartos": 3,
+      "suites": 1,
+      "banheiros": 2,
+      "vagas": 2,
+      "area_m2": 160,
+      "terreno_m2": 360,
+      "aceita_pets": true,
+      "quintal": true,
+      "moveis": false,
+      "nova": true,
+      "destaque": false,
+      "descricao": "Resumo objetivo do imóvel.",
+      "nota_grokbot": "Pontos fortes e observações.",
+      "tags": ["Quintal", "Suíte"],
+      "fotos": ["https://..."],
+      "link": "https://perezimoveis.com/...",
+      "portal": "Perez Imóveis",
+      "encontrado_em": "2026-11-25"
+    }
+  ]
+}
+```
+
+- Sempre usar a chave raiz `"casas"` (compatível com `data/casas.schema.json`).
+- Sempre salvar o **link direto do imóvel** no campo `"link"` e URLs diretas das fotos em `"fotos"`.
+- Se `lat`/`lng` não vierem explícitos, preencher `"bairro"` corretamente que o site geocodifica automaticamente por `data/<slug>/cidade.json`.
 
 ---
 

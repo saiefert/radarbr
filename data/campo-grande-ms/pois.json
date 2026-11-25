@@ -1,0 +1,828 @@
+{
+  "cidade": "Campo Grande - MS",
+  "atualizado_em": "2026-11-25T12:00:00-04:00",
+  "ciclovias": [
+    {
+      "id": "cg-ciclo-afonso-pena",
+      "nome": "Ciclovia Av. Afonso Pena / Parque das Nações",
+      "extensao_km": 6.4,
+      "detalhe": "Principal corredor cicloviário ligando Centro, Jardim dos Estados, Santa Fé e Parque das Nações Indígenas.",
+      "coords": [
+        [-20.4642, -54.6168],
+        [-20.4628, -54.6020],
+        [-20.4598, -54.5880],
+        [-20.4552, -54.5735]
+      ]
+    },
+    {
+      "id": "cg-ciclo-mato-grosso",
+      "nome": "Ciclovia Av. Mato Grosso / Carandá Bosque",
+      "extensao_km": 5.2,
+      "detalhe": "Eixo leste-oeste entre Centro, Jardim dos Estados, Carandá Bosque e Parque dos Poderes.",
+      "coords": [
+        [-20.4605, -54.6140],
+        [-20.4582, -54.5975],
+        [-20.4545, -54.5810],
+        [-20.4508, -54.5635]
+      ]
+    },
+    {
+      "id": "cg-ciclo-duque-caxias",
+      "nome": "Ciclovia Av. Duque de Caxias",
+      "extensao_km": 4.8,
+      "detalhe": "Ligação da região oeste (Santo Antônio, Vila Almeida, Aeroporto) ao Centro.",
+      "coords": [
+        [-20.4660, -54.6750],
+        [-20.4656, -54.6580],
+        [-20.4650, -54.6390],
+        [-20.4645, -54.6220]
+      ]
+    },
+    {
+      "id": "cg-ciclo-ernesto-geisel",
+      "nome": "Ciclovia Av. Ernesto Geisel / Orla Morena",
+      "extensao_km": 5.6,
+      "detalhe": "Pista ao longo do Córrego Prosa/Anhanduí conectando região central à zona sul e norte.",
+      "coords": [
+        [-20.4490, -54.6260],
+        [-20.4635, -54.6245],
+        [-20.4785, -54.6225],
+        [-20.4955, -54.6220]
+      ]
+    }
+  ],
+  "pois": [
+    {
+      "id": "cg-em-eduardo-olimpio",
+      "nome": "E.M. Prof. Eduardo Olímpio Machado",
+      "categoria": "escola_municipal",
+      "rede": "Municipal",
+      "lat": -20.4635,
+      "lng": -54.6095,
+      "detalhe": "Escola Municipal de Ensino Fundamental — região Centro / Jardim dos Estados."
+    },
+    {
+      "id": "cg-em-iracema-maria",
+      "nome": "E.M. Iracema Maria Vicente",
+      "categoria": "escola_municipal",
+      "rede": "Municipal",
+      "lat": -20.4782,
+      "lng": -54.5768,
+      "detalhe": "Escola Municipal — bairro Rita Vieira / Tiradentes."
+    },
+    {
+      "id": "cg-em-joao-evangelista",
+      "nome": "E.M. Prof. João Evangelista Vieira de Almeida",
+      "categoria": "escola_municipal",
+      "rede": "Municipal",
+      "lat": -20.4518,
+      "lng": -54.5815,
+      "detalhe": "Escola Municipal — região Carandá Bosque / Vivendas do Bosque."
+    },
+    {
+      "id": "cg-em-licurgo-oliveira",
+      "nome": "E.M. Prof. Licurgo de Oliveira Bastos",
+      "categoria": "escola_municipal",
+      "rede": "Municipal",
+      "lat": -20.4832,
+      "lng": -54.5882,
+      "detalhe": "Escola Municipal — Vila Vilas Boas."
+    },
+    {
+      "id": "cg-em-elpidio-reis",
+      "nome": "E.M. Elpídio Reis",
+      "categoria": "escola_municipal",
+      "rede": "Municipal",
+      "lat": -20.4272,
+      "lng": -54.5892,
+      "detalhe": "Escola Municipal — Mata do Jacinto / Novos Estados."
+    },
+    {
+      "id": "cg-em-arlene-marques",
+      "nome": "E.M. Profª Arlene Marques Almeida",
+      "categoria": "escola_municipal",
+      "rede": "Municipal",
+      "lat": -20.5142,
+      "lng": -54.6445,
+      "detalhe": "Escola Municipal — Aero Rancho."
+    },
+    {
+      "id": "cg-em-santos-dumont",
+      "nome": "E.M. Santos Dumont",
+      "categoria": "escola_municipal",
+      "rede": "Municipal",
+      "lat": -20.4578,
+      "lng": -54.6512,
+      "detalhe": "Escola Municipal — Santo Antônio / Vila Sobrinho."
+    },
+    {
+      "id": "cg-em-domingos-goncalves",
+      "nome": "E.M. Domingos Gonçalves Gomes",
+      "categoria": "escola_municipal",
+      "rede": "Municipal",
+      "lat": -20.4918,
+      "lng": -54.6025,
+      "detalhe": "Escola Municipal — Jardim TV Morena / Vila Progresso."
+    },
+    {
+      "id": "cg-em-jose-rodrigues",
+      "nome": "E.M. José Rodrigues Benfica",
+      "categoria": "escola_municipal",
+      "rede": "Municipal",
+      "lat": -20.4455,
+      "lng": -54.6140,
+      "detalhe": "Escola Municipal — Monte Castelo / São Francisco."
+    },
+    {
+      "id": "cg-em-nagen-jorge",
+      "nome": "E.M. Nagen Jorge Saad",
+      "categoria": "escola_municipal",
+      "rede": "Municipal",
+      "lat": -20.5548,
+      "lng": -54.5842,
+      "detalhe": "Escola Municipal — Moreninhas."
+    },
+    {
+      "id": "cg-em-senador-rachid",
+      "nome": "E.M. Senador Rachid Saldanha Derzi",
+      "categoria": "escola_municipal",
+      "rede": "Municipal",
+      "lat": -20.4562,
+      "lng": -54.5405,
+      "detalhe": "Escola Municipal — Jardim Noroeste."
+    },
+    {
+      "id": "cg-em-oliva-enciso",
+      "nome": "E.M. Profª Oliva Enciso",
+      "categoria": "escola_municipal",
+      "rede": "Municipal",
+      "lat": -20.4765,
+      "lng": -54.5720,
+      "detalhe": "Escola Municipal — Bairro Tiradentes."
+    },
+
+    {
+      "id": "cg-ee-maria-constanca",
+      "nome": "E.E. Maria Constança Barros Machado",
+      "categoria": "escola_estadual",
+      "rede": "Estadual",
+      "lat": -20.4712,
+      "lng": -54.6238,
+      "detalhe": "Escola Estadual tradicional (projeto Oscar Niemeyer) — Bairro Amambaí / Centro."
+    },
+    {
+      "id": "cg-ee-joaquim-murtinho",
+      "nome": "E.E. Joaquim Murtinho",
+      "categoria": "escola_estadual",
+      "rede": "Estadual",
+      "lat": -20.4641,
+      "lng": -54.6134,
+      "detalhe": "Escola Estadual histórica de Ensino Médio — Av. Afonso Pena, Centro."
+    },
+    {
+      "id": "cg-ee-hercules-maymone",
+      "nome": "E.E. Hércules Maymone",
+      "categoria": "escola_estadual",
+      "rede": "Estadual",
+      "lat": -20.4748,
+      "lng": -54.5978,
+      "detalhe": "Escola Estadual de Ensino Médio — Itanhangá Park / Jardim Paulista."
+    },
+    {
+      "id": "cg-ee-waldemir-barros",
+      "nome": "E.E. Waldemir Barros da Silva",
+      "categoria": "escola_estadual",
+      "rede": "Estadual",
+      "lat": -20.5568,
+      "lng": -54.5872,
+      "detalhe": "Escola Estadual de tempo integral — Moreninhas."
+    },
+    {
+      "id": "cg-ee-general-malan",
+      "nome": "E.E. General Malan",
+      "categoria": "escola_estadual",
+      "rede": "Estadual",
+      "lat": -20.4680,
+      "lng": -54.6305,
+      "detalhe": "Escola Estadual — Bairro Amambaí / Cabreúva."
+    },
+    {
+      "id": "cg-ee-lino-villacha",
+      "nome": "E.E. Lino Villachá",
+      "categoria": "escola_estadual",
+      "rede": "Estadual",
+      "lat": -20.3882,
+      "lng": -54.5875,
+      "detalhe": "Escola Estadual — Nova Lima."
+    },
+    {
+      "id": "cg-ee-silvio-oliveira",
+      "nome": "E.E. Prof. Silvio Oliveira dos Santos",
+      "categoria": "escola_estadual",
+      "rede": "Estadual",
+      "lat": -20.5145,
+      "lng": -54.6402,
+      "detalhe": "Escola Estadual — Aero Rancho."
+    },
+    {
+      "id": "cg-ee-ada-teixeira",
+      "nome": "E.E. Profª Ada Teixeira dos Santos Pereira",
+      "categoria": "escola_estadual",
+      "rede": "Estadual",
+      "lat": -20.4352,
+      "lng": -54.6075,
+      "detalhe": "Escola Estadual — Coronel Antonino."
+    },
+    {
+      "id": "cg-ee-joao-carlos-flores",
+      "nome": "E.E. João Carlos Flores",
+      "categoria": "escola_estadual",
+      "rede": "Estadual",
+      "lat": -20.5048,
+      "lng": -54.5795,
+      "detalhe": "Escola Estadual — Rita Vieira."
+    },
+    {
+      "id": "cg-ee-blanche-santos",
+      "nome": "E.E. Blanche dos Santos Pereira",
+      "categoria": "escola_estadual",
+      "rede": "Estadual",
+      "lat": -20.5122,
+      "lng": -54.6585,
+      "detalhe": "Escola Estadual — Jardim Tijuca."
+    },
+    {
+      "id": "cg-ee-dolores-ferreira",
+      "nome": "E.E. Dolores Ferreira de Mendes",
+      "categoria": "escola_estadual",
+      "rede": "Estadual",
+      "lat": -20.4530,
+      "lng": -54.5945,
+      "detalhe": "Escola Estadual — Bairro Santa Fé / Jardim dos Estados."
+    },
+
+    {
+      "id": "cg-ep-dom-bosco",
+      "nome": "Colégio Salesiano Dom Bosco",
+      "categoria": "escola_particular",
+      "rede": "Particular",
+      "lat": -20.4596,
+      "lng": -54.6112,
+      "detalhe": "Colégio particular tradicional — Educação Infantil ao Ensino Médio, Av. Mato Grosso."
+    },
+    {
+      "id": "cg-ep-auxiliadora",
+      "nome": "Colégio Nossa Senhora Auxiliadora",
+      "categoria": "escola_particular",
+      "rede": "Particular",
+      "lat": -20.4608,
+      "lng": -54.6068,
+      "detalhe": "Colégio particular tradicional — Jardim dos Estados."
+    },
+    {
+      "id": "cg-ep-bionatus",
+      "nome": "Colégio Bionatus",
+      "categoria": "escola_particular",
+      "rede": "Particular",
+      "lat": -20.4622,
+      "lng": -54.6012,
+      "detalhe": "Colégio particular de referência para vestibulares — Jardim dos Estados."
+    },
+    {
+      "id": "cg-ep-mace",
+      "nome": "Colégio MACE",
+      "categoria": "escola_particular",
+      "rede": "Particular",
+      "lat": -20.4631,
+      "lng": -54.6182,
+      "detalhe": "Colégio particular — Centro."
+    },
+    {
+      "id": "cg-ep-harmonia",
+      "nome": "Colégio Harmonia / Objetivo",
+      "categoria": "escola_particular",
+      "rede": "Particular",
+      "lat": -20.4548,
+      "lng": -54.5910,
+      "detalhe": "Colégio particular — Bairro Santa Fé."
+    },
+    {
+      "id": "cg-ep-bilingue-caranda",
+      "nome": "Escola Bilíngue Maple Bear — Carandá Bosque",
+      "categoria": "escola_particular",
+      "rede": "Particular",
+      "lat": -20.4492,
+      "lng": -54.5782,
+      "detalhe": "Ensino bilíngue canadense — Carandá Bosque."
+    },
+    {
+      "id": "cg-ep-adventista-cg",
+      "nome": "Colégio Adventista Campo-Grandense",
+      "categoria": "escola_particular",
+      "rede": "Particular",
+      "lat": -20.4675,
+      "lng": -54.6032,
+      "detalhe": "Colégio particular — Jardim Bela Vista / Centro."
+    },
+    {
+      "id": "cg-ep-status",
+      "nome": "Colégio Status",
+      "categoria": "escola_particular",
+      "rede": "Particular",
+      "lat": -20.4815,
+      "lng": -54.5902,
+      "detalhe": "Colégio particular — Vilas Boas / Jardim Paulista."
+    },
+    {
+      "id": "cg-ep-escola-sesi",
+      "nome": "Escola SESI Campo Grande",
+      "categoria": "escola_particular",
+      "rede": "Particular",
+      "lat": -20.4618,
+      "lng": -54.5855,
+      "detalhe": "Rede SESI de ensino tecnológico — Chácara Cachoeira."
+    },
+    {
+      "id": "cg-ep-marista-alexander",
+      "nome": "Colégio Alexander Fleming",
+      "categoria": "escola_particular",
+      "rede": "Particular",
+      "lat": -20.4525,
+      "lng": -54.6215,
+      "detalhe": "Colégio particular — São Francisco / Monte Castelo."
+    },
+    {
+      "id": "cg-ep-ufms",
+      "nome": "UFMS — Universidade Federal de MS",
+      "categoria": "escola_estadual",
+      "rede": "Pública (Federal)",
+      "lat": -20.5015,
+      "lng": -54.6138,
+      "detalhe": "Cidade Universitária UFMS — Lago do Amor, Universitário / Vila Olinda."
+    },
+
+    {
+      "id": "cg-ig-catedral",
+      "nome": "Catedral Nossa Senhora da Abadia e Santo Antônio",
+      "categoria": "igreja",
+      "lat": -20.4648,
+      "lng": -54.6152,
+      "detalhe": "Catedral Católica no coração do Centro — Rua 15 de Novembro."
+    },
+    {
+      "id": "cg-ig-perpetuo-socorro",
+      "nome": "Santuário Estadual N. Sra. do Perpétuo Socorro",
+      "categoria": "igreja",
+      "lat": -20.4718,
+      "lng": -54.6335,
+      "detalhe": "Santuário tradicional com novenas às quartas — Bairro Amambaí."
+    },
+    {
+      "id": "cg-ig-sao-jose",
+      "nome": "Paróquia São José",
+      "categoria": "igreja",
+      "lat": -20.4610,
+      "lng": -54.6122,
+      "detalhe": "Paróquia católica tradicional — Rua Pedro Celestino, Centro."
+    },
+    {
+      "id": "cg-ig-cristo-luz-dos-povos",
+      "nome": "Paróquia Cristo Luz dos Povos",
+      "categoria": "igreja",
+      "lat": -20.4538,
+      "lng": -54.5805,
+      "detalhe": "Paróquia católica — Carandá Bosque / Vivendas do Bosque."
+    },
+    {
+      "id": "cg-ig-pib-cg",
+      "nome": "Primeira Igreja Batista de Campo Grande (PIB)",
+      "categoria": "igreja",
+      "lat": -20.4612,
+      "lng": -54.6048,
+      "detalhe": "Igreja Batista tradicional — Rua 13 de Maio / Jardim dos Estados."
+    },
+    {
+      "id": "cg-ig-sara-nossa-terra",
+      "nome": "Igreja Batista da Lagoinha / Comunidade Cristã",
+      "categoria": "igreja",
+      "lat": -20.4645,
+      "lng": -54.5872,
+      "detalhe": "Templo evangélico — Chácara Cachoeira."
+    },
+    {
+      "id": "cg-ig-sao-francisco",
+      "nome": "Paróquia São Francisco de Assis",
+      "categoria": "igreja",
+      "lat": -20.4508,
+      "lng": -54.6238,
+      "detalhe": "Paróquia tradicional — Bairro São Francisco."
+    },
+    {
+      "id": "cg-ig-sagrado-coracao",
+      "nome": "Paróquia Sagrado Coração de Jesus",
+      "categoria": "igreja",
+      "lat": -20.4865,
+      "lng": -54.5992,
+      "detalhe": "Paróquia católica — Jardim TV Morena / Vila Progresso."
+    },
+    {
+      "id": "cg-ig-divino-espirito",
+      "nome": "Paróquia Divino Espírito Santo",
+      "categoria": "igreja",
+      "lat": -20.5138,
+      "lng": -54.6420,
+      "detalhe": "Paróquia — Aero Rancho."
+    },
+    {
+      "id": "cg-ig-nossa-senhora-fatima",
+      "nome": "Paróquia Nossa Senhora de Fátima",
+      "categoria": "igreja",
+      "lat": -20.4450,
+      "lng": -54.6115,
+      "detalhe": "Paróquia — Monte Castelo."
+    },
+    {
+      "id": "cg-ig-santa-rita",
+      "nome": "Paróquia Santa Rita de Cássia",
+      "categoria": "igreja",
+      "lat": -20.5042,
+      "lng": -54.5805,
+      "detalhe": "Paróquia — Bairro Rita Vieira / Universitário."
+    },
+
+    {
+      "id": "cg-merc-comper-jd-estados",
+      "nome": "Comper Hiper Center — Jardim dos Estados",
+      "categoria": "mercado",
+      "lat": -20.4590,
+      "lng": -54.5988,
+      "detalhe": "Hipermercado 24h referência em Campo Grande — Av. Ceará / Mato Grosso."
+    },
+    {
+      "id": "cg-merc-comper-itanhanda",
+      "nome": "Comper Itanhangá",
+      "categoria": "mercado",
+      "lat": -20.4742,
+      "lng": -54.5948,
+      "detalhe": "Supermercado completo — Av. Joaquim Murtinho / Itanhangá Park."
+    },
+    {
+      "id": "cg-merc-pao-acucar-cg",
+      "nome": "Pão de Açúcar — Santa Fé",
+      "categoria": "mercado",
+      "lat": -20.4565,
+      "lng": -54.5892,
+      "detalhe": "Supermercado gourmet com adega e padaria — Bairro Santa Fé."
+    },
+    {
+      "id": "cg-merc-fort-tiradentes",
+      "nome": "Fort Atacadista — Tiradentes",
+      "categoria": "mercado",
+      "lat": -20.4765,
+      "lng": -54.5762,
+      "detalhe": "Atacarejo completo — Av. Ministro João Arinos / Tiradentes."
+    },
+    {
+      "id": "cg-merc-fort-coronel",
+      "nome": "Fort Atacadista — Coronel Antonino",
+      "categoria": "mercado",
+      "lat": -20.4335,
+      "lng": -54.6095,
+      "detalhe": "Atacarejo completo na região norte — Av. Cônsul Assaf Trad."
+    },
+    {
+      "id": "cg-merc-comper-ypona",
+      "nome": "Comper Ypê Center — Monte Castelo",
+      "categoria": "mercado",
+      "lat": -20.4438,
+      "lng": -54.6168,
+      "detalhe": "Hipermercado com galeria de lojas — Av. Mascarenhas de Moraes."
+    },
+    {
+      "id": "cg-merc-assai-acapulco",
+      "nome": "Assaí Atacadista — Av. Duque de Caxias",
+      "categoria": "mercado",
+      "lat": -20.4652,
+      "lng": -54.6540,
+      "detalhe": "Atacarejo completo — Santo Antônio / Vila Almeida."
+    },
+    {
+      "id": "cg-merc-comper-spipe",
+      "nome": "Comper Spipe Calarge — Vilas Boas",
+      "categoria": "mercado",
+      "lat": -20.4875,
+      "lng": -54.5895,
+      "detalhe": "Supermercado completo — Av. Spipe Calarge."
+    },
+    {
+      "id": "cg-merc-fort-guanandi",
+      "nome": "Fort Atacadista — Guanandi / Aero Rancho",
+      "categoria": "mercado",
+      "lat": -20.5068,
+      "lng": -54.6395,
+      "detalhe": "Atacarejo na região do Anhanduizinho — Av. Presidente Ernesto Geisel."
+    },
+    {
+      "id": "cg-merc-pires-centro",
+      "nome": "Supermercado Pires — Centro",
+      "categoria": "mercado",
+      "lat": -20.4665,
+      "lng": -54.6178,
+      "detalhe": "Supermercado prático na região central."
+    },
+    {
+      "id": "cg-merc-comper-caranda",
+      "nome": "Supermercado Comper — Av. Mato Grosso / Carandá",
+      "categoria": "mercado",
+      "lat": -20.4512,
+      "lng": -54.5758,
+      "detalhe": "Supermercado completo atendendo Carandá Bosque e Vivendas."
+    },
+
+    {
+      "id": "cg-farm-sao-bento-afonso",
+      "nome": "Drogaria São Bento 24h — Av. Afonso Pena",
+      "categoria": "farmacia",
+      "lat": -20.4624,
+      "lng": -54.6062,
+      "detalhe": "Farmácia 24 horas tradicional de Campo Grande."
+    },
+    {
+      "id": "cg-farm-drogasil-santa-fe",
+      "nome": "Drogasil — Av. Mato Grosso / Santa Fé",
+      "categoria": "farmacia",
+      "lat": -20.4558,
+      "lng": -54.5918,
+      "detalhe": "Rede Drogasil com estacionamento fácil."
+    },
+    {
+      "id": "cg-farm-drogasil-vilas-boas",
+      "nome": "Drogasil — Av. Bom Pastor / Vilas Boas",
+      "categoria": "farmacia",
+      "lat": -20.4848,
+      "lng": -54.5872,
+      "detalhe": "Farmácia na região gastronômica da Bom Pastor."
+    },
+    {
+      "id": "cg-farm-pague-menos-centro",
+      "nome": "Farmácia Pague Menos — Centro",
+      "categoria": "farmacia",
+      "lat": -20.4658,
+      "lng": -54.6145,
+      "detalhe": "Farmácia com atendimento clínico — Centro."
+    },
+    {
+      "id": "cg-farm-raia-caranda",
+      "nome": "Droga Raia — Carandá Bosque",
+      "categoria": "farmacia",
+      "lat": -20.4502,
+      "lng": -54.5778,
+      "detalhe": "Farmácia 24h atendendo Carandá Bosque e Chácara Cachoeira."
+    },
+    {
+      "id": "cg-farm-sao-bento-aero",
+      "nome": "Drogaria São Bento — Aero Rancho",
+      "categoria": "farmacia",
+      "lat": -20.5148,
+      "lng": -54.6428,
+      "detalhe": "Farmácia — Av. Rachel de Queiroz."
+    },
+
+    {
+      "id": "cg-saude-santa-casa",
+      "nome": "Santa Casa de Campo Grande",
+      "categoria": "saude",
+      "lat": -20.4662,
+      "lng": -54.6075,
+      "detalhe": "Maior hospital de MS com pronto-socorro 24h — Centro / Jardim dos Estados."
+    },
+    {
+      "id": "cg-saude-unimed",
+      "nome": "Hospital Unimed Campo Grande",
+      "categoria": "saude",
+      "lat": -20.4525,
+      "lng": -54.5842,
+      "detalhe": "Hospital particular referência com pronto atendimento 24h — Av. Mato Grosso."
+    },
+    {
+      "id": "cg-saude-proncor",
+      "nome": "Hospital Proncor — Chácara Cachoeira",
+      "categoria": "saude",
+      "lat": -20.4618,
+      "lng": -54.5825,
+      "detalhe": "Hospital geral e cardiológico 24h — Chácara Cachoeira."
+    },
+    {
+      "id": "cg-saude-humap",
+      "nome": "Hospital Universitário UFMS (HUMAP)",
+      "categoria": "saude",
+      "lat": -20.4995,
+      "lng": -54.6115,
+      "detalhe": "Hospital público universitário — Bairro Universitário."
+    },
+    {
+      "id": "cg-saude-regional",
+      "nome": "Hospital Regional de Mato Grosso do Sul",
+      "categoria": "saude",
+      "lat": -20.5162,
+      "lng": -54.6448,
+      "detalhe": "Hospital estadual referência — Aero Rancho."
+    },
+    {
+      "id": "cg-saude-upa-coronel",
+      "nome": "UPA Coronel Antonino",
+      "categoria": "saude",
+      "lat": -20.4368,
+      "lng": -54.6090,
+      "detalhe": "Unidade de Pronto Atendimento 24h — Região Norte."
+    },
+    {
+      "id": "cg-saude-upa-universitario",
+      "nome": "UPA Universitário",
+      "categoria": "saude",
+      "lat": -20.5112,
+      "lng": -54.6005,
+      "detalhe": "Pronto atendimento 24h — Bairro Universitário."
+    },
+    {
+      "id": "cg-saude-upa-leblon",
+      "nome": "UPA Jardim Leblon",
+      "categoria": "saude",
+      "lat": -20.4965,
+      "lng": -54.6488,
+      "detalhe": "Pronto atendimento 24h — Região Lagoa."
+    },
+
+    {
+      "id": "cg-parque-nacoes",
+      "nome": "Parque das Nações Indígenas",
+      "categoria": "parque",
+      "lat": -20.4550,
+      "lng": -54.5732,
+      "detalhe": "Cartão-postal de Campo Grande: 119 hectares, lago, pistas de corrida, skate e Bioparque Pantanal."
+    },
+    {
+      "id": "cg-parque-belmar",
+      "nome": "Praça Belmar Fidalgo",
+      "categoria": "parque",
+      "lat": -20.4618,
+      "lng": -54.6128,
+      "detalhe": "Praça esportiva no Centro com pista de caminhada, quadras e sombra."
+    },
+    {
+      "id": "cg-parque-soter",
+      "nome": "Parque Ecológico do Sóter",
+      "categoria": "parque",
+      "lat": -20.4295,
+      "lng": -54.5855,
+      "detalhe": "Parque arborizado na Mata do Jacinto com ciclovia, quadras e trilhas."
+    },
+    {
+      "id": "cg-parque-horto",
+      "nome": "Horto Florestal",
+      "categoria": "parque",
+      "lat": -20.4685,
+      "lng": -54.6230,
+      "detalhe": "Área verde histórica no Centro com trilhas, teatro de arena e lago."
+    },
+    {
+      "id": "cg-parque-ayrton-senna",
+      "nome": "Parque Ayrton Senna",
+      "categoria": "parque",
+      "lat": -20.5175,
+      "lng": -54.6442,
+      "detalhe": "Grande parque de lazer e esportes no Aero Rancho."
+    },
+    {
+      "id": "cg-parque-orla-morena",
+      "nome": "Orla Morena",
+      "categoria": "parque",
+      "lat": -20.4648,
+      "lng": -54.6338,
+      "detalhe": "Parque linear com pista de caminhada, ciclovia, feiras e gastronomia — Cabreúva / Planalto."
+    },
+    {
+      "id": "cg-parque-lagoa-itau",
+      "nome": "Lagoa Itatiaia",
+      "categoria": "parque",
+      "lat": -20.4832,
+      "lng": -54.5685,
+      "detalhe": "Lagoa urbanizada com pista de caminhada no Tiradentes / Jardim Itatiaia."
+    },
+
+    {
+      "id": "cg-acad-smart-afonso",
+      "nome": "Smart Fit — Av. Afonso Pena",
+      "categoria": "academia",
+      "lat": -20.4612,
+      "lng": -54.5975,
+      "detalhe": "Academia completa no Jardim dos Estados / Santa Fé."
+    },
+    {
+      "id": "cg-acad-bluefit-mato-grosso",
+      "nome": "Bluefit — Av. Mato Grosso",
+      "categoria": "academia",
+      "lat": -20.4568,
+      "lng": -54.5898,
+      "detalhe": "Academia 24h com musculação e aulas coletivas."
+    },
+    {
+      "id": "cg-acad-smart-shopping",
+      "nome": "Smart Fit — Shopping Campo Grande",
+      "categoria": "academia",
+      "lat": -20.4578,
+      "lng": -54.5882,
+      "detalhe": "Unidade integrada ao Shopping Campo Grande — Santa Fé."
+    },
+    {
+      "id": "cg-acad-vilas-boas",
+      "nome": "Smart Fit — Av. Eduardo Elias Zahran / Vilas Boas",
+      "categoria": "academia",
+      "lat": -20.4842,
+      "lng": -54.5912,
+      "detalhe": "Academia moderna na região da Zahran / Vilas Boas."
+    },
+    {
+      "id": "cg-acad-monte-castelo",
+      "nome": "Academia Fórmula / Smart — Monte Castelo",
+      "categoria": "academia",
+      "lat": -20.4468,
+      "lng": -54.6148,
+      "detalhe": "Academia ampla na Av. Mascarenhas de Moraes."
+    },
+    {
+      "id": "cg-acad-santo-antonio",
+      "nome": "Academia Fit — Av. Júlio de Castilho",
+      "categoria": "academia",
+      "lat": -20.4582,
+      "lng": -54.6480,
+      "detalhe": "Musculação e funcional na região oeste."
+    },
+
+    {
+      "id": "cg-pad-pao-e-tal",
+      "nome": "Pão & Tal — Jardim dos Estados",
+      "categoria": "padaria",
+      "lat": -20.4598,
+      "lng": -54.6022,
+      "detalhe": "Padaria e confeitaria tradicional de Campo Grande."
+    },
+    {
+      "id": "cg-pad-nossa-senhora-aparecida",
+      "nome": "Padaria & Café — Av. Bom Pastor",
+      "categoria": "padaria",
+      "lat": -20.4838,
+      "lng": -54.5865,
+      "detalhe": "Corredor gastronômico da Av. Bom Pastor — Vilas Boas."
+    },
+    {
+      "id": "cg-pad-caranda",
+      "nome": "Padaria & Empório — Carandá Bosque",
+      "categoria": "padaria",
+      "lat": -20.4498,
+      "lng": -54.5772,
+      "detalhe": "Pães artesanais, café da manhã e conveniência."
+    },
+    {
+      "id": "cg-pad-centro",
+      "nome": "Café Mostarda & Padarias — Centro / Afonso Pena",
+      "categoria": "padaria",
+      "lat": -20.4638,
+      "lng": -54.6118,
+      "detalhe": "Cafés especiais e gastronomia na Av. Afonso Pena."
+    },
+
+    {
+      "id": "cg-pet-parque-nacoes",
+      "nome": "Espaço Pet — Parque das Nações Indígenas",
+      "categoria": "pet",
+      "lat": -20.4562,
+      "lng": -54.5762,
+      "detalhe": "Gramado amplo e calçadão muito procurado por tutores de cães."
+    },
+    {
+      "id": "cg-pet-belmar",
+      "nome": "Passeio Pet — Entorno Praça Belmar Fidalgo",
+      "categoria": "pet",
+      "lat": -20.4622,
+      "lng": -54.6120,
+      "detalhe": "Área sombreada e clínicas veterinárias próximas no Centro."
+    },
+    {
+      "id": "cg-pet-hospital-vet-ufms",
+      "nome": "Hospital Veterinário UFMS",
+      "categoria": "pet",
+      "lat": -20.5025,
+      "lng": -54.6152,
+      "detalhe": "Hospital veterinário referência — Bairro Universitário."
+    },
+    {
+      "id": "cg-pet-cobasi-santa-fe",
+      "nome": "Petz / Cobasi — Santa Fé / Afonso Pena",
+      "categoria": "pet",
+      "lat": -20.4585,
+      "lng": -54.5935,
+      "detalhe": "Megastore pet com banho & tosa e clínica veterinária."
+    }
+  ]
+}

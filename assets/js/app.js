@@ -1,16 +1,10 @@
-/* RadarBR — Multi-City Real-Time Hourly Crime & Traffic Map (+ Hidden Imóveis Module) */
+/* RadarBR — Core Multi-City Controller (2 Main Tabs: Imóveis [Default] + Radar [Todos/Crimes/Trânsito]) */
 (() => {
   "use strict";
 
   const URL_PARAMS = new URLSearchParams(window.location.search);
-
-  // Feature flags: Imóveis module is kept ready in code & data/casas.json, hidden by default (enable with ?imoveis=1)
-  const FEATURES = {
-    imoveis: URL_PARAMS.get("imoveis") === "1",
-  };
-
-  const RECENT_HOURS_THRESHOLD = 3; // Highlight occurrences from the last 3 hours as "Recente"
-  const AUTO_REFRESH_MS = 15 * 60 * 1000; // Gentle background check every 15 minutes
+  const RECENT_HOURS_THRESHOLD = 3;
+  const AUTO_REFRESH_MS = 15 * 60 * 1000;
 
   const BASEMAP_STEPS = [
     { id: "clean", label: "Clean" },
@@ -25,111 +19,66 @@
     house: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5L12 3l9 7.5"/><path d="M5.5 9.5V20h13V9.5"/></svg>`,
   };
 
-  // CrimeReports-style catalog (15 categories, 1 icon per group of crimes)
+  // CrimeReports-style catalog (15 categories)
   const CRIME_TYPES = {
     homicidio: {
-      id: "homicidio",
-      label: "Homicídio / Letal",
-      short: "Homicídio, latrocínio, feminicídio",
-      color: "#991b1b",
+      id: "homicidio", label: "Homicídio / Letal", short: "Homicídio, latrocínio, feminicídio", color: "#991b1b",
       icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19.8 4.2C19.8 8.6 17.4 12.2 12.6 16.2L9.4 13L19.8 4.2z" fill="currentColor"/><path d="M8 11.8l5.8 5.8" stroke-width="2.1"/><path d="M10.2 15.2L5.5 19.9" stroke-width="3.2"/></svg>`,
     },
     roubo: {
-      id: "roubo",
-      label: "Roubo / Assalto",
-      short: "Assalto, mão armada, arrastão",
-      color: "#dc2626",
+      id: "roubo", label: "Roubo / Assalto", short: "Assalto, mão armada, arrastão", color: "#dc2626",
       icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11c0-3.5 3.4-6 8-6s8 2.5 8 6v2.2c0 3.2-3.4 5.8-8 5.8s-8-2.6-8-5.8V11z"/><path d="M4.5 11.5h15v2.2c0 .6-.5 1.1-1.1 1.1h-3.3c-.9 0-1.5-.5-2-1.2l-1.1-1.4-1.1 1.4c-.5.7-1.1 1.2-2 1.2H5.6c-.6 0-1.1-.5-1.1-1.1v-2.2z" fill="currentColor" fill-opacity="0.3"/><circle cx="8.8" cy="12.6" r="1" fill="currentColor" stroke="none"/><circle cx="15.2" cy="12.6" r="1" fill="currentColor" stroke="none"/></svg>`,
     },
     furto: {
-      id: "furto",
-      label: "Furto",
-      short: "Celular, bike, comércio, fios",
-      color: "#d97706",
+      id: "furto", label: "Furto", short: "Celular, bike, comércio, fios", color: "#d97706",
       icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="14.5" cy="5.5" r="2"/><path d="M12.5 9.5l-3 2.5-2.5-.5"/><path d="M12.5 9.5l3 2 2.5-1"/><path d="M12.5 9.5l-1.5 5 3.5 2.5-.5 3.5"/><path d="M11 14.5l-3.5 2.5-2 3"/><path d="M4.5 9.5c0-1 .8-1.8 1.8-1.8h1.4c1 0 1.8.8 1.8 1.8v2.2a2.5 2.5 0 0 1-5 0V9.5z" fill="currentColor" fill-opacity="0.28"/></svg>`,
     },
     invasao: {
-      id: "invasao",
-      label: "Invasão / Arromb.",
-      short: "Arrombamento, invasão domiciliar",
-      color: "#b45309",
+      id: "invasao", label: "Invasão / Arromb.", short: "Arrombamento, invasão domiciliar", color: "#b45309",
       icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 11L12 4l8.5 7"/><path d="M5.5 10.5V20h13v-9.5"/><path d="M9.5 20v-7.5l4.8-1.4V20" fill="currentColor" fill-opacity="0.28"/><circle cx="12.6" cy="15.8" r="0.9" fill="currentColor" stroke="none"/></svg>`,
     },
     veiculo: {
-      id: "veiculo",
-      label: "Veículo (Furto/Roubo)",
-      short: "Carro, moto, caminhonete",
-      color: "#ca8a04",
+      id: "veiculo", label: "Veículo (Furto/Roubo)", short: "Carro, moto, caminhonete", color: "#ca8a04",
       icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 13.5l1.6-4.4A2 2 0 0 1 7 7.8h6.2"/><path d="M3.5 13.5h17v4h-2v-1.3H5.5v1.3h-2v-4z"/><path d="M20.5 13.5l-1.1-3"/><circle cx="7" cy="13.5" r="1.2" fill="currentColor" stroke="none"/><circle cx="17" cy="13.5" r="1.2" fill="currentColor" stroke="none"/><path d="M18.5 4v4"/><circle cx="18.5" cy="10.2" r="0.9" fill="currentColor" stroke="none"/></svg>`,
     },
     trafico: {
-      id: "trafico",
-      label: "Tráfico / Drogas",
-      short: "Entorpecentes, ponto de tráfico",
-      color: "#7c3aed",
+      id: "trafico", label: "Tráfico / Drogas", short: "Entorpecentes, ponto de tráfico", color: "#7c3aed",
       icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.5 6.5l7 7a4.2 4.2 0 1 1-6 6l-7-7a4.2 4.2 0 1 1 6-6z"/><path d="M8.5 15.5l7-7"/><path d="M11.5 18.5a4.2 4.2 0 0 0 6-6l-2-2-6 6 2 2z" fill="currentColor" fill-opacity="0.3"/></svg>`,
     },
     agressao: {
-      id: "agressao",
-      label: "Agressão / Violência",
-      short: "Lesão corporal, briga, ameaça",
-      color: "#ea580c",
+      id: "agressao", label: "Agressão / Violência", short: "Lesão corporal, briga, ameaça", color: "#ea580c",
       icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 11.5V8.3a1.5 1.5 0 0 1 3 0V11M9 11V7a1.5 1.5 0 0 1 3 0v4M12 11V7.3a1.5 1.5 0 0 1 3 0V11M15 11V8.5a1.5 1.5 0 0 1 3 0v5c0 2.9-1.9 5-4.8 5.4V21H8.8v-2.2C6.9 18 6 16.3 6 14.3v-2.8z" fill="currentColor" fill-opacity="0.22"/><path d="M6 11.5h6.5a1.5 1.5 0 0 1 0 3H9.2"/></svg>`,
     },
     violencia_domestica: {
-      id: "violencia_domestica",
-      label: "Violência Doméstica",
-      short: "Maria da Penha, medida protetiva",
-      color: "#e11d48",
+      id: "violencia_domestica", label: "Violência Doméstica", short: "Maria da Penha, medida protetiva", color: "#e11d48",
       icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 11L12 4l8.5 7"/><path d="M6 10.5V20h12v-9.5"/><path d="M12 10.5v4"/><circle cx="12" cy="17.2" r="1" fill="currentColor" stroke="none"/></svg>`,
     },
     violencia_sexual: {
-      id: "violencia_sexual",
-      label: "Crime Sexual",
-      short: "Estupro, importunação, assédio",
-      color: "#9d174d",
+      id: "violencia_sexual", label: "Crime Sexual", short: "Estupro, importunação, assédio", color: "#9d174d",
       icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7.5 3v5.5c0 4.8-3.2 8.7-7.5 9.8-4.3-1.1-7.5-5-7.5-9.8V6L12 3z"/><path d="M9.2 9.2l5.6 5.6M14.8 9.2l-5.6 5.6"/></svg>`,
     },
     arma: {
-      id: "arma",
-      label: "Arma / Disparo",
-      short: "Tiroteio, disparo, porte ilegal",
-      color: "#be123c",
+      id: "arma", label: "Arma / Disparo", short: "Tiroteio, disparo, porte ilegal", color: "#be123c",
       icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.8 7.5h16.4a.8.8 0 0 1 .8.8v2.7a.8.8 0 0 1-.8.8h-9.7l-1.8 6.9a1 1 0 0 1-1 .8H4.9a.9.9 0 0 1-.9-1.1L5.6 12H3.8a.8.8 0 0 1-.8-.8V8.3a.8.8 0 0 1 .8-.8z" fill="currentColor"/><path d="M10.2 11.8h4.5a1.2 1.2 0 0 1 1.1 1.6l-.5 1.4a1.2 1.2 0 0 1-1.1.8H9.6"/><path d="M12.7 12l-.6 2"/><path d="M19.2 7.5V6.2M4.4 7.5L3.2 6.3"/></svg>`,
     },
     incendio: {
-      id: "incendio",
-      label: "Incêndio Criminoso",
-      short: "Fogo criminoso, explosivo",
-      color: "#c2410c",
+      id: "incendio", label: "Incêndio Criminoso", short: "Fogo criminoso, explosivo", color: "#c2410c",
       icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.5 3.5c.8 3.2-1.8 4.8-1.8 7 0 1.2.9 2 2 2 1.5 0 2.3-1.3 2.5-3 2 1.8 3.3 4.1 3.3 6.5a6.5 6.5 0 1 1-13 0c0-3.2 2-5.6 4.2-7.8 1-1 2.1-2.5 2.8-4.7z" fill="currentColor" fill-opacity="0.25"/></svg>`,
     },
     vandalismo: {
-      id: "vandalismo",
-      label: "Vandalismo / Dano",
-      short: "Depredação, pichação, dano",
-      color: "#475569",
+      id: "vandalismo", label: "Vandalismo / Dano", short: "Depredação, pichação, dano", color: "#475569",
       icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7.5" y="9" width="9" height="11.5" rx="1.8"/><path d="M9.5 9V6.8a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1V9"/><path d="M12 5.8V4.2M15.5 4.5l2-1M16.5 7h2"/></svg>`,
     },
     estelionato: {
-      id: "estelionato",
-      label: "Estelionato / Golpe",
-      short: "Golpe presencial, fraude, extorsão",
-      color: "#0369a1",
+      id: "estelionato", label: "Estelionato / Golpe", short: "Golpe presencial, fraude, extorsão", color: "#0369a1",
       icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="6" width="17" height="12" rx="2.2"/><path d="M3.5 10.2h17"/><path d="M14.2 13.3l2.6 2.6M16.8 13.3l-2.6 2.6"/></svg>`,
     },
     operacao_policial: {
-      id: "operacao_policial",
-      label: "Operação / Prisão",
-      short: "Mandado, flagrante, receptação",
-      color: "#1d4ed8",
+      id: "operacao_policial", label: "Operação / Prisão", short: "Mandado, flagrante, receptação", color: "#1d4ed8",
       icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7.5" cy="14.5" r="3.8"/><circle cx="16.5" cy="14.5" r="3.8"/><path d="M9.6 11.3l1.2-2.8a1.4 1.4 0 0 1 2.4 0l1.2 2.8"/><path d="M11 8.5h2"/></svg>`,
     },
     outro: {
-      id: "outro",
-      label: "Outra Ocorrência",
-      short: "Outros registros policiais",
-      color: "#334155",
+      id: "outro", label: "Outra Ocorrência", short: "Outros registros policiais", color: "#334155",
       icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4L3.5 19h17L12 4z" fill="currentColor" fill-opacity="0.2"/><path d="M12 10v4.2"/><circle cx="12" cy="16.8" r="0.9" fill="currentColor" stroke="none"/></svg>`,
     },
   };
@@ -137,83 +86,48 @@
   // Traffic accidents catalog (10 road-warning sign icons)
   const TRAFFIC_TYPES = {
     fatal: {
-      id: "fatal",
-      label: "Acidente Fatal",
-      short: "Acidente com óbito / vítima fatal",
-      color: "#991b1b",
+      id: "fatal", label: "Acidente Fatal", short: "Acidente com óbito / vítima fatal", color: "#991b1b",
       icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4.5v15M7 9.5h10"/></svg>`,
     },
     atropelamento: {
-      id: "atropelamento",
-      label: "Atropelamento",
-      short: "Pedestre atropelado na via",
-      color: "#dc2626",
+      id: "atropelamento", label: "Atropelamento", short: "Pedestre atropelado na via", color: "#dc2626",
       icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5.5" r="2"/><path d="M12 8.5l-1 5.5-3 4.5M11 14l4.5 1.5 2 3M8.5 11l3.5-1.5 3.5 1.5"/></svg>`,
     },
     moto: {
-      id: "moto",
-      label: "Acidente de Moto",
-      short: "Queda ou colisão com motocicleta",
-      color: "#ea580c",
+      id: "moto", label: "Acidente de Moto", short: "Queda ou colisão com motocicleta", color: "#ea580c",
       icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6.2" cy="16.5" r="2.8"/><circle cx="17.8" cy="16.5" r="2.8"/><path d="M9 16.5h4.2l2.3-5.2h-4l-1.5 3H8M14.2 7.5h3l1.3 3.8"/></svg>`,
     },
     colisao: {
-      id: "colisao",
-      label: "Colisão / Batida",
-      short: "Batida entre veículos, cruzamento",
-      color: "#d97706",
+      id: "colisao", label: "Colisão / Batida", short: "Batida entre veículos, cruzamento", color: "#d97706",
       icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 15l1.3-3.8a1.6 1.6 0 0 1 1.5-1.1h4.2l1.2 2.4H3.5v3.5h1.5v-1h5.8"/><path d="M20.5 15l-1.3-3.8a1.6 1.6 0 0 0-1.5-1.1h-3.2l-.8 2.4h6.8v3.5h-1.5v-1h-4.8"/><path d="M12 4.5v3M9.5 6l1.5 1.8M14.5 6L13 7.8"/></svg>`,
     },
     capotamento: {
-      id: "capotamento",
-      label: "Capotamento / Tomb.",
-      short: "Veículo capotado ou saída de pista",
-      color: "#b45309",
+      id: "capotamento", label: "Capotamento / Tomb.", short: "Veículo capotado ou saída de pista", color: "#b45309",
       icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5.5 14.5l1.5-3.5a2 2 0 0 1 1.8-1.2h6.4a2 2 0 0 1 1.8 1.2l1.5 3.5H5.5z" transform="rotate(180 12 13)"/><path d="M18.5 7.5A7.5 7.5 0 0 0 6 7.5"/><path d="M16 4.8l2.8 2.7-3.2.8"/></svg>`,
     },
     ciclista: {
-      id: "ciclista",
-      label: "Ciclista / Bike",
-      short: "Bicicleta, bike elétrica, ciclovia",
-      color: "#0d9488",
+      id: "ciclista", label: "Ciclista / Bike", short: "Bicicleta, bike elétrica, ciclovia", color: "#0d9488",
       icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6.2" cy="16.2" r="3"/><circle cx="17.8" cy="16.2" r="3"/><path d="M6.2 16.2L10.3 9.5h4l3.5 6.7M10.3 9.5l1.7 6.7H6.2M9.2 7h2.8M14.3 9.5l1.1-2.5H18"/></svg>`,
     },
     onibus_caminhao: {
-      id: "onibus_caminhao",
-      label: "Ônibus / Caminhão",
-      short: "Veículo pesado, carreta, ônibus",
-      color: "#0369a1",
+      id: "onibus_caminhao", label: "Ônibus / Caminhão", short: "Veículo pesado, carreta, ônibus", color: "#0369a1",
       icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="11.5" height="9" rx="1.5"/><path d="M14.5 10h3.8l2.2 2.8V16h-6v-6z"/><circle cx="7" cy="17.2" r="1.7"/><circle cx="17.5" cy="17.2" r="1.7"/></svg>`,
     },
     embriaguez: {
-      id: "embriaguez",
-      label: "Embriaguez / Perigo",
-      short: "Bafômetro, racha, fuga do local",
-      color: "#7c3aed",
+      id: "embriaguez", label: "Embriaguez / Perigo", short: "Bafômetro, racha, fuga do local", color: "#7c3aed",
       icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="7.5"/><circle cx="12" cy="12" r="2"/><path d="M5 11h5M14 11h5M12 14v5.5"/><path d="M4.5 4.5l15 15"/></svg>`,
     },
     rodovia: {
-      id: "rodovia",
-      label: "Rodovia / Trevo",
-      short: "Rodovia, trevo, anel viário",
-      color: "#475569",
+      id: "rodovia", label: "Rodovia / Trevo", short: "Rodovia, trevo, anel viário", color: "#475569",
       icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 20L10 4M17 20L14 4M12 6.5v2.5M12 12v2.5M12 17.5V20"/></svg>`,
     },
     outro: {
-      id: "outro",
-      label: "Outro Acidente",
-      short: "Pane/incêndio, carga, animal na via",
-      color: "#ca8a04",
+      id: "outro", label: "Outro Acidente", short: "Pane/incêndio, carga, animal na via", color: "#ca8a04",
       icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4.5L3.8 19h16.4L12 4.5z" fill="currentColor" fill-opacity="0.22"/><path d="M12 10v4"/><circle cx="12" cy="16.5" r="0.9" fill="currentColor" stroke="none"/></svg>`,
     },
   };
 
-  const GRAVIDADE_LABELS = {
-    fatal: "Fatal",
-    grave: "Grave",
-    leve: "Leve",
-    sem_vitimas: "Sem vítimas",
-  };
+  const GRAVIDADE_LABELS = { fatal: "Fatal", grave: "Grave", leve: "Leve", sem_vitimas: "Sem vítimas" };
 
   const TIME_WINDOWS = [
     { id: "0", label: "Todos", hourly: false },
@@ -228,10 +142,11 @@
     { id: "custom", label: "Período", hourly: false },
   ];
 
-  // App state
+  const initialMainTab = URL_PARAMS.get("aba") === "radar" ? "radar" : "imoveis";
+
   const state = {
-    activeTab: "mapa", // mobile: "mapa" | "relatorios" | "imoveis"
-    sidebarMode: "relatorios", // desktop: "relatorios" | "imoveis"
+    mainTab: initialMainTab, // "imoveis" (default) | "radar"
+    mobileView: "mapa", // "mapa" | "lista" | "salvos" (imoveis) | "relatorios" (radar)
     cities: [],
     currentCitySlug: "campo-grande-ms",
     cityMeta: null,
@@ -240,22 +155,21 @@
 
     showCrimes: true,
     showTraffic: true,
-    showImoveis: FEATURES.imoveis,
 
     crimesFeed: null,
     crimes: [],
     trafficFeed: null,
     traffic: [],
     housesFeed: null,
-    houses: [],
+    poisFeed: null,
 
     reportKind: "todos", // "todos" | "crimes" | "transito"
-    timeWindow: "0", // "0" | "1h" | "6h" | "12h" | "24h" | "3d" | "7d" | "15d" | "30d" | "custom"
+    timeWindow: "0",
     dateFrom: "",
     dateTo: "",
     query: "",
-    precisao: "todas", // "todas" | "rua" | "bairro"
-    sort: "recente", // "recente" | "antigo" | "tipo" | "bairro"
+    precisao: "todas",
+    sort: "recente",
     typesExpanded: false,
     activeCrimeTypes: new Set(Object.keys(CRIME_TYPES)),
     activeTrafficTypes: new Set(Object.keys(TRAFFIC_TYPES)),
@@ -266,35 +180,30 @@
   let currentBaseLayer = null;
   let crimeLayer = null;
   let trafficLayer = null;
-  let houseLayer = null;
   const crimeMarkers = new Map();
   const trafficMarkers = new Map();
 
   const el = {
     citySelect: document.getElementById("citySelect"),
+    brandSubtitle: document.getElementById("brandSubtitle"),
     refreshFeedBtn: document.getElementById("refreshFeedBtn"),
     feedStatusText: document.getElementById("feedStatusText"),
     mobileStatusText: document.getElementById("mobileStatusText"),
-    toggleImoveisModeBtn: document.getElementById("toggleImoveisModeBtn"),
-    headerImoveisCount: document.getElementById("headerImoveisCount"),
+    tabImoveisCount: document.getElementById("tabImoveisCount"),
+    tabRadarCount: document.getElementById("tabRadarCount"),
     mapLayerBar: document.getElementById("mapLayerBar"),
     cycleBasemapBtn: document.getElementById("cycleBasemapBtn"),
     cycleBasemapLabel: document.getElementById("cycleBasemapLabel"),
     fitBoundsBtn: document.getElementById("fitBoundsBtn"),
     fitBoundsMobileBtn: document.getElementById("fitBoundsMobileBtn"),
     reportView: document.getElementById("reportView"),
-    imoveisView: document.getElementById("imoveisView"),
     navReportsCount: document.getElementById("navReportsCount"),
-    navImoveisBtn: document.getElementById("navImoveisBtn"),
-    navImoveisCount: document.getElementById("navImoveisCount"),
     toast: document.getElementById("toast"),
   };
 
   function isDesktop() {
     return window.innerWidth >= 840;
   }
-
-  // ==================== UTILITIES ====================
 
   function escapeHtml(str) {
     return String(str ?? "")
@@ -324,15 +233,16 @@
 
   let toastTimer = null;
   function showToast(msg) {
+    if (!el.toast) return;
     el.toast.textContent = msg;
     el.toast.hidden = false;
     clearTimeout(toastTimer);
     toastTimer = setTimeout(() => {
       el.toast.hidden = true;
-    }, 2400);
+    }, 2600);
   }
 
-  // Parse event timestamp supporting data_hora (ISO), data + hora ("YYYY-MM-DD" + "HH:MM"), or data only
+  // ==================== TIMESTAMP HELPERS ====================
   function parseEventTimestamp(raw) {
     if (raw.data_hora) {
       const t = Date.parse(String(raw.data_hora).trim());
@@ -346,7 +256,6 @@
         return { ms: t, data: `${yyyy}-${mm}-${dd}`, hora: `${hh}:${mi}`, hasHora: true };
       }
     }
-
     const dataStr = String(raw.data || "").trim();
     const horaRaw = String(raw.hora || "").trim();
     const horaMatch = horaRaw.match(/^(\d{1,2}):(\d{2})(?::(\d{2}))?/);
@@ -363,12 +272,7 @@
     }
 
     const fallbackMs = dataStr ? Date.parse(dataStr) : 0;
-    return {
-      ms: Number.isFinite(fallbackMs) ? fallbackMs : 0,
-      data: dataStr,
-      hora,
-      hasHora: Boolean(hora),
-    };
+    return { ms: Number.isFinite(fallbackMs) ? fallbackMs : 0, data: dataStr, hora, hasHora: Boolean(hora) };
   }
 
   function isEventRecent(item) {
@@ -382,13 +286,9 @@
     if (!ms) return "";
     const diffMs = Date.now() - ms;
     const diffMin = Math.round(diffMs / 60000);
-    if (hasHora && diffMin >= 0 && diffMin < 60) {
-      return diffMin <= 1 ? "agora" : `há ${diffMin} min`;
-    }
+    if (hasHora && diffMin >= 0 && diffMin < 60) return diffMin <= 1 ? "agora" : `há ${diffMin} min`;
     const diffHours = Math.round(diffMs / 3600000);
-    if (hasHora && diffHours >= 0 && diffHours < 24) {
-      return `há ${diffHours}h`;
-    }
+    if (hasHora && diffHours >= 0 && diffHours < 24) return `há ${diffHours}h`;
     const today = new Date();
     today.setHours(12, 0, 0, 0);
     const diffDays = Math.round((today.getTime() - ms) / 86400000);
@@ -423,12 +323,10 @@
   }
 
   // ==================== TYPE RESOLVERS & GEOCODING ====================
-
   function resolveCrimeType(rawTipo) {
     const norm = normalizeText(rawTipo || "").replace(/[\s/-]+/g, "_");
     if (!norm) return "outro";
     if (CRIME_TYPES[norm]) return norm;
-
     const text = normalizeText(rawTipo || "");
     if (/\b(homicidio|latrocinio|feminicidio|assassinato|execucao|cadaver|morte violenta)\b/.test(text)) return "homicidio";
     if (/\b(maria da penha|violencia domestica|medida protetiva|domestica)\b/.test(text)) return "violencia_domestica";
@@ -451,7 +349,6 @@
     const norm = normalizeText(rawTipo || "").replace(/[\s/-]+/g, "_");
     if (!norm) return "outro";
     if (TRAFFIC_TYPES[norm]) return norm;
-
     const text = normalizeText(rawTipo || "");
     if (/\b(fatal|morte|obito|morre|morreu|vitima fatal)\b/.test(text)) return "fatal";
     if (/\b(atropelamento|atropela|pedestre)\b/.test(text)) return "atropelamento";
@@ -529,6 +426,7 @@
     }
   }
 
+  // ==================== RADAR INGESTION ====================
   function ingestCrimes(rawData) {
     if (!rawData) {
       state.crimesFeed = null;
@@ -638,31 +536,7 @@
     state.traffic = normalized;
   }
 
-  function ingestHouses(rawData) {
-    if (!rawData || !Array.isArray(rawData.casas)) {
-      state.housesFeed = null;
-      state.houses = [];
-      return;
-    }
-    state.housesFeed = rawData;
-    state.houses = rawData.casas.map((raw, idx) => {
-      const coords = resolveCoords(raw, idx + 20000, "house");
-      return {
-        id: String(raw.id || `casa-${idx + 1}`),
-        titulo: String(raw.titulo || `Imóvel em ${raw.bairro || state.cityMeta?.nome || ""}`),
-        finalidade: normalizeText(raw.finalidade).includes("comp") ? "compra" : "aluguel",
-        preco: Number(raw.preco) || 0,
-        bairro: String(raw.bairro || ""),
-        endereco: String(raw.endereco || ""),
-        lat: coords.lat,
-        lng: coords.lng,
-        link: typeof raw.link === "string" ? raw.link.trim() : "",
-      };
-    });
-  }
-
-  // ==================== FILTERING ENGINE (HOURLY + DATE + TYPE + SEARCH) ====================
-
+  // ==================== RADAR FILTERING ====================
   function matchesTimeWindow(item) {
     if (state.timeWindow === "0") return true;
     if (state.timeWindow === "custom") {
@@ -675,15 +549,11 @@
     const win = TIME_WINDOWS.find((w) => w.id === state.timeWindow);
     if (!win) return true;
     if (!item.timestampMs) return false;
-    if (win.hours) {
-      const cutoff = Date.now() - win.hours * 3600000;
-      return item.timestampMs >= cutoff;
-    }
+    if (win.hours) return item.timestampMs >= Date.now() - win.hours * 3600000;
     if (win.days) {
       const startOfToday = new Date();
       startOfToday.setHours(0, 0, 0, 0);
-      const cutoff = startOfToday.getTime() - (win.days - 1) * 86400000;
-      return item.timestampMs >= cutoff;
+      return item.timestampMs >= startOfToday.getTime() - (win.days - 1) * 86400000;
     }
     return true;
   }
@@ -772,11 +642,10 @@
     if (df) df.value = "";
     const dt = document.getElementById("reportDateTo");
     if (dt) dt.value = "";
-    refreshAllViews();
+    refreshRadarViews();
   }
 
   // ==================== MAP ENGINE ====================
-
   function initMap() {
     const center = state.cityGeo?.centro || state.cityMeta?.centro || { lat: -20.4697, lng: -54.6201 };
     const zoom = state.cityGeo?.zoom || state.cityMeta?.zoom || 12;
@@ -787,7 +656,7 @@
       zoomControl: false,
       preferCanvas: true,
     });
-    L.control.zoom({ position: "topright" }).addTo(map);
+    L.control.zoom({ position: "topleft" }).addTo(map);
 
     baseLayers = {
       clean: L.layerGroup([
@@ -812,9 +681,12 @@
     };
 
     currentBaseLayer = baseLayers.clean.addTo(map);
-    houseLayer = L.layerGroup().addTo(map);
     trafficLayer = L.layerGroup().addTo(map);
     crimeLayer = L.layerGroup().addTo(map);
+
+    if (window.RadarBRImoveis?.onMapReady) {
+      window.RadarBRImoveis.onMapReady(map);
+    }
   }
 
   function setBasemap(name) {
@@ -869,15 +741,21 @@
     `;
   }
 
-  function renderMapLayers() {
-    if (!map) return;
-    crimeLayer.clearLayers();
-    trafficLayer.clearLayers();
-    houseLayer.clearLayers();
+  function clearRadarMapLayers() {
+    if (crimeLayer) crimeLayer.clearLayers();
+    if (trafficLayer) trafficLayer.clearLayers();
     crimeMarkers.clear();
     trafficMarkers.clear();
+  }
 
-    if (state.showCrimes) {
+  function renderRadarMapLayers() {
+    if (!map) return;
+    clearRadarMapLayers();
+
+    // STRICT SEPARATION: never show crimes or traffic when user is on the Imóveis tab
+    if (state.mainTab !== "radar") return;
+
+    if (state.showCrimes && state.reportKind !== "transito") {
       for (const c of getVisibleCrimes()) {
         const meta = CRIME_TYPES[c.tipo] || CRIME_TYPES.outro;
         const approxCls = c.precisao === "bairro" ? "crime-pin--approx" : "";
@@ -887,16 +765,13 @@
           html: `<div class="crime-pin ${approxCls} ${recentCls}" style="background:${meta.color}" title="${escapeHtml(meta.label)}: ${escapeHtml(c.titulo)}">${meta.icon}</div>`,
           iconSize: [0, 0],
         });
-        const marker = L.marker([c.displayLat, c.displayLng], {
-          icon,
-          zIndexOffset: recentCls ? 340 : 200,
-        }).addTo(crimeLayer);
+        const marker = L.marker([c.displayLat, c.displayLng], { icon, zIndexOffset: recentCls ? 340 : 200 }).addTo(crimeLayer);
         marker.bindPopup(() => createEventPopupHtml(c));
         crimeMarkers.set(c.id, { marker, item: c });
       }
     }
 
-    if (state.showTraffic) {
+    if (state.showTraffic && state.reportKind !== "crimes") {
       for (const t of getVisibleTraffic()) {
         const meta = TRAFFIC_TYPES[t.tipo] || TRAFFIC_TYPES.outro;
         const approxCls = t.precisao === "bairro" ? "traffic-pin--approx" : "";
@@ -906,41 +781,28 @@
           html: `<div class="traffic-pin ${approxCls} ${recentCls}" style="background:${meta.color}" title="${escapeHtml(meta.label)}: ${escapeHtml(t.titulo)}">${meta.icon}</div>`,
           iconSize: [0, 0],
         });
-        const marker = L.marker([t.displayLat, t.displayLng], {
-          icon,
-          zIndexOffset: recentCls ? 330 : 190,
-        }).addTo(trafficLayer);
+        const marker = L.marker([t.displayLat, t.displayLng], { icon, zIndexOffset: recentCls ? 330 : 190 }).addTo(trafficLayer);
         marker.bindPopup(() => createEventPopupHtml(t));
         trafficMarkers.set(t.id, { marker, item: t });
       }
     }
-
-    if (FEATURES.imoveis && state.showImoveis) {
-      for (const h of state.houses) {
-        const priceLabel = h.preco ? `R$ ${h.preco.toLocaleString("pt-BR")}` : "Imóvel";
-        const icon = L.divIcon({
-          className: "house-pin-wrap",
-          html: `<div class="house-pin"><span class="house-pin__dot"></span><span>${escapeHtml(priceLabel)}</span></div>`,
-          iconSize: [0, 0],
-        });
-        const marker = L.marker([h.lat, h.lng], { icon, zIndexOffset: 120 }).addTo(houseLayer);
-        marker.bindPopup(
-          `<div class="event-popup"><h4 class="event-popup__title">${escapeHtml(h.titulo)}</h4><p class="event-popup__loc">${escapeHtml(h.bairro)}</p>${h.link ? `<a href="${escapeHtml(h.link)}" target="_blank" rel="noopener noreferrer">Ver anúncio ↗</a>` : ""}</div>`
-        );
-      }
-    }
   }
 
-  function fitMapToCity(preferEvents = true) {
+  function fitMapToCity(preferPoints = true) {
     if (!map) return;
+    if (state.mainTab === "imoveis" && window.RadarBRImoveis?.fitToImoveis) {
+      window.RadarBRImoveis.fitToImoveis(preferPoints);
+      return;
+    }
+
     const pts = [];
-    if (preferEvents) {
-      if (state.showCrimes) getVisibleCrimes().forEach((c) => pts.push([c.displayLat, c.displayLng]));
-      if (state.showTraffic) getVisibleTraffic().forEach((t) => pts.push([t.displayLat, t.displayLng]));
+    if (preferPoints && state.mainTab === "radar") {
+      if (state.showCrimes && state.reportKind !== "transito") getVisibleCrimes().forEach((c) => pts.push([c.displayLat, c.displayLng]));
+      if (state.showTraffic && state.reportKind !== "crimes") getVisibleTraffic().forEach((t) => pts.push([t.displayLat, t.displayLng]));
     }
     if (pts.length >= 2) {
       map.fitBounds(L.latLngBounds(pts), {
-        paddingTopLeft: [40, isDesktop() ? 74 : 124],
+        paddingTopLeft: [40, isDesktop() ? 74 : 134],
         paddingBottomRight: [40, isDesktop() ? 74 : 60],
         maxZoom: 14,
         animate: true,
@@ -957,99 +819,71 @@
   }
 
   function focusEventOnMap(kind, id) {
+    if (state.mainTab !== "radar") setMainTab("radar");
     const isTraffic = kind === "transito";
-    const entry = isTraffic ? trafficMarkers.get(id) : crimeMarkers.get(id);
-    if (!entry) {
+    let target = isTraffic ? trafficMarkers.get(id) : crimeMarkers.get(id);
+    if (!target) {
       if (isTraffic) state.showTraffic = true;
       else state.showCrimes = true;
-      refreshAllViews();
+      refreshRadarViews();
+      target = isTraffic ? trafficMarkers.get(id) : crimeMarkers.get(id);
     }
-    const target = isTraffic ? trafficMarkers.get(id) : crimeMarkers.get(id);
     if (!target) return;
-    if (!isDesktop()) switchMobileTab("mapa");
+    if (!isDesktop()) switchMobileView("mapa");
     map.flyTo([target.item.displayLat, target.item.displayLng], Math.max(map.getZoom(), 15), { duration: 0.45 });
     setTimeout(() => target.marker.openPopup(), 420);
   }
 
-  // ==================== MAP DOCK & STATUS ====================
-
+  // ==================== RADAR DOCK & STATUS ====================
   function renderMapLayerBar() {
+    if (!el.mapLayerBar) return;
     const crimeCount = getVisibleCrimes().length;
     const trafficCount = getVisibleTraffic().length;
-    const parts = [
-      `
-        <button type="button" class="cat-toggle cat-toggle--crime ${state.showCrimes ? "is-on" : ""}" id="dockToggleCrimes" aria-pressed="${state.showCrimes}">
-          <span class="cat-toggle__dot" style="background:#b91c1c">${UI_ICONS.shieldAlert}</span>
-          <span>Crimes</span>
-          <span class="cat-toggle__count">${crimeCount}</span>
-        </button>
-      `,
-      `
-        <button type="button" class="cat-toggle cat-toggle--traffic ${state.showTraffic ? "is-on" : ""}" id="dockToggleTraffic" aria-pressed="${state.showTraffic}">
-          <span class="cat-toggle__dot" style="background:#d97706">${UI_ICONS.trafficAlert}</span>
-          <span>Trânsito</span>
-          <span class="cat-toggle__count cat-toggle__count--traffic">${trafficCount}</span>
-        </button>
-      `,
-    ];
-
-    if (FEATURES.imoveis) {
-      parts.push(`
-        <button type="button" class="cat-toggle cat-toggle--imoveis ${state.showImoveis ? "is-on" : ""}" id="dockToggleImoveis" aria-pressed="${state.showImoveis}">
-          <span class="cat-toggle__dot" style="background:#15803d">${UI_ICONS.house}</span>
-          <span>Imóveis</span>
-          <span class="cat-toggle__count cat-toggle__count--imoveis">${state.houses.length}</span>
-        </button>
-      `);
-    }
-
-    el.mapLayerBar.innerHTML = parts.join("");
+    el.mapLayerBar.innerHTML = `
+      <button type="button" class="cat-toggle cat-toggle--crime ${state.showCrimes ? "is-on" : ""}" id="dockToggleCrimes" aria-pressed="${state.showCrimes}">
+        <span class="cat-toggle__dot" style="background:#b91c1c">${UI_ICONS.shieldAlert}</span>
+        <span>Crimes</span>
+        <span class="cat-toggle__count">${crimeCount}</span>
+      </button>
+      <button type="button" class="cat-toggle cat-toggle--traffic ${state.showTraffic ? "is-on" : ""}" id="dockToggleTraffic" aria-pressed="${state.showTraffic}">
+        <span class="cat-toggle__dot" style="background:#d97706">${UI_ICONS.trafficAlert}</span>
+        <span>Trânsito</span>
+        <span class="cat-toggle__count cat-toggle__count--traffic">${trafficCount}</span>
+      </button>
+    `;
 
     document.getElementById("dockToggleCrimes").addEventListener("click", () => {
       state.showCrimes = !state.showCrimes;
-      refreshAllViews();
+      refreshRadarViews();
     });
     document.getElementById("dockToggleTraffic").addEventListener("click", () => {
       state.showTraffic = !state.showTraffic;
-      refreshAllViews();
+      refreshRadarViews();
     });
-    const imvBtn = document.getElementById("dockToggleImoveis");
-    if (imvBtn) {
-      imvBtn.addEventListener("click", () => {
-        state.showImoveis = !state.showImoveis;
-        refreshAllViews();
-      });
-    }
   }
 
   function updateStatusPills() {
-    const timestamps = [state.crimesFeed?.atualizado_em, state.trafficFeed?.atualizado_em]
-      .filter(Boolean)
-      .sort()
-      .reverse();
-    const newestIso = timestamps[0] || "";
+    const timestamps =
+      state.mainTab === "imoveis"
+        ? [state.housesFeed?.atualizado_em]
+        : [state.crimesFeed?.atualizado_em, state.trafficFeed?.atualizado_em];
+    const newestIso = timestamps.filter(Boolean).sort().reverse()[0] || "";
     const statusLabel = formatUpdatedPill(newestIso);
     if (el.feedStatusText) el.feedStatusText.textContent = statusLabel;
     if (el.mobileStatusText) el.mobileStatusText.textContent = statusLabel;
 
-    const totalVisible = getVisibleCrimes().length + getVisibleTraffic().length;
-    if (el.navReportsCount) {
-      el.navReportsCount.textContent = String(totalVisible);
-      el.navReportsCount.hidden = state.crimes.length === 0 && state.traffic.length === 0;
+    const radarVisible = getVisibleCrimes().length + getVisibleTraffic().length;
+    if (el.tabRadarCount) {
+      el.tabRadarCount.textContent = String(radarVisible);
+      el.tabRadarCount.hidden = radarVisible === 0;
     }
-
-    if (FEATURES.imoveis) {
-      el.toggleImoveisModeBtn.hidden = false;
-      el.navImoveisBtn.hidden = false;
-      el.headerImoveisCount.textContent = String(state.houses.length);
-      el.headerImoveisCount.hidden = state.houses.length === 0;
-      el.navImoveisCount.textContent = String(state.houses.length);
-      el.navImoveisCount.hidden = state.houses.length === 0;
+    if (el.navReportsCount) {
+      el.navReportsCount.textContent = String(radarVisible);
+      el.navReportsCount.hidden = radarVisible === 0;
     }
   }
 
-  // ==================== CENTRALIZED REPORT PANEL ====================
-
+  // ==================== RADAR REPORT PANEL (3 SUBTABS: TODOS / CRIMES / TRÂNSITO) ====================
   let reportShellReady = false;
   function ensureReportShell() {
     if (reportShellReady) return;
@@ -1065,7 +899,7 @@
           </div>
         </div>
 
-        <div class="report-tabs" role="tablist" aria-label="Filtrar relatório">
+        <div class="report-tabs" role="tablist" aria-label="Subabas do Radar">
           <button type="button" class="report-tab is-active" data-report-kind="todos" role="tab" aria-selected="true">
             <span>Todos</span>
             <span class="report-tab__cnt" id="tabTodosCnt">0</span>
@@ -1092,13 +926,10 @@
         </label>
 
         <div class="filter-block">
-          <div class="filter-block__head">
-            <span>Janela de Hora / Data</span>
-          </div>
+          <div class="filter-block__head"><span>Janela de Hora / Data</span></div>
           <div class="time-chips" id="reportTimeChips" role="group" aria-label="Filtrar por hora ou data">
             ${TIME_WINDOWS.map(
-              (w) =>
-                `<button type="button" class="time-chip ${w.hourly ? "time-chip--hourly" : ""}" data-time-win="${w.id}">${w.label}</button>`
+              (w) => `<button type="button" class="time-chip ${w.hourly ? "time-chip--hourly" : ""}" data-time-win="${w.id}">${w.label}</button>`
             ).join("")}
           </div>
           <div class="date-range-row" id="reportDateRange" hidden>
@@ -1147,7 +978,7 @@
       btn.addEventListener("click", () => {
         state.reportKind = btn.dataset.reportKind;
         state.typesExpanded = false;
-        refreshAllViews();
+        refreshRadarViews();
       });
     });
 
@@ -1156,42 +987,42 @@
     searchInput.addEventListener("input", () => {
       state.query = searchInput.value;
       clearSearch.hidden = !state.query;
-      refreshAllViews();
+      refreshRadarViews();
     });
     clearSearch.addEventListener("click", () => {
       searchInput.value = "";
       state.query = "";
       clearSearch.hidden = true;
-      refreshAllViews();
+      refreshRadarViews();
     });
 
     el.reportView.querySelectorAll("[data-time-win]").forEach((btn) => {
       btn.addEventListener("click", () => {
         state.timeWindow = btn.dataset.timeWin;
-        refreshAllViews();
+        refreshRadarViews();
       });
     });
 
     document.getElementById("reportDateFrom").addEventListener("change", (e) => {
       state.dateFrom = e.target.value;
       state.timeWindow = "custom";
-      refreshAllViews();
+      refreshRadarViews();
     });
     document.getElementById("reportDateTo").addEventListener("change", (e) => {
       state.dateTo = e.target.value;
       state.timeWindow = "custom";
-      refreshAllViews();
+      refreshRadarViews();
     });
 
     document.getElementById("reportAllTypesBtn").addEventListener("click", () => {
       if (state.reportKind === "transito") state.activeTrafficTypes = new Set(Object.keys(TRAFFIC_TYPES));
       else state.activeCrimeTypes = new Set(Object.keys(CRIME_TYPES));
-      refreshAllViews();
+      refreshRadarViews();
     });
     document.getElementById("reportClearTypesBtn").addEventListener("click", () => {
       if (state.reportKind === "transito") state.activeTrafficTypes.clear();
       else state.activeCrimeTypes.clear();
-      refreshAllViews();
+      refreshRadarViews();
     });
     document.getElementById("reportExpandTypesBtn").addEventListener("click", () => {
       state.typesExpanded = !state.typesExpanded;
@@ -1201,13 +1032,13 @@
     el.reportView.querySelectorAll("[data-prec]").forEach((btn) => {
       btn.addEventListener("click", () => {
         state.precisao = btn.dataset.prec;
-        refreshAllViews();
+        refreshRadarViews();
       });
     });
 
     document.getElementById("reportSortSelect").addEventListener("change", (e) => {
       state.sort = e.target.value;
-      refreshAllViews();
+      refreshRadarViews();
     });
 
     document.getElementById("resetReportFiltersBtn").addEventListener("click", resetAllFilters);
@@ -1216,7 +1047,6 @@
 
   function renderReportContent() {
     ensureReportShell();
-
     el.reportView.classList.toggle("report-view--crimes", state.reportKind === "crimes");
     el.reportView.classList.toggle("report-view--transito", state.reportKind === "transito");
 
@@ -1260,7 +1090,6 @@
     document.getElementById("reportSortSelect").value = state.sort;
     document.getElementById("clearReportSearchBtn").hidden = !state.query;
 
-    // Type filter block (shown on Crimes and Trânsito tabs)
     const typesBlock = document.getElementById("reportTypesBlock");
     if (state.reportKind === "todos") {
       typesBlock.hidden = true;
@@ -1277,12 +1106,8 @@
       for (const it of baseList) counts[it.tipo] = (counts[it.tipo] || 0) + 1;
 
       const totalCatalog = Object.keys(catalog).length;
-      document.getElementById("reportTypesHeading").textContent = isTraffic
-        ? "Tipos de acidente"
-        : "Tipos de crime (CrimeReports)";
-      document.getElementById("reportExpandTypesBtn").textContent = state.typesExpanded
-        ? "Recolher ▴"
-        : `Ver ${totalCatalog} ▾`;
+      document.getElementById("reportTypesHeading").textContent = isTraffic ? "Tipos de acidente" : "Tipos de crime";
+      document.getElementById("reportExpandTypesBtn").textContent = state.typesExpanded ? "Recolher ▴" : `Ver ${totalCatalog} ▾`;
 
       const chipsEl = document.getElementById("reportTypeChips");
       chipsEl.classList.toggle("is-expanded", state.typesExpanded);
@@ -1292,7 +1117,7 @@
           const cnt = counts[meta.id] || 0;
           const on = activeSet.has(meta.id);
           return `
-            <button type="button" class="type-chip ${on ? "" : "is-off"} ${cnt === 0 ? "is-empty" : ""}" data-type-id="${meta.id}" aria-pressed="${on}" title="${escapeHtml(meta.label)} — ${escapeHtml(meta.short)}">
+            <button type="button" class="type-chip ${on ? "" : "is-off"} ${cnt === 0 ? "is-empty" : ""}" data-type-id="${meta.id}" aria-pressed="${on}">
               <span class="type-chip__ico" style="background:${meta.color}">${meta.icon}</span>
               <span>${escapeHtml(meta.label)}</span>
               <span class="type-chip__cnt">${cnt}</span>
@@ -1306,7 +1131,7 @@
           const id = btn.dataset.typeId;
           if (activeSet.has(id)) activeSet.delete(id);
           else activeSet.add(id);
-          refreshAllViews();
+          refreshRadarViews();
         });
       });
     }
@@ -1319,13 +1144,12 @@
         : state.crimes.length + state.traffic.length;
     document.getElementById("reportMetaCount").textContent =
       totalRaw === 0
-        ? `Aguardando feed horário de ${state.cityMeta?.nome || "Campo Grande"}`
+        ? `Aguardando feed de ${state.cityMeta?.nome || "Campo Grande"}`
         : items.length === totalRaw
         ? `${items.length} ${items.length === 1 ? "registro" : "registros"}`
         : `Mostrando ${items.length} de ${totalRaw} registros`;
     document.getElementById("resetReportFiltersBtn").hidden = countActiveFilters() === 0;
 
-    // Summary stats bar
     const summaryEl = document.getElementById("reportSummary");
     if (items.length === 0) {
       summaryEl.hidden = true;
@@ -1359,14 +1183,13 @@
       summaryEl.innerHTML = statPills.join("");
     }
 
-    // Feed list
     const listEl = document.getElementById("reportList");
     if (totalRaw === 0) {
       const slug = state.currentCitySlug;
       listEl.innerHTML = `
         <div class="empty-box">
           <h3>Radar ativo em ${escapeHtml(cityLabel)}</h3>
-          <p>Pronto para exibir ocorrências horárias assim que o Grokbot atualizar <code>data/${escapeHtml(slug)}/crimes.json</code> e <code>data/${escapeHtml(slug)}/transito.json</code>.</p>
+          <p>Sem ocorrências carregadas em <code>data/${escapeHtml(slug)}/crimes.json</code>.</p>
         </div>
       `;
       return;
@@ -1376,7 +1199,7 @@
       listEl.innerHTML = `
         <div class="empty-box">
           <h3>Nenhum registro nessa janela</h3>
-          <p>Tente ampliar o período (ex.: 24h, 7 dias ou Todos) ou limpar a busca.</p>
+          <p>Tente ampliar o período ou limpar a busca.</p>
           <button type="button" class="btn-primary" id="emptyResetBtn">Mostrar todos</button>
         </div>
       `;
@@ -1419,11 +1242,7 @@
               <span class="event-card__source">${item.fonte ? `Fonte: ${escapeHtml(item.fonte)}` : "Registro local"}</span>
               <div class="event-card__actions">
                 <button type="button" class="event-btn ${isTraffic ? "event-btn--map-traffic" : "event-btn--map"}">Ver no mapa</button>
-                ${
-                  item.link
-                    ? `<a class="event-btn" href="${escapeHtml(item.link)}" target="_blank" rel="noopener noreferrer">Matéria ↗</a>`
-                    : ""
-                }
+                ${item.link ? `<a class="event-btn" href="${escapeHtml(item.link)}" target="_blank" rel="noopener noreferrer">Matéria ↗</a>` : ""}
               </div>
             </div>
           </article>
@@ -1445,59 +1264,81 @@
         if (pin) pin.classList.add("is-highlighted");
       });
       card.addEventListener("mouseleave", () => {
-        document.querySelectorAll(".crime-pin.is-highlighted, .traffic-pin.is-highlighted").forEach((n) => {
-          n.classList.remove("is-highlighted");
-        });
+        document.querySelectorAll(".crime-pin.is-highlighted, .traffic-pin.is-highlighted").forEach((n) => n.classList.remove("is-highlighted"));
       });
     });
   }
 
-  function renderImoveisModule() {
-    if (!FEATURES.imoveis || !el.imoveisView) return;
-    el.imoveisView.hidden = false;
-    if (state.houses.length === 0) {
-      el.imoveisView.innerHTML = `
-        <div class="empty-box">
-          <h3>Módulo de Imóveis (em espera)</h3>
-          <p>Nenhum imóvel cadastrado em <code>data/${escapeHtml(state.currentCitySlug)}/casas.json</code>.</p>
-        </div>
-      `;
-      return;
-    }
-    el.imoveisView.innerHTML = state.houses
-      .map(
-        (h) => `
-      <article class="event-card" style="--event-color:#15803d">
-        <h3 class="event-card__title">${escapeHtml(h.titulo)}</h3>
-        <p class="event-card__loc">${escapeHtml(h.bairro)}${h.preco ? ` · R$ ${h.preco.toLocaleString("pt-BR")}` : ""}</p>
-        ${h.link ? `<div class="event-card__foot"><span>${escapeHtml(h.finalidade)}</span><a class="event-btn" href="${escapeHtml(h.link)}" target="_blank" rel="noopener noreferrer">Abrir ↗</a></div>` : ""}
-      </article>
-    `
-      )
-      .join("");
-  }
-
-  function refreshAllViews() {
+  function refreshRadarViews() {
     updateStatusPills();
     renderMapLayerBar();
-    renderMapLayers();
+    renderRadarMapLayers();
     renderReportContent();
-    if (FEATURES.imoveis) renderImoveisModule();
   }
 
-  // ==================== NAVIGATION & CITY LOADING ====================
+  // ==================== MAIN TAB & MOBILE NAVIGATION ====================
+  function setMainTab(tab, { fit = true } = {}) {
+    const next = tab === "radar" ? "radar" : "imoveis";
+    state.mainTab = next;
+    document.body.dataset.mainTab = next;
 
-  function switchMobileTab(tab) {
-    state.activeTab = tab;
-    document.body.dataset.tab = tab;
-    document.querySelectorAll("[data-nav-tab]").forEach((btn) => {
-      btn.classList.toggle("is-active", btn.dataset.navTab === tab);
+    document.querySelectorAll("[data-main-tab-btn]").forEach((btn) => {
+      const active = btn.dataset.mainTabBtn === next;
+      btn.classList.toggle("is-active", active);
+      btn.setAttribute("aria-selected", String(active));
     });
-    if (tab === "mapa" && map) {
+
+    if (el.brandSubtitle) {
+      el.brandSubtitle.textContent = next === "imoveis" ? "Imóveis & Análise do Entorno" : "Crimes & Trânsito · Radar Urbano";
+    }
+
+    const themeMeta = document.querySelector('meta[name="theme-color"]');
+    if (themeMeta) themeMeta.setAttribute("content", next === "imoveis" ? "#15803d" : "#991b1b");
+
+    // Reset mobile view cleanly for the selected main tab
+    switchMobileView("mapa");
+
+    // Reflect main tab in URL
+    const nextUrl = new URL(window.location.href);
+    if (next === "radar") nextUrl.searchParams.set("aba", "radar");
+    else nextUrl.searchParams.delete("aba");
+    window.history.replaceState({}, "", nextUrl);
+
+    if (next === "imoveis") {
+      clearRadarMapLayers();
+      if (window.RadarBRImoveis?.onActivate) window.RadarBRImoveis.onActivate({ fit });
+    } else {
+      if (window.RadarBRImoveis?.onDeactivate) window.RadarBRImoveis.onDeactivate();
+      refreshRadarViews();
+      if (fit) fitMapToCity(true);
+    }
+
+    updateStatusPills();
+    if (map) setTimeout(() => map.invalidateSize(), 160);
+  }
+
+  function switchMobileView(view) {
+    state.mobileView = view;
+    document.body.dataset.mobileView = view;
+    document.body.dataset.tab = view;
+
+    document.querySelectorAll("#bottomNav [data-mobile-view]").forEach((btn) => {
+      const belongs =
+        (state.mainTab === "imoveis" && btn.classList.contains("only-imoveis")) ||
+        (state.mainTab === "radar" && btn.classList.contains("only-radar"));
+      btn.classList.toggle("is-active", belongs && btn.dataset.mobileView === view);
+    });
+
+    if (window.RadarBRImoveis?.onMobileViewChange) {
+      window.RadarBRImoveis.onMobileViewChange(view);
+    }
+
+    if (view === "mapa" && map) {
       setTimeout(() => map.invalidateSize(), 160);
     }
   }
 
+  // ==================== CITY LOADING ====================
   async function loadCityData(slug, { silent = false, fit = true } = {}) {
     const cityObj = state.cities.find((c) => c.slug === slug) || state.cities[0];
     if (!cityObj) return;
@@ -1507,7 +1348,6 @@
     el.citySelect.value = cityObj.slug;
     document.title = `RadarBR — ${cityObj.rotulo}`;
 
-    // Reflect selected city in URL without page reload
     const nextUrl = new URL(window.location.href);
     nextUrl.searchParams.set("cidade", cityObj.slug);
     window.history.replaceState({}, "", nextUrl);
@@ -1519,21 +1359,41 @@
       fetch(`${base}/cidade.json`, { cache: "no-cache" }).then((r) => (r.ok ? r.json() : null)).catch(() => null),
       fetch(`${base}/crimes.json`, { cache: "no-cache" }).then((r) => (r.ok ? r.json() : null)).catch(() => null),
       fetch(`${base}/transito.json`, { cache: "no-cache" }).then((r) => (r.ok ? r.json() : null)).catch(() => null),
-      FEATURES.imoveis
-        ? fetch(`${base}/casas.json`, { cache: "no-cache" }).then((r) => (r.ok ? r.json() : null)).catch(() => null)
-        : Promise.resolve(null),
+      fetch(`${base}/casas.json`, { cache: "no-cache" }).then((r) => (r.ok ? r.json() : null)).catch(() => null),
+      fetch(`${base}/pois.json`, { cache: "no-cache" }).then((r) => (r.ok ? r.json() : null)).catch(() => null),
     ];
 
     try {
-      const [cityGeo, crimesJson, trafficJson, casasJson] = await Promise.all(fetches);
+      const [cityGeo, crimesJson, trafficJson, casasJson, poisJson] = await Promise.all(fetches);
       state.cityGeo = cityGeo;
+      state.housesFeed = casasJson;
+      state.poisFeed = poisJson;
       ingestCrimes(crimesJson);
       ingestTraffic(trafficJson);
-      ingestHouses(casasJson);
 
       if (!map) initMap();
-      refreshAllViews();
-      if (fit) fitMapToCity(true);
+
+      if (window.RadarBRImoveis?.onCityDataLoaded) {
+        window.RadarBRImoveis.onCityDataLoaded({
+          citySlug: cityObj.slug,
+          cityMeta: cityObj,
+          cityGeo,
+          casasJson,
+          poisJson,
+        });
+      }
+
+      if (state.mainTab === "radar") {
+        clearRadarMapLayers();
+        refreshRadarViews();
+        if (fit) fitMapToCity(true);
+      } else {
+        clearRadarMapLayers();
+        renderReportContent();
+        if (window.RadarBRImoveis?.onActivate) window.RadarBRImoveis.onActivate({ fit });
+        updateStatusPills();
+      }
+
       if (!silent) showToast(`${cityObj.rotulo} atualizado`);
     } finally {
       setTimeout(() => el.refreshFeedBtn.classList.remove("is-spinning"), 260);
@@ -1541,6 +1401,14 @@
   }
 
   function bindEvents() {
+    document.querySelectorAll("[data-main-tab-btn]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        if (btn.dataset.mainTabBtn !== state.mainTab) {
+          setMainTab(btn.dataset.mainTabBtn, { fit: true });
+        }
+      });
+    });
+
     el.citySelect.addEventListener("change", () => {
       loadCityData(el.citySelect.value, { silent: false, fit: true });
     });
@@ -1549,8 +1417,8 @@
       loadCityData(state.currentCitySlug, { silent: false, fit: false });
     });
 
-    document.querySelectorAll("[data-nav-tab]").forEach((btn) => {
-      btn.addEventListener("click", () => switchMobileTab(btn.dataset.navTab));
+    document.querySelectorAll("#bottomNav [data-mobile-view]").forEach((btn) => {
+      btn.addEventListener("click", () => switchMobileView(btn.dataset.mobileView));
     });
 
     el.cycleBasemapBtn.addEventListener("click", () => {
@@ -1566,27 +1434,42 @@
     el.fitBoundsBtn.addEventListener("click", () => fitMapToCity(true));
     el.fitBoundsMobileBtn.addEventListener("click", () => fitMapToCity(true));
 
-    if (el.toggleImoveisModeBtn) {
-      el.toggleImoveisModeBtn.addEventListener("click", () => {
-        state.sidebarMode = state.sidebarMode === "imoveis" ? "relatorios" : "imoveis";
-        document.body.dataset.sidebarMode = state.sidebarMode;
-        el.toggleImoveisModeBtn.classList.toggle("is-active", state.sidebarMode === "imoveis");
-        el.toggleImoveisModeBtn.setAttribute("aria-pressed", String(state.sidebarMode === "imoveis"));
-      });
-    }
-
     window.addEventListener("resize", () => {
       if (map) map.invalidateSize();
     });
   }
 
+  // Shared API for imoveis.js
+  window.RadarBR = {
+    getMap: () => map,
+    getState: () => state,
+    isDesktop,
+    escapeHtml,
+    normalizeText,
+    hashString,
+    showToast,
+    resolveCoords,
+    setMainTab,
+    switchMobileView,
+    updateStatusPills,
+  };
+
   async function init() {
     bindEvents();
+
+    // Apply initial tab visual state immediately
+    document.body.dataset.mainTab = state.mainTab;
+    document.querySelectorAll("[data-main-tab-btn]").forEach((btn) => {
+      const active = btn.dataset.mainTabBtn === state.mainTab;
+      btn.classList.toggle("is-active", active);
+      btn.setAttribute("aria-selected", String(active));
+    });
 
     try {
       const resp = await fetch("./data/cidades.json", { cache: "no-cache" });
       if (!resp.ok) throw new Error("Não foi possível carregar data/cidades.json");
       const registry = await resp.json();
+      // Only active cities (Campo Grande and Maringá); inactive cities remain hidden/disabled
       state.cities = (registry.cidades || []).filter((c) => c && c.ativa !== false);
       if (!state.cities.length) throw new Error("Nenhuma cidade ativa em data/cidades.json");
 
@@ -1597,11 +1480,12 @@
       const requestedSlug = URL_PARAMS.get("cidade");
       const initialSlug = state.cities.some((c) => c.slug === requestedSlug)
         ? requestedSlug
-        : registry.cidade_padrao || state.cities[0].slug;
+        : registry.cidade_padrao && state.cities.some((c) => c.slug === registry.cidade_padrao)
+        ? registry.cidade_padrao
+        : state.cities[0].slug;
 
       await loadCityData(initialSlug, { silent: true, fit: true });
 
-      // Periodic silent check for hourly Grokbot updates
       setInterval(() => {
         if (!document.hidden) {
           loadCityData(state.currentCitySlug, { silent: true, fit: false });
@@ -1609,13 +1493,8 @@
       }, AUTO_REFRESH_MS);
     } catch (err) {
       console.error(err);
-      el.feedStatusText.textContent = "Erro ao carregar dados";
-      el.reportView.innerHTML = `
-        <div class="empty-box">
-          <h3>Não foi possível carregar o RadarBR</h3>
-          <p>${escapeHtml(err.message)}. Para testar localmente, rode <code>python -m http.server</code> na pasta <code>RadarBR</code>.</p>
-        </div>
-      `;
+      if (el.feedStatusText) el.feedStatusText.textContent = "Erro ao carregar dados";
+      showToast(err.message);
     }
   }
 
