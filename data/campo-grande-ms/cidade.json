@@ -624,6 +624,34 @@
     "residencial buzios": {
       "lat": -20.531,
       "lng": -54.6365
+    },
+    "jardim jacy": {
+      "lat": -20.4918,
+      "lng": -54.6435
+    },
+    "jardim mansur": {
+      "lat": -20.4718,
+      "lng": -54.5682
+    },
+    "jardim columbia": {
+      "lat": -20.382,
+      "lng": -54.5735
+    },
+    "vila nascente": {
+      "lat": -20.4415,
+      "lng": -54.5681
+    },
+    "vila taveiropolis": {
+      "lat": -20.4912,
+      "lng": -54.6485
+    },
+    "alphaville 2": {
+      "lat": -20.415,
+      "lng": -54.544
+    },
+    "jardim monte libano": {
+      "lat": -20.4755,
+      "lng": -54.6115
     }
   }
 }
